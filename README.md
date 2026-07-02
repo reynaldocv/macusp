@@ -163,17 +163,13 @@ Implementamos dois arquivos para fazer os menus de idiomas e de navegação
     -**macusp-flags**: (recomendamos não mexer), nesse arquivo listamos todos os idiomas configurados no sistema
     para fixar cual é o idioma principal.     
     
-    -**macusp-menuitems.php** 
-
-    
+    -**macusp-menuitems.php**: é responsável do menu (*WORKS - ARTISTS - EXHIBITIONS - ADVANCED SEARCH*).      
 
 ### 2.3 Footer
 
 ### 3- Pagina Home
 
 ## 4- Agregando Idiomas
-
-
 
 ## 5- Templates (items)
 
