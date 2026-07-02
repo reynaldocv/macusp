@@ -1,0 +1,142 @@
+.carrousel {
+  top:20px;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/1;
+  line-height: 1.5;
+  overflow: hidden;
+  background-color: white;
+  text-align: center;
+  list-style-type: none;
+}
+
+.macusp-carrousel { 
+  width: 100%;   
+  height: 100%;
+  position:absolute;
+  transform: translate(0%, 0%);
+}
+
+.macusp-carrousel {
+  > li {    
+    top: 0rem; 
+    left: 0rem;
+    position:absolute;
+    width: 6%;
+    aspect-ratio: 5/3;
+    margin-top: 0px;
+    transform: translate(0%, 0%); 
+    border-radius: 10rem;
+    font-size: 0.5rem;
+    box-shadow: 1rem 1rem 1rem var(--macusp-color3d);
+    transition: all 1s ease-in-out;
+    background-size: 110%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+  }
+
+  > li:nth-child(3){
+    top: 0%; 
+  }
+
+  > li:nth-child(2){
+    top: 0px;
+    left: 7%;
+    transform: translate(0);  
+    box-shadow: 1rem .5rem 1rem .5rem var(--macusp-color3e);
+    aspect-ratio: 5/3;
+    width: 30%;    
+    border-radius: 5rem;    
+    background-size: 110%;
+  }  
+
+  > li:nth-child(1){
+    top: 57%; 
+  }
+
+  li:nth-child(6){
+    top: 57%; 
+  }
+
+  > li:nth-child(5){
+    top: 38%; 
+    z-index: 1;
+
+  }
+
+  > li:nth-child(4){
+    top: 19%; 
+  } 
+ 
+
+  > li .details {
+    position: absolute;    
+    display: none;
+  }
+
+  > li:nth-child(2) .details{  
+    position: absolute;
+    display: inline-block;
+    left: 110%;
+    width: 200%;
+    animation: identifier 3s ease forwards; 
+  }
+
+  > li:nth-child(2) .details h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--macusp-color3);
+    font-weight: bold;
+  }
+
+  > li:nth-child(2) .details p{
+    text-align: justify;
+    width: 100%; 
+    font-size: 1.5rem;
+    margin: 1px;
+    
+  }
+
+  @keyframes identifier {
+    from {
+      opacity: 0;
+      filter:blur(30px);
+      transform: scale(0);
+    }
+    to {
+      opacity: 1;
+      filter: blur(10px);
+      transform: scale(1);
+    }
+    
+  }
+}
+
+.carrousel > .controls {
+    position: absolute;
+    bottom: 15%;
+    left:22%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1.5rem;
+  }
+
+.carrousel  > .controls button {  
+  background-color: var(--macusp-color3d);
+  bottom: 50px;
+  border-radius: 25%;
+  border: 0;
+  width: 2.4rem;
+  aspect-ratio: 1/1;
+  border-radius: 1.4rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.carrousel > .controls button:hover {
+    background-color: coral;
+  }
+
+

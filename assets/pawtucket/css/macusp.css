@@ -1,0 +1,1240 @@
+.row{
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.artists-h1 
+{    
+  font-size: large;
+  padding: 10px 0px 10px 0px;
+}
+
+.artists-h1 > a  
+{  
+  color: black;
+}
+
+
+.artists-h1:hover > a  
+{  
+  color: var(--macusp-color3);
+}
+
+.nav > li > a > img{
+  max-height: 15px;
+}
+
+.macuspItems {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+	text-align: center;
+	color: var(--macusp-color1)
+
+}
+.macuspItems > li {
+	display: inline-block;
+	font-size: large;
+	padding: 20px 40px 20px 40px;
+	
+}
+.macuspItems > li > a {
+	box-shadow: 0 0 0 0 0 var(--macusp-color2);	
+	transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+	
+}
+
+
+.macuspItems > li > a:hover {  
+  box-shadow: 0px 2px 10px 20px var(--macusp-color2d);
+  background: var(--macusp-color2d);
+	text-decoration: none;
+	color: var(--macusp-color1)
+    
+}
+
+.macuspItems > li > a:active {    
+  background: var(--macusp-color2d);
+}
+
+.macuspActivedItem { 
+  box-shadow: 0px 1px 0px 0px var(--macusp-color2c);
+  background: var(--macusp-color2d);  
+	border-radius: 1%;	
+  color: var(--macusp-color1); 
+  font-weight: bold;
+}
+
+@media (max-width: 768px){
+  .macuspItems {
+    background-color: var(--macusp-color1e);
+    color: var(--macusp-color1); 
+    text-align:left; 
+  }
+  .macuspItems > li {
+    display: block;
+    font-size: medium;
+    padding: 10px 5px 10px 5px;  
+    
+  }
+  .macuspItems > li > a {
+    padding: 0px;  
+  }
+  .nav > li > a {
+    margin-left:40px; 
+  }
+  
+	
+}
+
+
+
+
+
+.inputTextFilter {
+	font-family: 'Segoe UI', sans-serif;
+	margin: 1em 0 1em 0;
+	position: relative;
+	width: 100%;
+  }
+  
+.inputTextFilter input {
+	font-size: 100%;
+	padding: 0.4em;  
+	outline: none;
+	border: 2px solid rgb(200, 200, 200);
+	background-color: white;
+	border-radius: 20px;
+	width: 100%;
+} 
+
+
+
+
+
+
+
+
+
+
+.macuspSubItems {
+  margin: 40px;
+  background-color: var(--macusp-color2e);
+  list-style-type: none;
+	text-align: center;
+	color: var(--macusp-color1)
+
+}
+.macuspSubItems > li {
+	display: inline-block;
+	font-size: large;
+	padding: 5px;  
+	
+}
+.macuspSubItems > li > a {
+  border-radius: 25px;
+	box-shadow: 1px 0 100px 100px 100px white;
+  background-color: white;
+  border: 2px solid var(--macusp-color2c);
+	transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+	padding: 25px 50px 25px 50px;
+  margin: 0px 50px 0px 50px;  
+}
+
+
+.macuspSubItems > li > a:hover {
+  border-radius: 25px;
+  border: 2px solid var(--macusp-color2);
+	box-shadow: inset 0 100px 100px 100px var(--macusp-color2c);
+	text-decoration: none;
+	color: var(--macusp-color1);
+}
+
+.macuspSubItems > li > a:active {
+	color: var(--macusp-color1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.macuspView{
+  font-weight: bolder;
+}
+
+
+
+
+
+
+
+
+/*#occurrencesexhibitions*/
+
+.bResultListItemCol:hover > div > div > div > a{
+  color: var(--macusp-color1);
+}
+
+
+.bResultListItemContent > div > span {
+  color: lightgray;
+  font-size: medium;
+  position: absolute;
+  top: 65px;
+  right: 20px;
+  cursor: pointer;
+  
+  
+	/*overflow:hidden;*/
+}
+
+.bResultListItemContent:hover > div > span {
+  
+  color: var(--macusp-color3);
+  
+	/*overflow:hidden;*/
+}
+
+
+.bResultListItemCol-exhibition{
+  
+  height: 110px;
+}
+
+.bResultListItemContent-exhibition {
+  height:60px;
+  
+	/*overflow:hidden;*/
+}
+
+.bResultListItem-exhibition{
+  background-color: white;
+  border-left: 5px solid lightgray;
+  border-right: 5px solid lightgray;
+}
+
+.bResultListItem-exhibition:hover{
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	padding:12px; /*had commented this out*/
+	margin: 2px; /*had commented this out*/  
+	height:80px;
+}
+
+.bResultListItemContent-exhibition > div > span {
+  color: lightgray;
+  font-size: medium;
+  position: absolute;
+  top: 55px;
+  right: 30px;
+  cursor: pointer;
+  
+  
+	/*overflow:hidden;*/
+}
+
+.bResultListItemContent-exhibition:hover > div > span {
+  color: var(--macusp-color3);
+  
+	/*overflow:hidden;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bResultListItemCol-publication{
+  
+  height: 110px;
+}
+
+.bResultListItemContent-publication {
+  height:60px;
+  
+	/*overflow:hidden;*/
+}
+
+.bResultListItem-publication{
+  background-color: white;
+  border: 2px double  lightgray;  
+  
+}
+
+.bResultListItem-publication:hover{
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	padding:12px; /*had commented this out*/
+	margin: 2px; /*had commented this out*/  
+	height:80px;
+}
+
+.bResultListItemContent-publication > div > span {
+  color: lightgray;
+  font-size: medium;
+  position: absolute;
+  top: 55px;
+  right: 30px;
+  cursor: pointer;
+  
+  
+	/*overflow:hidden;*/
+}
+
+.bResultListItemContent-publication:hover > div > span {
+  color: var(--macusp-color3);
+  
+	/*overflow:hidden;*/
+}
+
+
+
+
+/*#entities*/
+
+.box-contains{
+  padding-left: 10px;
+  line-height: 1.4; 
+  
+}
+
+.bResultListItemCol-artist{
+  height: 100px;
+}
+
+.bResultListItemContent-artist {
+	height:50px;
+	/*overflow:hidden;*/
+}
+
+.bResultListItem-artist{
+  background-color: white;
+  border-top: 2px solid lightgray;
+  border-bottom: 2px solid lightgray;
+}
+
+.bResultListItem-artist:hover{
+ -webkit-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0x 10px rgba(0, 0, 0, 0.5);
+	height:80px;	
+  padding:5px 5px 5px 5px; /*had commented this out*/
+	margin: 10px 5px 5px 5px;
+
+}
+.bResultListItemImg-artist{  
+  max-height:50px;
+	min-height:30px;
+	overflow:hidden;	
+	float:right; 
+}
+.bResultListItemContent-artist > div > span {
+  color: lightgray;
+  font-size: medium;
+  position: absolute;
+  top: 55px;
+  right: 30px;
+  cursor: pointer;
+  
+	/*overflow:hidden;*/
+}
+
+.bResultListItem-artist .bResultListItemImg-artist {
+  float: right; 
+}
+
+.hover-tip:hover::after {
+  content: attr(data-text);
+  position: absolute;
+  bottom:20px;
+  right: 0px; 
+  background: #333333ee;
+  color: white;
+  padding: 5px 15px 5px 15px;
+  border-radius: 4px;
+  font-size: medium;
+}
+
+
+.bResultList-artist-name{
+  font-size: medium;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hover-tip:hover::after {
+  content: attr(data-text);
+  position: absolute;
+  bottom:20px;
+  right: 0px; 
+  background: #333333ee;
+  color: white;
+  padding: 5px 15px 5px 15px;
+  border-radius: 4px;
+  font-size: medium;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.macuspExhibitionsItems {
+  background-color: var(--macusp-color2e);
+  list-style-type: none;
+	text-align: right;
+	color: var(--macusp-color3);
+}
+.macuspExhibitionsItems > li {
+	display: inline-block;
+	font-size: large;
+	
+}
+.macuspExhibitionsItems > li > a {
+	box-shadow: inset 0 0 0 0 var(--macusp-color2b);	
+	transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+	padding: 15px 50px 15px 50px; 
+}
+
+
+.macuspExhibitionsItems > li > a:hover {
+	box-shadow: inset 0 100px 100px 100px var(--macusp-color2c);
+	text-decoration: none;
+	color: black;
+}
+
+.macuspExhibitionsActivedItem { 
+	color: black;
+	background-color: var(--macusp-color2d);
+	padding: 15px 0px 15px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .MenuItemSearchGroup {	    
+    position: relative;
+    display: inline-block;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 0px 35px 0px 35px;
+ 
+  }  
+  .MenuItemSearchGroup input {   
+    
+    font-size: large;
+    height: 44px;
+    outline: none;
+    border: 2px solid gray;
+    padding-left: 30px;
+    background-color: transparent;
+    border-radius: 20px;    
+    text-transform: uppercase;
+    
+    
+  }  
+  .MenuItemSearchGroup label {
+    position: absolute;
+    left: 60px;
+    bottom: 4px;
+    font-size: large;    
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: var(--macusp-color5);
+  }
+  .MenuItemSearchGroup button {  	
+    position: absolute;
+    right: 45px;
+    bottom: 5px;
+  }
+  .MenuItemSearchGroup :is(input:focus, input:valid)~label {
+      content:'Search:';
+      transform: translateY(-30px) scale(1);
+      color: var(--macusp-color5);
+      font-size: small;	
+  }
+  
+  .MenuItemSearchGroup :is(input:focus, input:valid) {
+      background-color: white; 
+      border-color: var(--macusp-color2);
+  }
+
+
+  .MenuItemSearchGroupBlue {	    
+    position: relative;
+    display: inline-block;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 0px 35px 0px 35px;
+ 
+  }  
+  .MenuItemSearchGroupBlue input {   
+    
+    font-size: large;
+    height: 44px;
+    outline: none;
+    border: 2px solid gray;
+    padding-left: 30px;
+    background-color: transparent;
+    border-radius: 20px;    
+    text-transform: uppercase;
+    border-color: var(--macusp-color8c);
+    
+    
+  }  
+  .MenuItemSearchGroupBlue label {
+    position: absolute;
+    left: 60px;
+    bottom: 4px;
+    font-size: large;    
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: var(--macusp-color8);
+  }
+  .MenuItemSearchGroupBlue button {  	
+    position: absolute;
+    right: 45px;
+    bottom: 5px;
+  }
+  .MenuItemSearchGroupBlue :is(input:focus, input:valid)~label {
+      content:'Search:';
+      transform: translateY(-30px) scale(1);
+      color: var(--macusp-color8);
+      font-size: small;	
+  }
+  
+  .MenuItemSearchGroupBlue :is(input:focus, input:valid) {
+      background-color: white; 
+      border-color: var(--macusp-color8);
+  }
+
+#pre-footer{
+  position: sticky;
+  bottom: 0px;
+  text-align: center;
+  padding: 10px 30px 10px 30px;
+  width: 100%;
+  font-size: small;
+  color: white;
+  background-color: var(--macusp-color4);
+}
+
+@media (max-width: 768px) {
+  #pre-footer{
+    padding: 5px;
+    width: 100%;
+    font-size: small;    
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#additional-info{
+  position: relative;
+  font-size: small;
+  padding: 15px;
+  background-color: #aaaaaa22;
+  border-radius: 20px;
+  width: 100%;
+}
+
+#additional-info p{
+  font-size: small;
+  text-transform: capitalize;
+}
+#additional-info span{
+  font-size: small;
+  text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+  #additional-info{
+    position:static;
+    display: none;
+    background-color: blue;    
+  }
+}
+
+#additional-info > .message{
+  font-weight: bold;
+  margin: 10px;
+}
+
+#additional-info > h3{
+  color: var(--macusp-color1);
+ 
+}
+
+#additional-info > p{
+  text-align: right;
+
+}
+
+#additional-info > ul{
+
+  margin-left: -20px;
+}
+
+#additional-info > .container{
+  width: 100%;
+}
+
+
+
+
+#additional-info > .scrollContainer{
+  text-align: left;
+  font-size: small;
+  background-color: white;
+  width: 100%;
+  height: 250px;
+  overflow-y:scroll;
+  overflow-x:hidden;
+  margin-bottom: 30px;
+}
+
+#additional-info > a{ 
+  color: maroon;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  color: var(--macusp-color3b);
+  border-radius: 20px;
+  background-color: var(--macusp-color2e);
+  padding:10px;
+  text-align: center;
+
+}
+#additional-info > a:hover{  
+  text-decoration: none;
+  color: var(--macusp-color3);
+  background-color: var(--macusp-color2d);
+  transition: 1s;
+}
+#additional-info > div {  
+  text-align: center;
+  width: 100%;
+}
+
+#additional-info > div > img{  
+  width: 100%;  
+  height: auto;
+  max-height: 600px;
+  
+}
+
+.macusp-center
+{
+  align-content: center;
+  width: 100%;
+}
+
+.macusp-center > div
+{
+  width: 100px;
+  background-color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .MacuspForm {
+    padding: 30px;
+    position: relative;
+    display: inline-block;
+    font-family: 'Segoe UI', sans-serif;
+    width: 100%;
+ 
+  }  
+  .MacuspForm input {    
+    font-size: large;
+    height: 44px;
+    width: 100%;
+    outline: none;
+    border: 2px solid gray;
+    padding-left: 30px;
+    background-color: transparent;
+    border-radius: 20px;    
+    text-transform: uppercase;
+    
+  }  
+  .MacuspForm label {
+    font-size: large; 
+    color: var(--macusp-color5);
+  }
+
+  .MacuspForm button {  
+    position: absolute;
+    background-color: var(--macusp-color1);	
+    color: white;
+    border-radius: 50px;
+    width: 30px;;
+    right: 40px;
+    top: 37px;
+  }
+
+.MacuspAdvancedForm{
+  border-radius: 50px;
+  width: 90%;
+  display: inline-block;
+  padding: 5px;  
+  
+}   
+    
+.MacuspAdvancedForm > input{
+  margin-left: auto;
+  margin-right: auto;
+  font-size: medium;
+  bottom:0px;
+  width: 95% !important;
+  height: 45px;
+  
+  border-radius: 50px;
+  border: 2px solid var(--macusp-color2b) ;
+  padding: 5px 10px 5px 40px;
+  color: #555555;
+  text-transform: uppercase;
+}
+.MacuspAdvancedForm > input:focus{
+  outline: none; 
+}
+
+.MacuspAdvancedForm > span{
+  display: inline-block;
+  z-index: 1;
+  width: 90%;
+  right: 10px;
+  bottom: 20px;
+  margin: auto;
+  font-size: medium;
+  display: block;
+  color:black;
+}
+
+.MacuspAdvancedFormbtn{
+  margin-left:20px;
+  position: relative;
+}
+
+.MacuspAdvancedFormbtn > a{  
+  color: white;
+  font-size: medium;
+  border-radius: 50px;
+  padding: 10px 30px 10px 50px;
+  background-color: var(--macusp-color1);	
+}
+
+.MacuspAdvancedFormbtn > span{
+  position: absolute;
+  font-size: medium;
+  color: white;
+  left:20px;
+}
+
+
+.click{    
+  width: 100%;  
+  display: inline-block;
+  text-align: center;   
+  margin: 10px; 
+  padding: 10px;  
+}
+
+.click > a{  
+  color:black;
+  margin-bottom: 0px;  
+  padding: 12px 50px 12px 50px;  
+  background-color: var(--macusp-color2d);   
+  border: 2px solid var(--macusp-color2);       
+  border-radius: 10px;
+	transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  
+}
+
+.click > a:hover{  
+  margin-bottom: 20px;  
+  border: 2px solid var(--macusp-color2);
+  box-shadow: 0px 0px 3px 5px var(--macusp-color1d);
+  background: var(--macusp-color2d);
+	text-decoration: none;
+	color: var(--macusp-color1); 
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+
+@media (max-width: 1200px) { 
+  .click > a{    
+    padding: 12px 20px 12px 20px;  
+  }
+}
+
+@media (max-width: 900px) {
+  .click{
+    margin: 0px; 
+  }
+  .click > a{        
+    padding: 12px 5px 12px 5px;  
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.progressBar{ 
+    
+    width: 100%;
+    height: 15px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 0px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.navbar{
+  margin-bottom: 0px;
+}
+
+.margintop10{
+  margin-top:10px;
+}
+
+.resultCount{
+  right: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.afiches{
+  width: 100%;
+  text-align: center;
+}
+.bloques{
+  position: relative;
+  margin: 20px;  
+  display: inline-block;
+  width: 250px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 10px;
+  border: none;
+}
+.bloques > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+.bloques > div{
+  width: 100%;  
+  height: 100%;
+  position: absolute;
+  left:0px; 
+  top: 0px;
+  
+  
+}
+
+.bloques > div > span{
+  
+  position: absolute;
+  width: 100%;     
+  color: white;  
+  font-size: medium;
+  left:0px; 
+  bottom: 0px;
+  margin-bottom: -10px;
+}
+
+.bloques > div > h1{
+  margin-top: 0px;
+  width: 100%;  
+  color: white;
+  font-weight: 600;
+  font-size: medium;
+  left:0px;   
+  top: -100px;
+}
+
+
+.bloques > div> span, .bloques > div > h1{    
+  padding: 4%;
+  background-color:var(--macusp-light); background-color: var(--macusp-color1c);
+  font-family: 'Raleway', sans-serif;
+  
+  -webkit-transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
+  -ms-transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
+  transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
+}
+
+.bloques:hover > div > h1{  
+  padding-bottom:25%;  
+  background-color:var(--macusp-color1c);
+}
+
+.bloques:hover > div> span{  
+  padding-bottom:30%;  
+  background-color:var(--macusp-color1c);
+}
+
+.bloques:hover > a{  
+  padding-bottom:30%;  
+  background-color:var(--macusp-color1c);
+}
+
+
+
+
+.macuspButton {
+  font-size: large;  
+  align-content: center;
+  text-align: center;
+}
+
+.macuspButton > a{
+  margin: 20px; 
+  margin: 10 auto; 
+  width: 100px;  
+  font-size: medium;  
+  background-color: yellow;
+  padding: 20px;
+  box-shadow: 0px 1px 0px 0px var(--macusp-color2c);
+  background: var(--macusp-color2d);
+  border-radius: 1%;
+  color: var(--macusp-color1);
+  font-weight: bold;
+  
+}
+
+.macuspButton > a:hover{
+
+  padding: 20px;
+  box-shadow: 0px 1px 0px 0px var(--macusp-color2c);
+  background: var(--macusp-color2d);
+  border-radius: 1%;
+  color: var(--macusp-color1);
+  font-weight: bold;
+  
+}
+
+
+
+
+
+.macuspDrop{
+  
+  font-size: larger;
+  text-align: left;
+  background-color: #f8e5e6ee; 
+}
+
+.macuspDrop > li{
+  text-align: left;
+	display: inline-block;
+	font-size: medium;
+	padding: 5px 10px 5px 10px;
+  width: 100%;
+}
+
+.macuspDrop > li > a {
+	
+	transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.macuspDrop > li > a:hover {  
+  box-shadow: 0px 0px 10px 10px var(--macusp-color2d);
+  background: var(--macusp-color2d);
+	text-decoration: none;
+	color: var(--macusp-color1)
+    
+}
+
+
+
+
+
+#bViews{  
+  text-align: right;
+  width: 100%;
+  display: block;
+}
+
+.macuspViews h5 a .redGlyphicon{
+  color: var(--macusp-color1b);  
+}
+
+#bSortByList ul li.redLink{
+  color: var(--macusp-color1);  
+}
+
