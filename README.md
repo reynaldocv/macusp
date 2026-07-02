@@ -86,7 +86,7 @@ Esse theme contém 6 pastas, a seguir mencionamos a sua funcionalidade e seu con
    - messages.po (arquivo contendo as traduções)
    - messages.mo (arquivo codificado)
 
-   o arquivo messages.mo é gerado a partir do message.po com o seguinte comando: 
+   o arquivo messages.mo é compilado a partir do message.po com o seguinte comando (no Ubuntu): 
   
       msgfmt messages.po -o messages.mo 
 
@@ -96,7 +96,7 @@ Contém os arquivos de visualização (são arquivos front-end).
 > Toda consulta ao bando de dados é feita no arquivos [controllers](#13-controllers)
 > e essa informação vai para os arquivos na pasta views (arquivos front-end). 
 
-    - 1 
+    - *Browse*
     - 2
     - 3
 
