@@ -6,9 +6,11 @@ A seguir é descrito em detalhes a funcionalidade de esse theme.
 
 O Conteudo está dividido nas seguintes seções: 
 
-1. [Conteúdo ](#1- conteudo-do-theme-macusp).
-2. Conteudo e Funcionalidad [Link Text](#conteudo).
-2. Conteudo e Funcionalidad [Link Text](#macusp). 
+1. [Conteúdo ](#1--conteudo-do-theme-macusp).
+2. [Web Page - Estrutura].
+  2.1 [Web Page - Estrutura].
+  2.2 [Web Page - Estrutura].
+3. Agregando um idioma mais [Link Text](#macusp). 
 
 
 ## 1- Conteudo do theme MACUSP
