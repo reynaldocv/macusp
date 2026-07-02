@@ -40,9 +40,9 @@ Esse tema contém 6 pastas, a seguir mencionamos a sua funcionalidade e seu cont
 > [!IMPORTANT]
 > Os arquivos browse.conf, detail.conf, macusp_frontpage.conf e search.conf estão configurados 
 > com relação às definições:  
-> - works (em relação às obras de arte)
-> - artists (em relacção às entidades artistas)
-> - exhibitions (em relacção às ocurrências exposições)
+> - *works* (em relação às obras de arte)
+> - *artists* (em relacção às entidades artistas)
+> - *exhibitions* (em relacção às ocurrências exposições)
 > mais detalhes (see [Configuração](#configuraçao)). 
 
 ### 1.3 controllers: 
@@ -50,20 +50,20 @@ Esse tema contém 6 pastas, a seguir mencionamos a sua funcionalidade e seu cont
 
   - **BrowseController.php** 
   Arquivo controller que está encargado da navegação das seguintes páginas: 
-      - obras -works [index.php/Browse/works](http://143.107.130.173/admacervo/macusp/index.php/Intro/works). 
-      - artistas - artists [index.php/Browse/artists](http://143.107.130.173/admacervo/macusp/index.php/Browse/artists). 
-      - exposições - exhibitions [index.php/Browse/exhibitions](http://143.107.130.173/admacervo/macusp/index.php/Intro/exhibitions). 
+      - obras - *works* [index.php/Browse/works](http://143.107.130.173/admacervo/macusp/index.php/Intro/works). 
+      - artistas - *artists* [index.php/Browse/artists](http://143.107.130.173/admacervo/macusp/index.php/Browse/artists). 
+      - exposições - *exhibitions* [index.php/Browse/exhibitions](http://143.107.130.173/admacervo/macusp/index.php/Intro/exhibitions). 
 
 > [!IMPORTANT]
 > O arquivo de configuração dele é o browse.conf. 
     
   - **DetailController.php**
   Arquivo controller responsável pela exhibição de cada artista (artists), coletivo (groups), obra (works), exposição (exhibitions) e publicação (publications) :
-      - obras - works [index.php/Detail/works/38512](http://localhost/pawtucket/index.php/Detail/works/38512). 
-      - artistas - artists [index.php/Detail/artists/5023](http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/5023). 
-      - coletivos - groups [index.php/Detail/artists/6657](http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/6657). 
-      - exposições - exhibitions [index.php/Detail/exhibitions/2524](http://143.107.130.173/admacervo/macusp/index.php/Detail/exhibitions/2524). 
-       - publicações - publications [index.php/Detail/publications/1296](http://143.107.130.173/admacervo/macusp/index.php/Detail/publications/1296)
+      - obras - *works* [index.php/Detail/works/38512](http://localhost/pawtucket/index.php/Detail/works/38512). 
+      - artistas - *artists* [index.php/Detail/artists/5023](http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/5023). 
+      - coletivos - *groups* [index.php/Detail/artists/6657](http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/6657). 
+      - exposições - *exhibitions* [index.php/Detail/exhibitions/2524](http://143.107.130.173/admacervo/macusp/index.php/Detail/exhibitions/2524). 
+       - publicações - *publications* [index.php/Detail/publications/1296](http://143.107.130.173/admacervo/macusp/index.php/Detail/publications/1296)
 
 > [!IMPORTANT]
 > O arquivo de configuração dele é o detail.conf, que são declarados todas a visualizações individuais: works, artists, groups, exhibitions e publications.  
@@ -77,9 +77,9 @@ Esse tema contém 6 pastas, a seguir mencionamos a sua funcionalidade e seu cont
 
   - **IntroController.php**
   Arquivo controller responsável pelas paginas de inicios 
-      - obras -works [index.php/Intro/works](http://143.107.130.173/admacervo/macusp/index.php/Intro/works). 
-      - artistas - artists [index.php/Intro/artists](http://143.107.130.173/admacervo/macusp/index.php/Intro/artists). 
-      - exposições - exhibitions [index.php/Intro/exhibitions](http://143.107.130.173/admacervo/macusp/index.php/Intro/exhibitions). 
+      - obras - *works* [index.php/Intro/works](http://143.107.130.173/admacervo/macusp/index.php/Intro/works). 
+      - artistas - *artists* [index.php/Intro/artists](http://143.107.130.173/admacervo/macusp/index.php/Intro/artists). 
+      - exposições - *exhibitions* [index.php/Intro/exhibitions](http://143.107.130.173/admacervo/macusp/index.php/Intro/exhibitions). 
 
 > [!IMPORTANT]
 > O arquivo de configuração dele é o macusp_frontpage.conf onde é declarado: works, artists e exhibitions.  
@@ -171,7 +171,7 @@ no momento da execução do tema MACUSP.
 O arquivo está localizado no views/pawtucket/pageFormat/pageHeader.php. 
 A estrutura foi mantida na maior parte, as modificações feitas foram duas. 
 Implementamos dois arquivos para fazer os menus de idiomas e de navegação 
-(WORKS - ARTISTS - EXHIBITIONS - ADVANCED SEARCH).     
+(*WORKS - ARTISTS - EXHIBITIONS - ADVANCED SEARCH*).     
     
     -**macusp-flags**: (recomendamos não mexer), nesse arquivo listamos todos os idiomas configurados no sistema
     para fixar cual é o idioma é o principal e mostrar.     
