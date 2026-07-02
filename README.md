@@ -7,20 +7,20 @@ A seguir é descrito em detalhes a funcionalidade de esse theme.
 O Conteudo está dividido nas seguintes seções: 
 
 1. [Conteúdo ](#1--conteudo-do-theme-macusp).  
-  - [assets](#11-assets)
-  - [conf](#12-conf)
-  - [controllers](#13-controllers)
+    - [assets](#11-assets)
+    - [conf](#12-conf)
+    - [controllers](#13-controllers)
 2. [Web Page - Estrutura].  
-  - [Web Page - Estrutura].   
-  - [Web Page - Estrutura].
+    - [Web Page - Estrutura].   
+    - [Web Page - Estrutura].
 3. Agregando um idioma mais [Link Text](#macusp). 
 4. [Conteúdo ](#1--conteudo-do-theme-macusp).  
-  - [assets](#11-assets)
-  - [conf](#12-conf)
+    - [assets](#11-assets)
+    - [conf](#12-conf)
   - [controllers](#13-controllers)
 5. [Web Page - Estrutura].  
-  - [Web Page - Estrutura].   
-  - [Web Page - Estrutura].
+  _ [Web Page - Estrutura].   
+  _ [Web Page - Estrutura].
 5. Agregando um idioma mais [Link Text](#macusp). 
 
 
