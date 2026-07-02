@@ -161,9 +161,11 @@ Implementamos dois arquivos para fazer os menus de idiomas e de navegação
 (*WORKS - ARTISTS - EXHIBITIONS - ADVANCED SEARCH*).     
     
     -**macusp-flags**: (recomendamos não mexer), nesse arquivo listamos todos os idiomas configurados no sistema
-    para fixar cual é o idioma é o principal e mostrar.     
+    para fixar cual é o idioma principal.     
     
     -**macusp-menuitems.php** 
+
+    
 
 ### 2.3 Footer
 
