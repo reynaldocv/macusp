@@ -83,8 +83,13 @@ Esse theme contém 6 pastas, a seguir mencionamos a sua funcionalidade e seu con
     
 ###  1.4 locale
  Nessa pasta está os arquivos dos idiomas. Cada subpasta contém dois documentos: 
-   - messages.po (arquivo contendo as traduções)
-   - messages.mo (arquivo codificado)
+   - en_US
+      - messages.po (arquivo contendo as traduções)
+      - messages.mo (arquivo codificado)
+   - pt_BR
+      - messages.po (arquivo contendo as traduções)
+      - messages.mo (arquivo codificado)
+    
 
    o arquivo messages.mo é compilado a partir do message.po com o seguinte comando (no Ubuntu): 
   
