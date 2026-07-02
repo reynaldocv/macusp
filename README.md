@@ -1,7 +1,7 @@
-# Texto descriptivo do thema "Macusp" - Collectiveaccess - pawtucket2
+# "Macusp" - pawtucket2 - Collectiveaccess 
 
-Esse é um theme "MACUSP" para o pawtucket2 - collectiveaccess. O pawtucket2 é a
-interface para o usuario final do acervo online MACUSP. 
+Esse é um tema (theme) "MACUSP" para o pawtucket2 - collectiveaccess. 
+O pawtucket2 é a interface para o usuario final do acervo online MACUSP. 
 A seguir é descrito em detalhes a funcionalidade de esse theme. 
 
 O Conteudo está dividido nas seguintes seções: 
@@ -9,8 +9,6 @@ O Conteudo está dividido nas seguintes seções:
 1. [Conteúdo ](#1- conteudo-do-theme-macusp).
 2. Conteudo e Funcionalidad [Link Text](#conteudo).
 2. Conteudo e Funcionalidad [Link Text](#macusp). 
-
-
 
 
 ## 1- Conteudo do theme MACUSP
@@ -83,22 +81,20 @@ Esse theme contém 6 pastas, a seguir mencionamos a sua funcionalidade e seu con
   - **pageController.php**  
   - **ScanController.php**
     
-  - *locale*
+###  1.4 locale
+ Nessa pasta está os arquivos dos idiomas. Cada subpasta contém dois documentos: 
+   - messages.po (arquivo contendo as traduções)
+   - messages.mo (arquivo codificado)
 
+   o arquivo messages.mo é gerado a partir do message.po com o seguinte comando: 
+  
+      msgfmt messages.po -o messages.mo 
 
-    - 1 
-    - 2
-    - 3
-
-- *templates*
-
-
-    - 1 
-    - 2
-    - 3
-
-- *views*
-
+###  1.5 views
+Contém os arquivos de visualização (são arquivos front-end).
+> [!INFO]
+> Toda consulta ao bando de dados é feita no arquivos [controllers](#13-controllers)
+> e essa informação vai para os arquivos na pasta views (arquivos front-end). 
 
     - 1 
     - 2
