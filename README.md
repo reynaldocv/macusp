@@ -12,7 +12,10 @@ O Conteudo está dividido nas seguintes seções:
     - [controllers](#13-controllers)
     - [locale](#14-locale)
     - [views](#15-views)    
-2. [Web Page - Estrutura](#2--webpage---estrutura).      
+2. [Web Page - Estrutura](#2--webpage---estrutura).   
+    - [Configuração dos estilos css](#21-configuração-de-estilos-css)
+    - [header](#21-header)
+    - [footer](#22-footer)
 3. [Agregando Idiomas](#3--agregando-idiomas). 
 
 ## 1- Conteudo do tema MACUSP
@@ -156,9 +159,17 @@ conf/assets.conf
 Em themePackages and themeLoadSets foram definidos as variáveis css e macusp para que os estilos sejam usadas 
 no momento da execução do tema MACUSP. 
 
-### 2.3 Header 
+### 2.2 Header 
+O arquivo está localizado no views/pawtucket/pageFormat/pageHeader.php. 
+A estrutura foi mantida na maior parte, as modificações feitas foram duas. 
+Implementamos dois arquivos para fazer os menus de idiomas e de navegação 
+(WORKS - ARTISTS - EXHIBITIONS - ADVANCED SEARCH).     
+    
+    -**macusp-flags**: (recomendamos não mexer), nesse arquivo listamos todos os idiomas configurados no sistema
+    para fixar cual é o idioma é o principal e mostrar.     
+    -**macusp-menuitems.php** 
 
-### 2.4 Footer
+### 2.3 Footer
 
 ### 3- Pagina Home
 
