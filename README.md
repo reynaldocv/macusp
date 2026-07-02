@@ -7,9 +7,9 @@ A seguir é descrito em detalhes a funcionalidade de esse theme.
 O Conteudo está dividido nas seguintes seções: 
 
 1. [Conteúdo ](#1--conteudo-do-theme-macusp).  
-  - 1.1 [assets](#11-assets)
-  - 1.2 [conf](#12-conf)
-  - 1.3 [controllers](#13-controllers)
+  -1.1 [assets](#11-assets)
+  -1.2 [conf](#12-conf)
+  -1.3 [controllers](#13-controllers)
 2. [Web Page - Estrutura].  
   - 2.1 [Web Page - Estrutura].   
   - 2.2 [Web Page - Estrutura].
@@ -113,7 +113,7 @@ Esse theme contém 6 pastas, a seguir mencionamos a sua funcionalidade e seu con
 ###  1.5 views
 Contém os arquivos de visualização (são arquivos front-end).
 > [!NOTE]
-> Toda consulta ao bando de dados é feita no arquivos [controllers](#13-controllers)
+> Toda consulta ao banco de dados é feita no arquivos [controllers](#13-controllers)
 > e essa informação vai para os arquivos na pasta **views** (arquivos front-end). 
 
   - **Browse**
