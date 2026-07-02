@@ -92,14 +92,19 @@ Esse theme contém 6 pastas, a seguir mencionamos a sua funcionalidade e seu con
 
 ###  1.5 views
 Contém os arquivos de visualização (são arquivos front-end).
-> [!INFO]
+> [!NOTE]
 > Toda consulta ao bando de dados é feita no arquivos [controllers](#13-controllers)
-> e essa informação vai para os arquivos na pasta views (arquivos front-end). 
+> e essa informação vai para os arquivos na pasta **views** (arquivos front-end). 
 
-    - *Browse*
-    - 2
-    - 3
-
+  - **Browse**
+  - **Contact**
+  - **Details**
+  - **Form**
+  - **Gallery**
+  - **Macusp**
+  - **PageFormat**
+  - **pages**
+    
 > [!CAUTION]
 > Como vas
 
