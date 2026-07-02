@@ -23,7 +23,7 @@ Esse theme contém 6 pastas, a seguir mencionamos a sua funcionalidade e seu con
     - **macusp.css**: arquivo que contém os estilos con relação ao theme macusp. 
   - **pawtucket/graphics/**: contém os gráficos mostrados do theme, como arquivos de imagens.    
 
-### 1.2 *conf: 
+### 1.2 conf: 
   - **app.conf**
   - **assets.conf**
   - **browse.conf**   
@@ -65,15 +65,15 @@ Esse theme contém 6 pastas, a seguir mencionamos a sua funcionalidade e seu con
 
   - **InfoController.php** 
   Arquivo controller responsável pelos quadros de informação mostrados quando o usuário fizer click no 
-  icono <span class='glyphicon glyphicon-info-sign'></span>, 
-  por exemplo, na página de [Tarsila do Amaral](http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/6657) temos obras, exposições e publicações con o icono de info 
+  icono **(i)**. 
+  Por exemplo, na página de [Tarsila do Amaral](http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/6657) temos obras, exposições e publicações con o icono de info 
   onde o resultado é mostrado na parte direita da webpage.
 
   - **IntroController.php**
   - **MacuspSearchController.php**    
   - **pageController.php**
   - **SearchController.php**
-  - **ScanController.php**
+  - **ScanController.php**  
     
   - *locale*
 
