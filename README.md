@@ -105,20 +105,72 @@ Contém os arquivos de visualização (são arquivos front-end).
 > Toda consulta ao banco de dados é feita no arquivos [controllers](#13-controllers)
 > e essa informação vai para os arquivos na pasta **views** (arquivos front-end). 
 
-  - **Browse** 
+  - **Browse**: 
   - **Contact**
   - **Details**
   - **Form**
   - **Gallery**
   - **Macusp**
-  - **PageFormat**
+  - **PageFormat**: Arquivos da estrutura da página web (header, footer, etc...)
   - **pages**
   - **scan**
   - **search**
 
 ## 2- Webpage - Estrutura
+### 2.1 Configuração de Estilos (css)
+As modificações feita foram nos arquivos /assets/css/main.css e /assets/css/macusp.css. 
+Esses arquivos e bibliotecas usadas no tema, devem ser declaradas no arquivo de configuração 
+conf/assets.conf
 
-## 3- Agregando Idiomas
+    # Theme-specific asset (js, css) configuration
+ 
+ 
+    minification = 0
+
+    themePackages = {
+      # -----------------------
+      pawtucket = {
+        css = css/main.css:100,
+        macusp = css/macusp.css:100, 
+        carrousel = css/carrousel.css, 
+        banner = css/macusp-banner.css:100, 
+        fonts = css/fonts.css,
+        fontAwesome = css/Font-Awesome/css/fontawesome-all.css, 
+    #		fontjs = css/fontawesomenew/js/fontawesome-all.min.js,
+        themecss = css/theme.css:200
+      }
+      # -----------------------
+    }
+
+    themeLoadSets = {
+      #
+      # Libraries listed in "_default" are always loaded (whether or not they have been
+      # registered in code to load), are loaded in the order listed and are always 
+      # loaded first
+      #
+      _default = [
+        pawtucket/css, pawtucket/macusp, pawtucket/carrousel, pawtucket/banner, pawtucket/fonts, pawtucket/themecss, pawtucket/fontAwesome #, pawtucket/fontjs  
+      ]
+    }
+
+Em themePackages and themeLoadSets foram definidos as variáveis css e macusp para que os estilos sejam usadas 
+no momento da execução do tema MACUSP. 
+
+### 2.3 Header 
+
+### 2.4 Footer
+
+### 3- Pagina Home
+
+## 4- Agregando Idiomas
+
+
+
+## 5- Templates (items)
+
+
+
+
     
 > [!CAUTION]
 > Como vas
