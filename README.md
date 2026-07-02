@@ -160,10 +160,10 @@ A estrutura foi mantida na maior parte, as modificações feitas foram duas.
 Implementamos dois arquivos para fazer os menus de idiomas e de navegação 
 (*WORKS - ARTISTS - EXHIBITIONS - ADVANCED SEARCH*).     
     
-  -**macusp-flags**: (recomendamos não mexer), nesse arquivo listamos todos os idiomas configurados no sistema
+  - **macusp-flags**: (recomendamos não mexer), nesse arquivo listamos todos os idiomas configurados no sistema
     para fixar cual é o idioma principal.     
     
-  -**macusp-menuitems.php**: é responsável do menu (*WORKS - ARTISTS - EXHIBITIONS - ADVANCED SEARCH*).      
+  - **macusp-menuitems.php**: é responsável do menu (*WORKS - ARTISTS - EXHIBITIONS - ADVANCED SEARCH*).      
 
 ### 2.3 Footer
 
