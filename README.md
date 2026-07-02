@@ -133,32 +133,19 @@ As modificações feita foram nos arquivos /assets/css/main.css e /assets/css/ma
 Esses arquivos e bibliotecas usadas no tema, devem ser declaradas no arquivo de configuração 
 conf/assets.conf
 
-    # Theme-specific asset (js, css) configuration
- 
- 
-    minification = 0
-
-    themePackages = {
-      # -----------------------
+    themePackages = {      
       pawtucket = {
         css = css/main.css:100,
         macusp = css/macusp.css:100, 
         carrousel = css/carrousel.css, 
         banner = css/macusp-banner.css:100, 
         fonts = css/fonts.css,
-        fontAwesome = css/Font-Awesome/css/fontawesome-all.css, 
-    #		fontjs = css/fontawesomenew/js/fontawesome-all.min.js,
+        fontAwesome = css/Font-Awesome/css/fontawesome-all.css,     
         themecss = css/theme.css:200
       }
-      # -----------------------
     }
 
-    themeLoadSets = {
-      #
-      # Libraries listed in "_default" are always loaded (whether or not they have been
-      # registered in code to load), are loaded in the order listed and are always 
-      # loaded first
-      #
+    themeLoadSets = {    
       _default = [
         pawtucket/css, pawtucket/macusp, pawtucket/carrousel, pawtucket/banner, pawtucket/fonts, pawtucket/themecss, pawtucket/fontAwesome #, pawtucket/fontjs  
       ]
