@@ -2,38 +2,29 @@
 
 Esse é um tema (theme) "MACUSP" para o pawtucket2 - collectiveaccess. 
 O pawtucket2 é a interface para o usuario final do acervo online MACUSP. 
-A seguir é descrito em detalhes a funcionalidade de esse theme. 
+A seguir é descrito em detalhes a funcionalidade de esse tema. 
 
 O Conteudo está dividido nas seguintes seções: 
 
-1. [Conteúdo ](#1--conteudo-do-theme-macusp).  
+1. [Conteúdo ](#1--conteudo-do-tema-macusp).  
     - [assets](#11-assets)
     - [conf](#12-conf)
     - [controllers](#13-controllers)
-2. [Web Page - Estrutura].  
-    - [Web Page - Estrutura].   
-    - [Web Page - Estrutura].
-3. Agregando um idioma mais [Link Text](#macusp). 
-4. [Conteúdo ](#1--conteudo-do-theme-macusp).  
-    - [assets](#11-assets)
-    - [conf](#12-conf)
-  - [controllers](#13-controllers)
-5. [Web Page - Estrutura].  
-  _ [Web Page - Estrutura].   
-  _ [Web Page - Estrutura].
-5. Agregando um idioma mais [Link Text](#macusp). 
+2. [Web Page - Estrutura](#2--webpage---estrutura).      
+3. [Agregando Idiomas](#3--agregando-idiomas). 
 
 
 
-## 1- Conteudo do theme MACUSP
-Esse theme contém 6 pastas, a seguir mencionamos a sua funcionalidade e seu conteudo: 
+## 1- Conteudo do tema MACUSP
+
+Esse tema contém 6 pastas, a seguir mencionamos a sua funcionalidade e seu conteudo: 
 ### 1.1 assets: 
   contem os arquivos (logos e gráficos) de imagens e de estilos (css). 
 
   - **pawtucket/css/**: contém a lista de arquivos de estilos (css). Nesse pastas dois arquivos são importantes: main.css e macusp.css. 
     - **main.css**: arquivo principal de pawtucket2; nesse arquivo foi agregado as cores do macusp.  
-    - **macusp.css**: arquivo que contém os estilos con relação ao theme macusp. 
-  - **pawtucket/graphics/**: contém os gráficos mostrados do theme, como arquivos de imagens.    
+    - **macusp.css**: arquivo que contém os estilos con relação ao tema macusp. 
+  - **pawtucket/graphics/**: contém os gráficos mostrados do tema, como arquivos de imagens.    
 
 ### 1.2 *conf: 
   - **app.conf**
@@ -102,8 +93,7 @@ Esse theme contém 6 pastas, a seguir mencionamos a sua funcionalidade e seu con
       - messages.mo (arquivo codificado)
    - pt_BR
       - messages.po (arquivo contendo as traduções)
-      - messages.mo (arquivo codificado)
-    
+      - messages.mo (arquivo codificado)    
 
    os arquivos messages.mo são compilados a partir dos arquivos messages.po com, usando o seguinte comando (no Ubuntu): 
   
@@ -115,7 +105,7 @@ Contém os arquivos de visualização (são arquivos front-end).
 > Toda consulta ao banco de dados é feita no arquivos [controllers](#13-controllers)
 > e essa informação vai para os arquivos na pasta **views** (arquivos front-end). 
 
-  - **Browse**
+  - **Browse** 
   - **Contact**
   - **Details**
   - **Form**
@@ -123,6 +113,12 @@ Contém os arquivos de visualização (são arquivos front-end).
   - **Macusp**
   - **PageFormat**
   - **pages**
+  - **scan**
+  - **search**
+
+## 2- Webpage - Estrutura
+
+## 3- Agregando Idiomas
     
 > [!CAUTION]
 > Como vas
