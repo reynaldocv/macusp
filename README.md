@@ -23,7 +23,7 @@ Esse theme contém 6 pastas, a seguir mencionamos a sua funcionalidade e seu con
     - **macusp.css**: arquivo que contém os estilos con relação ao theme macusp. 
   - **pawtucket/graphics/**: contém os gráficos mostrados do theme, como arquivos de imagens.    
 
-### 1.2 conf: 
+### 1.2 *conf: 
   - **app.conf**
   - **assets.conf**
   - **browse.conf**   
@@ -54,8 +54,8 @@ Esse theme contém 6 pastas, a seguir mencionamos a sua funcionalidade e seu con
   - **DetailController.php**
   Arquivo controller responsável pela exhibição de cada artista (artists), coletivo (groups), obra (works), exposição (exhibitions) e publicação (publications) :
       - obras - works [index.php/Detail/works/38512](http://localhost/pawtucket/index.php/Detail/works/38512). 
-      - artistas - artists [index.php/Detail/artists/6657](http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/6657). 
-      - coletivos - groups [index.php/Detail/artists/5023](http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/5023). 
+      - artistas - artists [index.php/Detail/artists/5023](http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/5023). 
+      - coletivos - groups [index.php/Detail/artists/6657](http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/6657). 
       - exposições - exhibitions [index.php/Detail/exhibitions/2524](http://143.107.130.173/admacervo/macusp/index.php/Detail/exhibitions/2524). 
        - publicações - publications [index.php/Detail/publications/1296](http://143.107.130.173/admacervo/macusp/index.php/Detail/publications/1296)
 
@@ -64,16 +64,24 @@ Esse theme contém 6 pastas, a seguir mencionamos a sua funcionalidade e seu con
 
 
   - **InfoController.php** 
-  Arquivo controller responsável pelos quadros de informação mostrados quando o usuário fizer click no 
-  icono **(i)**. 
-  Por exemplo, na página de [Tarsila do Amaral](http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/6657) temos obras, exposições e publicações con o icono de info 
+  Arquivo controller responsável pelos quadros de informação mostrados quando o usuário faz click no 
+  icono (i), 
+  por exemplo, na página de [Tarsila do Amaral](http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/5023) temos obras, exposições e publicações con o icono de info 
   onde o resultado é mostrado na parte direita da webpage.
 
   - **IntroController.php**
-  - **MacuspSearchController.php**    
-  - **pageController.php**
+  Arquivo controller responsável pelas paginas de inicios 
+      - obras -works [index.php/Intro/works](http://143.107.130.173/admacervo/macusp/index.php/Intro/works). 
+      - artistas - artists [index.php/Intro/artists](http://143.107.130.173/admacervo/macusp/index.php/Intro/artists). 
+      - exposições - exhibitions [index.php/Intro/exhibitions](http://143.107.130.173/admacervo/macusp/index.php/Intro/exhibitions). 
+
+> [!IMPORTANT]
+> O arquivo de configuração dele é o macusp_frontpage.conf onde é declarado: works, artists e exhibitions.  
+
   - **SearchController.php**
-  - **ScanController.php**  
+  - **MacuspSearchController.php**    
+  - **pageController.php**  
+  - **ScanController.php**
     
   - *locale*
 
