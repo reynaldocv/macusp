@@ -85,9 +85,17 @@ Esse tema contém 6 pastas, a seguir mencionamos a sua funcionalidade e seu cont
 > O arquivo de configuração dele é o macusp_frontpage.conf onde é declarado: works, artists e exhibitions.  
 
   - **SearchController.php**
+  Arquivo controller responsável pela busca de informacão. Ele retorna o resultados das buscas.
+  Também é responsável do multisearch (barra de busca coletiva do menu). 
+
   - **MacuspSearchController.php**    
+  Arquivo controller, similar ao SearchController, onde ele retorna o resultados das buscas com o icono info (i).
+
   - **pageController.php**  
+  Arquivo controller focado em criar novas páginas web.
+  
   - **ScanController.php**
+  Arquivo controller focado nas buscas avançadas de obras, artistas e exposições (*works*, *artists* e *exhibitions*). 
     
 ###  1.4 locale
  Nessa pasta está os arquivos dos idiomas. Cada subpasta contém dois documentos: 
