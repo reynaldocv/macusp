@@ -10,10 +10,10 @@ O Conteudo está dividido nas seguintes seções:
     - [assets](#11-assets)
     - [conf](#12-conf)
     - [controllers](#13-controllers)
+    - [locale](#14-locale)
+    - [views](#15-views)    
 2. [Web Page - Estrutura](#2--webpage---estrutura).      
 3. [Agregando Idiomas](#3--agregando-idiomas). 
-
-
 
 ## 1- Conteudo do tema MACUSP
 
