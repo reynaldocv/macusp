@@ -91,7 +91,7 @@ Esse theme contém 6 pastas, a seguir mencionamos a sua funcionalidade e seu con
       - messages.mo (arquivo codificado)
     
 
-   o arquivo messages.mo é compilado a partir do message.po com o seguinte comando (no Ubuntu): 
+   os arquivos messages.mo são compilados a partir dos arquivos messages.po com, usando o seguinte comando (no Ubuntu): 
   
       msgfmt messages.po -o messages.mo 
 
