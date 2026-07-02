@@ -167,6 +167,7 @@ Implementamos dois arquivos para fazer os menus de idiomas e de navegação
     
     -**macusp-flags**: (recomendamos não mexer), nesse arquivo listamos todos os idiomas configurados no sistema
     para fixar cual é o idioma é o principal e mostrar.     
+    
     -**macusp-menuitems.php** 
 
 ### 2.3 Footer
