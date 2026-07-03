@@ -251,6 +251,9 @@ graph TD
     Home --> Exhibitions[Exposições]    
     Home --> MultiSearch[Busca Geral]
     Home --> AdvancedSearch[Busca Avançãda]
+    Works --> ViewWorks[Ver todos as Obras]
+    Artists --> ViewArtists[Ver todos os Artistas]
+    Exhibitions --> ViewExhibitions[Ver todos as Exposições]
     
     %% Definición de los enlaces
     click Home "http://143.107.130.173/admacervo/macusp/index.php" "<b>Views</b>: Front" _blank
