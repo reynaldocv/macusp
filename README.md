@@ -268,6 +268,7 @@ graph TD
     VP2 --> M4[Líder de Sistemas]
 ```
 
+
 ```mermaid
 graph TD
     CEO[Director Ejecutivo] --> VP1[VP Tecnología]
