@@ -268,6 +268,16 @@ graph TD
     VP2 --> M4[Líder de Sistemas]
 ```
 
+```mermaid
+graph TD
+    CEO[Director Ejecutivo] --> VP1[VP Tecnología]
+    CEO --> VP2[VP Marketing]
+
+    %% Definición de los enlaces
+    click CEO "https://github.com" "Visitar perfil de GitHub" _blank
+    click VP1 "https://google.com" "Ir a soporte" _blank
+```
+
 
 > [!CAUTION]
 > Como vas
