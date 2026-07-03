@@ -245,11 +245,11 @@ Here is a simple flow chart:
 ```mermaid
 graph TD
     %% Parte superior e inferior del primer puesto
-    home["<a href='http://143.107.130.173/admacervo/macusp/index.php'> Home </a> <br> <strong> Controllers: </strong> asdf <br> <strong> Views: </strong>"]
-    works["<a href='http://143.107.130.173/admacervo/macusp/index.php/Intro/works'>Obras</a> <br> <strong> Controllers: </strong> asdf <br> <strong> Views: </strong>"]
-    artists["<a href='http://143.107.130.173/admacervo/macusp/index.php/Intro/works'>Artistas</a> <br> <strong> Controllers: </strong> asdf <br> <strong> Views: </strong>"]
-    exposições["<a href='http://143.107.130.173/admacervo/macusp/index.php/Intro/works'>Exposições</a> <br> <strong> Controllers: </strong> asdf <br> <strong> Views: </strong>"]
-    buscaGeral["<a href='https://link.com'>Home</a> <br> <strong> Controllers: </strong> asdf <br> <strong> Views: </strong>"]
+    home["        <a href='http://143.107.130.173/admacervo/macusp/index.php'> Home </a>                 <br> Controllers: asdf <br> Views: "]
+    works["       <a href='http://143.107.130.173/admacervo/macusp/index.php/Intro/works'>Obras</a>      <br> Controllers: asdf <br> Views: "]
+    artists["     <a href='http://143.107.130.173/admacervo/macusp/index.php/Intro/artists'>Artistas</a>   <br> Controllers: asdf <br> Views:"]
+    exposições["  <a href='http://143.107.130.173/admacervo/macusp/index.php/Intro/exhibitions'>Exposições</a> <br> <strong> Controllers: </strong> asdf <br> Views:"]
+    buscaGeral["  <a href='https://link.com'>Home</a> <br> <strong> Controllers: </strong> asdf <br> <strong> Views: </strong>"]
     busca["<a href='https://link.com'>Home</a> <br> <strong> Controllers: </strong> asdf <br> <strong> Views: </strong>"]
     
     %% Conexión del organigrama (une la parte inferior de uno con la superior del otro)
