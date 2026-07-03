@@ -238,13 +238,6 @@ São um arquivo por cada idioma ativado, nesse caso só temos dois arquivos:
 
 Here is a simple flow chart:
 
-```mermaid
-graph TD;
-    [Home - ]-->[hola //comofda];
-    [Home - ]-->[holaq //comofdaasd];
-    B-->D;
-    C-->D;
-```
 
 
 ```mermaid
