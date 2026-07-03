@@ -264,6 +264,10 @@ graph TD
     works --> viewWorks
     artists --> viewArtists    
     exhibitions --> viewExhibitions
+    advancedSearch --> asWorks
+    advancedSearch --> asArtists
+    advancedSearch -----> asExhibitions
+
 
     %% Estilos para que parezcan una sola pieza
     style home fill:#111,stroke:#333,color:#fff
