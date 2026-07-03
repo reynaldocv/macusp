@@ -246,7 +246,7 @@ Here is a simple flow chart:
 
 ```mermaid
 graph TD
-    CEO[Home <br><b>Views<b>: Front] --> Works[Obras <br> <b>Controllers<b>: Browse <br> <b>Views<b>: Browse]
+    CEO[Home <br><b>Views<b>: Front] --> Works[Obras <br> <b>Controllers<b>: Browse <br> <b>Views<b>: Browse <br>[link](http://143.107.130.173/admacervo/macusp/index.php/)]
     CEO --> VP2[VP Tecnología]
     
     VP1 --> M1[Gerente de Ventas<br><b>Controller</b>]
