@@ -243,7 +243,7 @@ São um arquivo por cada idioma ativado, nesse caso só temos dois arquivos:
 Here is a simple flow chart:
 
 ```mermaid
-graph TD
+graph LR
     %% Parte superior e inferior del primer puesto
     home["           <a href='http://143.107.130.173/admacervo/macusp/index.php'> Home </a> <br> Views: Front, pageFormat"]
     works["          <a href='http://143.107.130.173/admacervo/macusp/index.php/Intro/works'>Obras</a>      <br> Controllers: Intro <br> Views: Macusp"]
@@ -265,7 +265,7 @@ graph TD
     artists --> viewArtists    
     exhibitions --> viewExhibitions
     advancedSearch ---> asWorks
-    advancedSearch ----> asArtists
+    advancedSearch ---> asArtists
     advancedSearch -----> asExhibitions
 
 
