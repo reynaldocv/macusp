@@ -242,6 +242,23 @@ São um arquivo por cada idioma ativado, nesse caso só temos dois arquivos:
 
 Here is a simple flow chart:
 
+```mermaid
+graph TD
+    %% Parte superior e inferior del primer puesto
+    Home[Home] --- A2["👤 <a href='https://link.com'>Juan Pérez</a>"]
+    
+    %% Parte superior e inferior del segundo puesto
+    B1[Gerente TI] --- B2["📂 <a href='https://link.com'>Ver Equipo</a>"]
+    
+    %% Conexión del organigrama (une la parte inferior de uno con la superior del otro)
+    A2 --> B1
+
+    %% Estilos para que parezcan una sola pieza
+    style A1 fill:#333,stroke:#333,color:#fff
+    style A2 fill:#fff,stroke:#333
+    style B1 fill:#666,stroke:#666,color:#fff
+    style B2 fill:#fff,stroke:#666
+```
 
 
 ```mermaid
