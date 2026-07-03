@@ -245,7 +245,7 @@ graph TD
     CEO[Director Ejecutivo / CEO] --> VP1[VP Operaciones]
     CEO --> VP2[VP Tecnología]
     
-    VP1 --> M1[Gerente de Ventas//**hola**]
+    VP1 --> M1[Gerente de Ventas<br><b>Controller</b>]
     VP1 --> M2[Gerente de Logística]
     
     VP2 --> M3[Líder de Desarrollo]
