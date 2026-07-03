@@ -267,9 +267,9 @@ graph TD
 
     %% Estilos para que parezcan una sola pieza
     style home fill:#111,stroke:#333,color:#fff
-    style works fill:#fff,stroke:#333
-    style artists fill:#666,stroke:#666,color:#fff
-    style exhibitions fill:#fff,stroke:#666
+    style works fill:#222,stroke:#333
+    style artists fill:#222,stroke:#666,color:#fff
+    style exhibitions fill:#222,stroke:#666
 ```
 
 
