@@ -246,14 +246,17 @@ Here is a simple flow chart:
 
 ```mermaid
 graph TD
-    Home[Home <br><b>Views<b>: Front] --> Works[Obras<br><b>Controllers<b>: Front<br><b>Views<b>: Front]
+    Home[Home] --> Works[Obras]
     Home --> Artists[Artistas]
     Home --> Exhibitions[Exposições]    
     Home --> MultiSearch[Busca Geral]
     Home --> AdvancedSearch[Busca Avançãda]
     
     %% Definición de los enlaces
-    click Home "http://143.107.130.173/admacervo/macusp/index.php" "1<br>2<br>2" _blank
+    click Home        "http://143.107.130.173/admacervo/macusp/index.php" "<b>Controllers</b>:             <br> Views: <br> Front" <br> config: <br> Front" _blank
+    click Works       "http://143.107.130.173/admacervo/macusp/index.php" "<b>Controllers</b>:             <br> Views: <br> Front" <br> config: <br> Front" _blank
+    click Artists     "http://143.107.130.173/admacervo/macusp/index.php" "<b>Controllers</b>:             <br> Views: <br> Front" <br> config: <br> Front" _blank
+    click Exhibitions "http://143.107.130.173/admacervo/macusp/index.php" "<b>Controllers</b>:             <br> Views: <br> Front" <br> config: <br> Front" _blank
     click VP1 "https://google.com" "Ir a soporte" _blank
 
 ```
