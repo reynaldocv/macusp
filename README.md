@@ -259,17 +259,17 @@ graph LR
     asExhibitions["<a href='http://143.107.130.173/admacervo/macusp/index.php/Scan/advanced/exhibitions'> Busca Exposições </a> <br> Controllers: scan <br>  Views: Scan  "]
     
     %% Conexión del organigrama (une la parte inferior de uno con la superior del otro)
-    home --> works
-    home --> artists
-    home --> exhibitions
-    home --> search
+    home -> works
+    home -> artists
+    home -> exhibitions
+    home -> search
     home --> advancedSearch
     works --> viewWorks
     artists --> viewArtists    
-    exhibitions --> viewExhibitions
-    advancedSearch --> asWorks
-    advancedSearch --> asArtists
-    advancedSearch --> asExhibitions
+    exhibitions -> viewExhibitions
+    advancedSearch -> asWorks
+    advancedSearch -> asArtists
+    advancedSearch -> asExhibitions
 
 
     %% Estilos para que parezcan una sola pieza
