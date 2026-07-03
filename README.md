@@ -182,7 +182,7 @@ São um arquivo por cada idioma ativado, nesse caso só temos dois arquivos:
   
 ## 4- Agregando Idiomas
 
-  ###pasos a seguir (como exemplo agregaremos o idioma es_ES(espanhol)): 
+  ### pasos a seguir (como exemplo agregaremos o idioma es_ES(espanhol)): 
 
   - **Primeiro** Aquivo configuração: declarar os idiomas no arquivo {pawtucket2}/app/config/app.conf
 
@@ -198,31 +198,31 @@ São um arquivo por cada idioma ativado, nesse caso só temos dois arquivos:
 
     - O variável "flags:pawtucket:language" deve ter o acrônimo do idioma na pasta que estiver.  
 
-         msgid "flags:pawtucket:language"
-         msgstr "en_US"
+          msgid "flags:pawtucket:language"
+          msgstr "en_US"
 
     - As variáveis "flags:lang:{acrônimo}" deve ter todos os acrônimos dos idioma declarados no arquivo de configuração e o nome do idioma, no seu respectivo idioma. 
 
-         msgid "flags:lang:{acrônimo}"
-         msgstr "{nombe do idioma}"
+          msgid "flags:lang:{acrônimo}"
+          msgstr "{nombe do idioma}"
 
     Por exemplo, no arquivo {macusp}/locale/en_US/messages.po devemos declarar as seguintes variáveis:
 
-      #definimos a variável "flags:lang:language" com o acrônimo do seu respectivo idioma (nesse caso en_US). 
+          #definimos a variável "flags:lang:language" com o acrônimo do seu respectivo idioma (nesse caso en_US). 
 
-      msgid "flags:pawtucket:language"
-      msgstr "es_ES"
+          msgid "flags:pawtucket:language"
+          msgstr "es_ES"
 
-      #definimos as variáveis "flags:lang:{acrônimo}" para cada idioma e seu respectivo nome en inglês. 
+          #definimos as variáveis "flags:lang:{acrônimo}" para cada idioma e seu respectivo nome en inglês. 
 
-      msgid "flags:lang:en_US"
-      msgstr "Inglés"
+          msgid "flags:lang:en_US"
+          msgstr "Inglés"
 
-      msgid "flags:lang:pt_BR"
-      msgstr "Portugués"
+          msgid "flags:lang:pt_BR"
+          msgstr "Portugués"
 
-      msgid "flags:lang:es_ES"
-      msgstr "Español"
+          msgid "flags:lang:es_ES"
+          msgstr "Español"
 
     Fazer esses pasos para todos os idiomas declaramos. 
 
