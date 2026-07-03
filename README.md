@@ -264,8 +264,8 @@ graph TD
     works --> viewWorks
     artists --> viewArtists    
     exhibitions --> viewExhibitions
-    advancedSearch --> asWorks
-    advancedSearch --> asArtists
+    advancedSearch ---> asWorks
+    advancedSearch ----> asArtists
     advancedSearch -----> asExhibitions
 
 
