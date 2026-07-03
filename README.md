@@ -264,9 +264,9 @@ graph LR
     works --> viewWorks
     artists --> viewArtists    
     exhibitions --> viewExhibitions
-    advancedSearch ---> asWorks
-    advancedSearch ---> asArtists
-    advancedSearch -----> asExhibitions
+    advancedSearch --> asWorks
+    advancedSearch --> asArtists
+    advancedSearch --> asExhibitions
 
 
     %% Estilos para que parezcan una sola pieza
