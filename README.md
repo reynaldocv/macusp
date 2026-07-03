@@ -253,9 +253,9 @@ graph TD
     Home --> AdvancedSearch[Busca Avançãda]
     
     %% Definición de los enlaces
-    click Home "http://143.107.130.173/admacervo/macusp/index.php" "<b>Views</b>: Front _blank
-    click Works "http://143.107.130.173/admacervo/macusp/index.php" "<b>Controllers</b>: BrowserController <br> Views: Browser <br> config: browse.conf <br> Front" _blank
-    click Artists "http://143.107.130.173/admacervo/macusp/index.php" "<b>Controllers</b>:             <br> Views: Front <br> config:  Front" _blank
+    click Home "http://143.107.130.173/admacervo/macusp/index.php" "<b>Views</b>: Front" _blank
+    click Works "http://143.107.130.173/admacervo/macusp/index.php" "<b>Controllers</b>: BrowserController <br> Views: Browser <br> config: browse.conf" _blank
+    click Artists "http://143.107.130.173/admacervo/macusp/index.php" "<b>Controllers</b>:             <br> Views: Front <br> config: Front" _blank
     click Exhibitions "http://143.107.130.173/admacervo/macusp/index.php" "<b>Controllers</b>:             <br> Views: Front <br> config: Front" _blank
     click VP1 "https://google.com" "Ir a soporte" _blank
 
