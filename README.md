@@ -247,6 +247,18 @@ graph TD;
 ```
 
 
+```mermaid
+graph TD
+    CEO[Director Ejecutivo / CEO] --> VP1[VP Operaciones]
+    CEO --> VP2[VP Tecnología]
+    
+    VP1 --> M1[Gerente de Ventas]
+    VP1 --> M2[Gerente de Logística]
+    
+    VP2 --> M3[Líder de Desarrollo]
+    VP2 --> M4[Líder de Sistemas]
+```
+
     
 > [!CAUTION]
 > Como vas
