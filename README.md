@@ -18,6 +18,10 @@ O Conteudo está dividido nas seguintes seções:
     - [footer](#22-footer)
 3. [Agregando Idiomas](#3--agregando-idiomas). 
 
+4. [Agregando Idiomas](#3--agregando-idiomas). 
+
+5. [Organigrama](#5--organigrama). 
+
 ## 1- Conteudo do tema MACUSP
 
 Esse tema contém 6 pastas, a seguir mencionamos a sua funcionalidade e seu conteudo: 
@@ -234,7 +238,7 @@ São um arquivo por cada idioma ativado, nesse caso só temos dois arquivos:
   - **Quarto**: Procurar ma imagem tipo .svg de tamanho 30x30 e copiar na pasta {pawtucket2}/assets/graphics/flags/
   com o nome do {acronimo}.svg (nesse caso sería es_ES.svg)
 
-## 5- Templates (items)
+## 5- Organigrama 
 
 Here is a simple flow chart:
 
@@ -242,7 +246,7 @@ Here is a simple flow chart:
 
 ```mermaid
 graph TD
-    CEO[Director Ejecutivo / CEO] --> VP1[VP Operaciones]
+    CEO[Home <br><b>Views<b>: Front] --> Works[Obras <br> <b>Controllers<b>: Browse <br> <b>Views<b>: Browse]
     CEO --> VP2[VP Tecnología]
     
     VP1 --> M1[Gerente de Ventas<br><b>Controller</b>]
