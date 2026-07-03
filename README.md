@@ -245,12 +245,15 @@ Here is a simple flow chart:
 ```mermaid
 graph TD
     %% Parte superior e inferior del primer puesto
-    home["           <a href='http://143.107.130.173/admacervo/macusp/index.php'> Home </a>                 <br> Controllers: asdf <br> Views: "]
-    works["          <a href='http://143.107.130.173/admacervo/macusp/index.php/Intro/works'>Obras</a>      <br> Controllers: asdf <br> Views: "]
-    artists["        <a href='http://143.107.130.173/admacervo/macusp/index.php/Intro/artists'>Artistas</a>   <br> Controllers: asdf <br> Views:"]
-    exhibitions["    <a href='http://143.107.130.173/admacervo/macusp/index.php/Intro/exhibitions'>Exposições</a> <br>  Controllers: asdf <br> Views:"]
-    search["         <a href='https://link.com'>Home</a> <br>  Controllers: asdf <br>  Views: "]
-    advancedSearch[" <a href='https://link.com'>Home</a> <br>  Controllers: </strong> asdf <br>  Views: "]
+    home["           <a href='http://143.107.130.173/admacervo/macusp/index.php'> Home </a> <br> Views: - Front <br> - pageFormat"]
+    works["          <a href='http://143.107.130.173/admacervo/macusp/index.php/Intro/works'>Obras</a>      <br> Controllers: Intro <br> Views: Macusp"]
+    artists["        <a href='http://143.107.130.173/admacervo/macusp/index.php/Intro/artists'>Artistas</a>  <br> Controllers: Intro <br> Views: Macusp"]
+    exhibitions["    <a href='http://143.107.130.173/admacervo/macusp/index.php/Intro/exhibitions'>Exposições</a> <br> Controllers: Intro <br> Views: Macusp"]
+    search["         <a href='https://link.com'> Busca Geral </a> <br>  Controllers: asdf <br>  Views: "]
+    advancedSearch[" <a href='https://link.com'> Busca Avançada</a> <br>  Controllers: </strong> asdf <br>  Views: "]
+    viewWorks[" <a href='https://link.com'> Ver todos as obras</a> <br>  Controllers: </strong> asdf <br>  Views: "]
+    viewArtists[" <a href='https://link.com'> Ver todos os artistas</a> <br>  Controllers: </strong> asdf <br>  Views: "]
+    viewExhibitions[" <a href='https://link.com'> Ver todos as exposições</a> <br>  Controllers: </strong> asdf <br>  Views: "]
     
     %% Conexión del organigrama (une la parte inferior de uno con la superior del otro)
     home --> works
@@ -258,6 +261,9 @@ graph TD
     home --> exhibitions
     home --> search
     home --> advancedSearch
+    works --> viewWorks
+    artists --> viewArtists    
+    exhibitions --> viewExhibitions
 
     %% Estilos para que parezcan una sola pieza
     style home fill:#333,stroke:#333,color:#fff
