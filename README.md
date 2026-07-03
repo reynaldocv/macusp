@@ -240,8 +240,8 @@ Here is a simple flow chart:
 
 ```mermaid
 graph TD;
-    A-->B;
-    A-->C;
+    [Home - ]-->[hola //comofda];
+    [Home - ]-->[holaq //comofdaasd];
     B-->D;
     C-->D;
 ```
