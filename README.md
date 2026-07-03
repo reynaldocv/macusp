@@ -245,13 +245,19 @@ Here is a simple flow chart:
 ```mermaid
 graph TD
     %% Parte superior e inferior del primer puesto
-    Home["<a href='https://link.com'>Home</a> <br> <strong> Controllers: </strong> asdf <br> <strong> Views: </strong>"]
-    
-    %% Parte superior e inferior del segundo puesto
-    B1[Gerente TI] --- B2["📂 <a href='https://link.com'>Ver Equipo</a>"]
+    home["<a href='http://143.107.130.173/admacervo/macusp/index.php'> Home </a> <br> <strong> Controllers: </strong> asdf <br> <strong> Views: </strong>"]
+    works["<a href='http://143.107.130.173/admacervo/macusp/index.php/Intro/works'>Obras</a> <br> <strong> Controllers: </strong> asdf <br> <strong> Views: </strong>"]
+    artists["<a href='http://143.107.130.173/admacervo/macusp/index.php/Intro/works'>Artistas</a> <br> <strong> Controllers: </strong> asdf <br> <strong> Views: </strong>"]
+    exposições["<a href='http://143.107.130.173/admacervo/macusp/index.php/Intro/works'>Exposições</a> <br> <strong> Controllers: </strong> asdf <br> <strong> Views: </strong>"]
+    buscaGeral["<a href='https://link.com'>Home</a> <br> <strong> Controllers: </strong> asdf <br> <strong> Views: </strong>"]
+    busca["<a href='https://link.com'>Home</a> <br> <strong> Controllers: </strong> asdf <br> <strong> Views: </strong>"]
     
     %% Conexión del organigrama (une la parte inferior de uno con la superior del otro)
-    A2 --> B1
+    home --> works
+    home --> artists
+    home --> exhibitions
+    home --> busca
+    home --> buscaGeral
 
     %% Estilos para que parezcan una sola pieza
     style A1 fill:#333,stroke:#333,color:#fff
