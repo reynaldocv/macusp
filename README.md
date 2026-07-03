@@ -260,10 +260,10 @@ graph TD
     home --> buscaGeral
 
     %% Estilos para que parezcan una sola pieza
-    style A1 fill:#333,stroke:#333,color:#fff
-    style A2 fill:#fff,stroke:#333
-    style B1 fill:#666,stroke:#666,color:#fff
-    style B2 fill:#fff,stroke:#666
+    style home fill:#333,stroke:#333,color:#fff
+    style works fill:#fff,stroke:#333
+    style artists fill:#666,stroke:#666,color:#fff
+    style exhibitions fill:#fff,stroke:#666
 ```
 
 
