@@ -266,7 +266,7 @@ graph TD
     exhibitions --> viewExhibitions
 
     %% Estilos para que parezcan una sola pieza
-    style home fill:#333,stroke:#333,color:#fff
+    style home fill:#111,stroke:#333,color:#fff
     style works fill:#fff,stroke:#333
     style artists fill:#666,stroke:#666,color:#fff
     style exhibitions fill:#fff,stroke:#666
