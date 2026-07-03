@@ -245,7 +245,7 @@ Here is a simple flow chart:
 ```mermaid
 graph TD
     %% Parte superior e inferior del primer puesto
-    Home["Home ---------------<br>👤 <a href='https://link.com'>Juan Pérez</a>"]
+    Home["<a href='https://link.com'>Home</a> <br> <strong> Controllers: </strong> asdf <br> <strong> Views: </strong>"]
     
     %% Parte superior e inferior del segundo puesto
     B1[Gerente TI] --- B2["📂 <a href='https://link.com'>Ver Equipo</a>"]
