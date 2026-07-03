@@ -254,6 +254,9 @@ graph LR
     viewWorks[" <a href='https://link.com'> Ver todos as obras</a> <br>  Controllers: </strong> asdf <br>  Views: "]
     viewArtists[" <a href='https://link.com'> Ver todos os artistas</a> <br>  Controllers: </strong> asdf <br>  Views: "]
     viewExhibitions[" <a href='https://link.com'> Ver todos as exposições</a> <br>  Controllers: </strong> asdf <br>  Views: "]
+    asWorks[<a href='http://143.107.130.173/admacervo/macusp/index.php/Scan/advanced/works'> Busca - Obras</a> <br>  Controllers: </strong> asdf <br>  Views: "]
+    asArtists[<a href='http://143.107.130.173/admacervo/macusp/index.php/Scan/advanced/artists'> Busca Artistas</a> <br>  Controllers: </strong> asdf <br>  Views: "]
+    asExhibitions[<a href='http://143.107.130.173/admacervo/macusp/index.php/Scan/advanced/exhibitions'> Busca Exposições </a> <br>  Controllers: </strong> asdf <br>  Views: "]
     
     %% Conexión del organigrama (une la parte inferior de uno con la superior del otro)
     home --> works
