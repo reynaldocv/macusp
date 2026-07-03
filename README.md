@@ -208,12 +208,14 @@ São um arquivo por cada idioma ativado, nesse caso só temos dois arquivos:
 
     Por exemplo, no arquivo {macusp}/locale/en_US/messages.po devemos declarar as seguintes variáveis:
 
-          #definimos a variável "flags:lang:language" com o acrônimo do seu respectivo idioma (nesse caso en_US). 
+          # definimos a variável "flags:lang:language" com o acrônimo 
+          # do seu respectivo idioma (nesse caso en_US). 
 
           msgid "flags:pawtucket:language"
           msgstr "es_ES"
 
-          #definimos as variáveis "flags:lang:{acrônimo}" para cada idioma e seu respectivo nome en inglês. 
+          # definimos as variáveis "flags:lang:{acrônimo}" para cada 
+          # idioma e seu respectivo nome en inglês. 
 
           msgid "flags:lang:en_US"
           msgstr "Inglés"
@@ -232,13 +234,17 @@ São um arquivo por cada idioma ativado, nesse caso só temos dois arquivos:
   - **Quarto**: Procurar ma imagem tipo .svg de tamanho 30x30 e copiar na pasta {pawtucket2}/assets/graphics/flags/
   com o nome do {acronimo}.svg (nesse caso sería es_ES.svg)
 
-
-
-  
-
 ## 5- Templates (items)
 
+Here is a simple flow chart:
 
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
 
 
     
