@@ -245,7 +245,7 @@ Here is a simple flow chart:
 ```mermaid
 graph TD
     %% Parte superior e inferior del primer puesto
-    home["           <a href='http://143.107.130.173/admacervo/macusp/index.php'> Home </a> <br> Views: <br> Front, pageFormat"]
+    home["           <a href='http://143.107.130.173/admacervo/macusp/index.php'> Home </a> <br> Views: Front, pageFormat"]
     works["          <a href='http://143.107.130.173/admacervo/macusp/index.php/Intro/works'>Obras</a>      <br> Controllers: Intro <br> Views: Macusp"]
     artists["        <a href='http://143.107.130.173/admacervo/macusp/index.php/Intro/artists'>Artistas</a>  <br> Controllers: Intro <br> Views: Macusp"]
     exhibitions["    <a href='http://143.107.130.173/admacervo/macusp/index.php/Intro/exhibitions'>Exposições</a> <br> Controllers: Intro <br> Views: Macusp"]
