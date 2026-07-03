@@ -246,38 +246,18 @@ Here is a simple flow chart:
 
 ```mermaid
 graph TD
-    CEO[Home <br><b>Views<b>: Front] --> Works[Obras <br> <b>Controllers<b>: Browse <br> <b>Views<b>: Browse <br>]
-    CEO --> VP2[VP Tecnología]
+    Home[Home <br><b>Views<b>: Front] --> Works[Obras<br><b>Controllers<b>: Front<br><b>Views<b>: Front]
+    Home --> Artists[Artistas]
+    Home --> Exhibitions[Exposições]    
+    Home --> MultiSearch[Busca Geral]
+    Home --> AdvancedSearch[Busca Avançãda]
     
-    VP1 --> M1[Gerente de Ventas<br><b>Controller</b>]
-    VP1 --> M2[Gerente de Logística]
-    
-    VP2 --> M3[Líder de Desarrollo]
-    VP2 --> M4[Líder de Sistemas]
-```
-
-```mermaid
-graph TD
-    CEO[Home <br><b>Views<b>: Front] --> Works[Obras <br> <b>Controllers<b>: Browse <br> <b>Views<b>: Browse <br>[link](http://143.107.130.173/admacervo/macusp/index.php/)]
-    CEO --> VP2[VP Tecnología]
-    
-    VP1 --> M1[Gerente de Ventas<br><b>Controller</b>]
-    VP1 --> M2[Gerente de Logística]
-    
-    VP2 --> M3[Líder de Desarrollo]
-    VP2 --> M4[Líder de Sistemas]
-```
-
-
-```mermaid
-graph TD
-    CEO[Director Ejecutivo] --> VP1[VP Tecnología]
-    CEO --> VP2[VP Marketing]
-
     %% Definición de los enlaces
-    click CEO "https://github.com" "Visitar perfil de GitHub" _blank
+    click Home "http://143.107.130.173/admacervo/macusp/index.php" "1<br>2<br>2" _blank
     click VP1 "https://google.com" "Ir a soporte" _blank
+
 ```
+
 
 
 > [!CAUTION]
