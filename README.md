@@ -182,7 +182,7 @@ São um arquivo por cada idioma ativado, nesse caso só temos dois arquivos:
   
 ## 4- Agregando Idiomas
 
-  ### pasos a seguir (como exemplo agregaremos o idioma es_ES(espanhol)): 
+  ### Passos a seguir (como exemplo agregaremos o idioma es_ES(espanhol)): 
 
   - **Primeiro** Aquivo configuração: declarar os idiomas no arquivo {pawtucket2}/app/config/app.conf
 
@@ -229,12 +229,12 @@ São um arquivo por cada idioma ativado, nesse caso só temos dois arquivos:
 > [!IMPORTANT]
 > Não esquecer de compilar os arquivo messages.po e gerar os messages.mo ([comando no Ubuntu](#14-locale)). 
  
-  - **Quarto**: Procurar un imagem tipo .svg de tamanho 20x20 e copiar na pasta {pawtucket2}/assets/graphics/flags
+  - **Quarto**: Procurar ma imagem tipo .svg de tamanho 30x30 e copiar na pasta {pawtucket2}/assets/graphics/flags/
   com o nome do {acronimo}.svg (nesse caso sería es_ES.svg)
 
+
+
   
-
-
 
 ## 5- Templates (items)
 
