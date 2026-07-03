@@ -163,13 +163,78 @@ Implementamos dois arquivos para fazer os menus de idiomas e de navegação
   - **macusp-flags**: (recomendamos não mexer), nesse arquivo listamos todos os idiomas configurados no sistema
     para fixar cual é o idioma principal.     
     
-  - **macusp-menuitems.php**: é responsável do menu (*WORKS - ARTISTS - EXHIBITIONS - ADVANCED SEARCH*).      
+  - **macusp-menuitems.php**: é responsável da barra de menu (*WORKS - ARTISTS - EXHIBITIONS - ADVANCED SEARCH*).      
 
 ### 2.3 Footer
+O arquivo está localizado no views/pawtucket/pageFormat/pageFooter.php. 
 
 ### 3- Pagina Home
+Os arquivos da página de inicio estão no views/pawtucket/Front 
+([index.php](http://143.107.130.173/admacervo/macusp/))
+São um arquivo por cada idioma ativado, nesse caso só temos dois arquivos: 
+    - front_page_en_US.php 
+    - front_page_pt_BR.php 
 
+> [!IMPORTANT]
+> - Ao adicionar outro idioma, por exemplo es_ES, é só criar un arquivo com o 
+> nome 'front_page_es_ES.php' (recomendamos copiar o arquivo 'front_page_pt_BR.php', mudar de nome para 
+  'front_page_es_ES.php', e fazer a tradução de conteúdo.) 
+  
 ## 4- Agregando Idiomas
+
+  ###pasos a seguir (como exemplo agregaremos o idioma es_ES(espanhol)): 
+
+  - **Primeiro** Aquivo configuração: declarar os idiomas no arquivo {pawtucket2}/app/config/app.conf
+
+      ui_locales = [en_US, pt_BR, es_ES]
+
+  - **Segundo**: Gerar a pasta respectiva do idioma agregado no {macusp}/locale/. Nesse exemplo, devemos criar 
+      a pasta {macusp}/locale/es_ES e seus respectivos arquivos: 
+        - messages.po
+        - messages.mo 
+
+  - **Terceiro**: Aquivos locales: localizados no {macusp}/locale/. Para cada idioma em seu respectivo 
+  arquivo message.po deve ser declarado as seguintes variáveis: 
+
+    - O variável "flags:pawtucket:language" deve ter o acrônimo do idioma na pasta que estiver.  
+
+         msgid "flags:pawtucket:language"
+         msgstr "en_US"
+
+    - As variáveis "flags:lang:{acrônimo}" deve ter todos os acrônimos dos idioma declarados no arquivo de configuração e o nome do idioma, no seu respectivo idioma. 
+
+         msgid "flags:lang:{acrônimo}"
+         msgstr "{nombe do idioma}"
+
+    Por exemplo, no arquivo {macusp}/locale/en_US/messages.po devemos declarar as seguintes variáveis:
+
+      #definimos a variável "flags:lang:language" com o acrônimo do seu respectivo idioma (nesse caso en_US). 
+
+      msgid "flags:pawtucket:language"
+      msgstr "es_ES"
+
+      #definimos as variáveis "flags:lang:{acrônimo}" para cada idioma e seu respectivo nome en inglês. 
+
+      msgid "flags:lang:en_US"
+      msgstr "Inglés"
+
+      msgid "flags:lang:pt_BR"
+      msgstr "Portugués"
+
+      msgid "flags:lang:es_ES"
+      msgstr "Español"
+
+    Fazer esses pasos para todos os idiomas declaramos. 
+
+> [!IMPORTANT]
+> Não esquecer de compilar os arquivo messages.po e gerar os messages.mo ([comando no Ubuntu](#14-locale)). 
+ 
+  - **Quarto**: Procurar un imagem tipo .svg de tamanho 20x20 e copiar na pasta {pawtucket2}/assets/graphics/flags
+  com o nome do {acronimo}.svg (nesse caso sería es_ES.svg)
+
+  
+
+
 
 ## 5- Templates (items)
 
