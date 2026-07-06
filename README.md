@@ -18,6 +18,10 @@ O Conteudo está dividido nas seguintes seções:
     - [footer](#22-footer)
 3. [Agregando Idiomas](#3--agregando-idiomas). 
 
+4. [Agregando Idiomas](#3--agregando-idiomas). 
+
+5. [Organigrama](#5--organigrama). 
+
 ## 1- Conteudo do tema MACUSP
 
 Esse tema contém 6 pastas, a seguir mencionamos a sua funcionalidade e seu conteudo: 
@@ -163,20 +167,121 @@ Implementamos dois arquivos para fazer os menus de idiomas e de navegação
   - **macusp-flags**: (recomendamos não mexer), nesse arquivo listamos todos os idiomas configurados no sistema
     para fixar cual é o idioma principal.     
     
-  - **macusp-menuitems.php**: é responsável do menu (*WORKS - ARTISTS - EXHIBITIONS - ADVANCED SEARCH*).      
+  - **macusp-menuitems.php**: é responsável da barra de menu (*WORKS - ARTISTS - EXHIBITIONS - ADVANCED SEARCH*).      
 
 ### 2.3 Footer
+O arquivo está localizado no views/pawtucket/pageFormat/pageFooter.php. 
 
 ### 3- Pagina Home
+Os arquivos da página de inicio estão no views/pawtucket/Front 
+([index.php](http://143.107.130.173/admacervo/macusp/))
+São um arquivo por cada idioma ativado, nesse caso só temos dois arquivos: 
+    - front_page_en_US.php 
+    - front_page_pt_BR.php 
 
+> [!IMPORTANT]
+> - Ao adicionar outro idioma, por exemplo es_ES, é só criar un arquivo com o 
+> nome 'front_page_es_ES.php' (recomendamos copiar o arquivo 'front_page_pt_BR.php', mudar de nome para 
+  'front_page_es_ES.php', e fazer a tradução de conteúdo.) 
+  
 ## 4- Agregando Idiomas
 
-## 5- Templates (items)
+  ### Passos a seguir (como exemplo agregaremos o idioma es_ES(espanhol)): 
 
+  - **Primeiro** Aquivo configuração: declarar os idiomas no arquivo {pawtucket2}/app/config/app.conf
 
+      ui_locales = [en_US, pt_BR, es_ES]
 
+  - **Segundo**: Gerar a pasta respectiva do idioma agregado no {macusp}/locale/. Nesse exemplo, devemos criar 
+      a pasta {macusp}/locale/es_ES e seus respectivos arquivos: 
+        - messages.po
+        - messages.mo 
 
+  - **Terceiro**: Aquivos locales: localizados no {macusp}/locale/. Para cada idioma em seu respectivo 
+  arquivo message.po deve ser declarado as seguintes variáveis: 
+
+    - O variável "flags:pawtucket:language" deve ter o acrônimo do idioma na pasta que estiver.  
+
+          msgid "flags:pawtucket:language"
+          msgstr "en_US"
+
+    - As variáveis "flags:lang:{acrônimo}" deve ter todos os acrônimos dos idioma declarados no arquivo de configuração e o nome do idioma, no seu respectivo idioma. 
+
+          msgid "flags:lang:{acrônimo}"
+          msgstr "{nombe do idioma}"
+
+    Por exemplo, no arquivo {macusp}/locale/en_US/messages.po devemos declarar as seguintes variáveis:
+
+          # definimos a variável "flags:lang:language" com o acrônimo 
+          # do seu respectivo idioma (nesse caso en_US). 
+
+          msgid "flags:pawtucket:language"
+          msgstr "es_ES"
+
+          # definimos as variáveis "flags:lang:{acrônimo}" para cada 
+          # idioma e seu respectivo nome en inglês. 
+
+          msgid "flags:lang:en_US"
+          msgstr "Inglés"
+
+          msgid "flags:lang:pt_BR"
+          msgstr "Portugués"
+
+          msgid "flags:lang:es_ES"
+          msgstr "Español"
+
+    Fazer esses pasos para todos os idiomas declaramos. 
+
+> [!IMPORTANT]
+> Não esquecer de compilar os arquivo messages.po e gerar os messages.mo ([comando no Ubuntu](#14-locale)). 
+ 
+  - **Quarto**: Procurar ma imagem tipo .svg de tamanho 30x30 e copiar na pasta {pawtucket2}/assets/graphics/flags/
+  com o nome do {acronimo}.svg (nesse caso sería es_ES.svg)
+
+## 5- Organigrama 
+
+Here is a simple flow chart:
+
+```mermaid
+graph LR
+    %% Parte superior e inferior del primer puesto
+    home["           <a href='http://143.107.130.173/admacervo/macusp/index.php'> Home </a> <br> Views: Front, pageFormat"]
+    works["          <a href='http://143.107.130.173/admacervo/macusp/index.php/Intro/works'>Obras</a>      <br> Controllers: Intro <br> Views: Macusp"]
+    artists["        <a href='http://143.107.130.173/admacervo/macusp/index.php/Intro/artists'>Artistas</a>  <br> Controllers: Intro <br> Views: Macusp"]
+    exhibitions["    <a href='http://143.107.130.173/admacervo/macusp/index.php/Intro/exhibitions'>Exposições</a> <br> Controllers: Intro <br> Views: Macusp"]
+    search["         <a href='https://link.com'> Busca Geral </a> <br>  Controllers: MultiSearch <br>  Views: Search "]
+    advancedSearch[" <a href='https://link.com'> Busca Avançada</a> <br>  Controllers: </strong> asdf <br>  Views: "]
+    viewWorks[" <a href='https://link.com'> Ver todos as obras</a> <br>  Controllers: </strong> asdf <br>  Views: "]
+    viewArtists[" <a href='https://link.com'> Ver todos os artistas</a> <br>  Controllers: </strong> asdf <br>  Views: "]
+    viewExhibitions[" <a href='https://link.com'> Ver todos as exposições</a> <br>  Controllers: </strong> asdf <br>  Views: "]
+    asWorks["<a href='http://143.107.130.173/admacervo/macusp/index.php/Scan/advanced/works'> Busca - Obras</a> <br>  Controllers: Scan <br> Views: Scan"]
+    asArtists["<a href='http://143.107.130.173/admacervo/macusp/index.php/Scan/advanced/artists'> Busca - Artistas</a> <br>  Controllers: Scan <br> Views: Scan "]
+    asExhibitions["<a href='http://143.107.130.173/admacervo/macusp/index.php/Scan/advanced/exhibitions'> Busca Exposições </a> <br> Controllers: scan <br>  Views: Scan  "]
     
+    %% Conexión del organigrama (une la parte inferior de uno con la superior del otro)
+    home --> works
+    home --> artists
+    home --> exhibitions
+    home --> search
+    home --> advancedSearch
+    works --> viewWorks
+    artists --> viewArtists    
+    exhibitions --> viewExhibitions
+    advancedSearch --> asWorks
+    advancedSearch --> asArtists
+    advancedSearch --> asExhibitions
+
+
+    %% Estilos para que parezcan una sola pieza
+    style home fill:#111,stroke:#333,color:#fff
+    style works fill:#444,stroke:#333
+    style artists fill:#444,stroke:#666,color:#fff
+    style exhibitions fill:#444,stroke:#666
+```
+
+
+
+
 > [!CAUTION]
 > Como vas
 

@@ -11,6 +11,7 @@
 		<?php			
 			print "<h4>"._t('Enter your search terms in the fields below.')."</h4>";	
 		?>
+
 		
 		<?php print $this->render($vn_view); ?>
 		<?php print $this->render("Scan/advanced_search_results.php"); ?>	
