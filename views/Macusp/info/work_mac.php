@@ -7,6 +7,8 @@ $artist = $item->getWithTemplate(   "<unit relativeTo='ca_entities' restrictToRe
                                         ^ca_entities.preferred_labels.displayname <br>
                                     </unit>");
 
+$vn_id = $item->getWithTemplate("^ca_objects.object_id");
+
 $name = $item->getWithTemplate("^ca_objects.preferred_labels.name");
 
 $imagen = $item->getWithTemplate("^ca_object_representations.media.medium");
@@ -18,7 +20,7 @@ $details = $item->getWithTemplate("<ifdef code='ca_objects.datePeriod.datePeriod
 				</p>
 			</ifdef>"); 
 
-$button = caDetailLink($this->request, _t("More details"),'',$vs_table,$object_id); 
+$button = caDetailLink($this->request, _t("More details"),'', 'ca_objets' ,$vn_id); 
 ?>
 
 

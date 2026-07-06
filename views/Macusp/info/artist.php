@@ -5,10 +5,12 @@
     $title = _t("Artist"); 
 
     $name = $item->get("ca_entities.preferred_labels.displayname");
-
+    
     $numObjets = $item->getWithTemplate("<ifcount code='ca_objects' restrictToTypes='work'>^ca_objects._count </ifcount>"); 
     $objects = "<b>"._t("Number of works avaliable online")."</b><p>$numObjets</p>";
-                        
+    
+    $vn_id = $item->getWithTemplate("^ca_entities.entity_id");
+    
     $vs_data_birth_Place = $item->getWithTemplate("^ca_entities.DadosBiograficos.LocalNascimento.hierarchy.preferred_labels%hierarchyDirection=asc%maxLevelsFromBottom=2%delimiter=_➜_");
     $vs_data_birth_Year = $item->getWithTemplate("<ifdef code='ca_entities.DadosBiograficos.AnoNascimento'>^ca_entities.DadosBiograficos.AnoNascimento</ifdef>"); 
 
