@@ -1,4 +1,4 @@
-# "Macusp" - pawtucket2 - Collectiveaccess 
+theme# "Macusp" - pawtucket2 - Collectiveaccess 
 
 Esse é um tema (theme) "MACUSP" para o pawtucket2 - collectiveaccess. 
 O pawtucket2 é a interface para o usuario final do acervo online MACUSP. 
@@ -16,11 +16,15 @@ O Conteudo está dividido nas seguintes seções:
     - [Configuração dos estilos css](#21-configuração-de-estilos-css)
     - [header](#21-header)
     - [footer](#22-footer)
-3. [Agregando Idiomas](#3--agregando-idiomas). 
+3. [Page Home](#3--pagina-home). 
 
-4. [Agregando Idiomas](#3--agregando-idiomas). 
+4. [Agregando Idiomas](#4--agregando-idiomas). 
 
 5. [Organigrama](#5--organigrama). 
+
+5. [Browse](#5--Browse). 
+
+
 
 ## 1- Conteudo do tema MACUSP
 
@@ -67,7 +71,7 @@ Esse tema contém 6 pastas, a seguir mencionamos a sua funcionalidade e seu cont
       - artistas - *artists* [index.php/Detail/artists/5023](http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/5023). 
       - coletivos - *groups* [index.php/Detail/artists/6657](http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/6657). 
       - exposições - *exhibitions* [index.php/Detail/exhibitions/2524](http://143.107.130.173/admacervo/macusp/index.php/Detail/exhibitions/2524). 
-       - publicações - *publications* [index.php/Detail/publications/1296](http://143.107.130.173/admacervo/macusp/index.php/Detail/publications/1296)
+      - publicações - *publications* [index.php/Detail/publications/1296](http://143.107.130.173/admacervo/macusp/index.php/Detail/publications/1296)
 
 > [!IMPORTANT]
 > O arquivo de configuração dele é o detail.conf, que são declarados todas a visualizações individuais: works, artists, groups, exhibitions e publications.  
@@ -278,6 +282,123 @@ graph LR
     style artists fill:#444,stroke:#666,color:#fff
     style exhibitions fill:#444,stroke:#666
 ```
+
+## 6- Browse
+Temos 3 tipos de browse (broseTypes) definidos no arquivo config (browse.conf)
+    - works
+    - artists
+    - exhibitions
+    
+localizado em {macusp-theme}/conf/browse.conf. 
+
+### Agregando nova visualização 
+
+Para definir una nova visualização temos:
+
+    browseTypes = {
+      works = {
+        .
+        .
+        .    
+        views = {
+          images = {},
+          list = {},				
+        },
+        sortBy = {
+          Identifier = ca_objects.idno,
+          Title = ca_object_labels.name
+        },		
+        sortDirection = {
+          Identifier = asc,
+          Title = desc
+        },
+        .
+        .
+        .    		
+      }
+    }
+
+O *views* contém a lista de visualizações. Cada visualização 
+é ordenado pelos parâmetros no *sortBy* and *sortDirection*
+contém o sentido da ordenação. 
+
+Para agregar una nova visualização 'exemplo' 
+
+#### Passo 1: Definir no browse.conf 
+
+Devemos definir no *views*, por exemplo: 
+
+    browseTypes = {
+      works = {
+        .
+        .
+        .    
+        views = {
+          images = {},
+          list = {},				
+          exemplo = {}
+        },        
+        .
+        .
+        .    		
+      }
+    }
+
+#### Passo 2: Criação de arquivos 
+
+Devemos criar dois novos arquivos  usando no nome do nova visualização: 
+    - {macusp-theme}/views/Browse/browse_results_{nome da visualização}_html.php 
+    - {macusp-theme}/views/Macusp/box/{nome de tabela}_{nome da visualização}.php 
+
+para nosso exemplo, sería: 
+    - {macusp-theme}/views/Browse/browse_results_exemplo_html.php 
+
+O mais recomendável é copiar o arquivo {macusp-theme}/views/Browse/browse_results_list_html.php, ou outro e 
+mudar de nome para {macusp-theme}/views/Browse/browse_results_exemplo_html.php.  
+
+No novo arquivo {macusp-theme}/views/Browse/browse_results_exemplo_html.php temos as seguinte linha de código (linha 190). 
+
+    include("boxes/$vs_table"."_"."$vs_current_view.php"); 
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+## 7- Details 
+
+### Agregar Visualização 
+
+
+## 8- Items (box)
+
+### Agregar Visualização 
+
+
+## 9-Info 
+
+
+## 10- MultiSearch
+
+
+## 11- Advanced Search 
+
+
+
+
+
+
+
+
 
 
 

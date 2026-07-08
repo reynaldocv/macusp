@@ -50,10 +50,8 @@
 			if ($info === True )
 			{
 				$infoClick = "<span class='glyphicon glyphicon-info-sign' onclick='getInfoArtist($vn_id)'></span>"; 
-			}
-			
-			//$vs_rep_detail_link = ""; 
-			
+			}			
+			//$vs_rep_detail_link = ""; 			
 		}
 		else{
 			
