@@ -331,7 +331,7 @@ Devemos definir no *views*, por exemplo:
     browseTypes = {
       works = {
         .
-        .
+        table = ca_objects,
         .    
         views = {
           images = {},
@@ -346,35 +346,132 @@ Devemos definir no *views*, por exemplo:
 
 #### Passo 2: Criação de arquivos 
 
-Devemos criar dois novos arquivos  usando no nome do nova visualização: 
+Devemos criar dois novos arquivos usando no nome do nova visualização 'exemplo'
+e a nome da tabela do banco de dados do collectiveaccess: 
     - {macusp-theme}/views/Browse/browse_results_{nome da visualização}_html.php 
     - {macusp-theme}/views/Macusp/box/{nome de tabela}_{nome da visualização}.php 
 
 para nosso exemplo, sería: 
     - {macusp-theme}/views/Browse/browse_results_exemplo_html.php 
+    - {macusp-theme}/views/Macusp/boxes/ca_objects_exemplo_html.php 
 
 O mais recomendável é copiar o arquivo {macusp-theme}/views/Browse/browse_results_list_html.php, ou outro e 
-mudar de nome para {macusp-theme}/views/Browse/browse_results_exemplo_html.php.  
+mudar de nome para {macusp-theme}/views/Browse/browse_results_exemplo_html.php. 
 
-No novo arquivo {macusp-theme}/views/Browse/browse_results_exemplo_html.php temos as seguinte linha de código (linha 190). 
+    - {macusp-theme}/views/Browse/browse_results_exemplo_html.php: esse arquivo mostra a lista de items a mostrar (recomendamos não modificar)
+    - {macusp-theme}/views/Macusp/boxes/ca_objects_exemplo_html.php: ese arquivo contém o item a mostrar 
+    armazenado no variável **$qr_res**. é possivel recuperar informação do ese item usando as funções
 
-    include("boxes/$vs_table"."_"."$vs_current_view.php"); 
+    $qr_res->get('...'); 
+    $qr_res->getParameter('...'); 
 
+Toda infarmação é salvada no varivel $vs_result_output. 
 
+      <?php 
+        try{
+          if ($qr_res)
+          {
+            /*if (strlen($vs_label_detail_link) > 70) 
+            {
+              $vs_label_detail_link = substr($vs_label_detail_link, 0, 70); 
+            }*/
 
+            $vs_authors = $qr_res->getWithTemplate("<unit relativeTo='ca_entities' excludeRelationshipTypes='doador' restrictToTypes='Artista' delimiter='<br>'>
+                                            <b>^ca_entities.preferred_labels.displayname</b>
+                                          </unit>"); 
 
+            $vs_date_work = $qr_res->getWithTemplate("<ifdef code='ca_objects.datePeriod'><unit relativeTo='ca_objects.datePeriod' delimiter=' '>^ca_objects.datePeriod </unit></ifdef>"); 
+            
+            $preDetails = "<h5>$vs_authors</h5>"; 
+            $postDetails = "<h7>$vs_date_work</h7>"; 
 
+            if ($info === True )
+            {
+              $infoClick = "<span class='glyphicon glyphicon-info-sign' onclick='getInfoWork($vn_id)'></span>"; 
+            }
+          }
+          else{
+            
+            
+            $vs_rep_detail_link = "<a href='#'>".$vs_default_placeholder_tag."</a>";
+                
+            $vs_label_detail_link = "<a href='#'>"._("Título")."</a>"; 
+            $preDetails = "<h5>"._("Autoria")."</h5>"; 
+            $postDetails = "<h7>"._("Data")."</h7>"; 
+            
+          }
+          $vs_result_output = "
+              <div class='bResultListItemCol col-xs-{$vn_col_span_xs} col-sm-{$vn_col_span_sm} col-md-{$vn_col_span}'>
+                <div class='bResultListItem' id='row{$vn_id}' onmouseover='jQuery(\"#bResultListItemExpandedInfo{$vn_id}\").show();'  onmouseout='jQuery(\"#bResultListItemExpandedInfo{$vn_id}\").hide();'>
+                  <div class='bSetsSelectMultiple'><input type='checkbox' name='object_ids[]' value='{$vn_id}'></div>
+                  <div class='bResultListItemContent'><div class='text-center bResultListItemImg'>{$vs_rep_detail_link}</div>
+                    <div class='bResultListItemText'>
+                      $preDetails 
+                      <small></small>{$vs_label_detail_link}
+                      <div style='margin-top:5px; margin-left:10px'>{$postDetails}</div>
+                      $infoClick
+                    </div><!-- end bResultListItemText -->
+                  </div><!-- end bResultListItemContent -->								
+                </div><!-- end bResultListItem -->
+              </div><!-- end col -->"; 
 
+        }
+        catch (Exception $e) {
 
-
-
-
-    
-
-
-
+          $vs_result_output = "Program error..."; 
+        }
+      ?>
 
 ## 7- Details 
+O configuração desse arquivo está localizado no {macusp-theme}/conf/detail.conf
+
+  detailTypes = {
+    works = {
+      displayName = _(Objects),
+      table = ca_objects,
+      restrictToTypes = [],
+    }    
+  }
+
+para cada detailTypes, deve-se escrever:
+    - o título *displayname*
+    - a tabela *table* pudendo ser: ca_objects, ca_entities, ca_occurrences, etc.
+    - o tipo de item *restrictToTypes*, exemplos: obras, Artistas, exposicoes, publicacoes, etc. 
+  
+Para o macusp-theme, temos: 
+
+    detailTypes = {
+      works = {
+        displayName = _(Objects),
+        table = ca_objects,
+        restrictToTypes = [],  
+      },		
+      artists = {
+        displayName = _(Artist),
+        table = ca_entities,
+        restrictToTypes = [Artista],        
+      },	
+      groups = {
+        displayName = _(Group),
+        table = ca_entities,
+        restrictToTypes = [coletivo],        
+      },
+      exhibitions = {
+        displayName = _(Exhibitions),
+        table = ca_occurrences,
+        restrictToTypes = [esposicao],        
+      },
+      publications = {
+        displayName = _(Publications),
+        table = ca_occurrences,
+        restrictToTypes = [publicacao],        
+      },      
+    }
+
+
+
+
+
 
 ### Agregar Visualização 
 
