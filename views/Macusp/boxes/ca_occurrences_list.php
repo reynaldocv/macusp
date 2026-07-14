@@ -3,7 +3,7 @@
 		if ($qr_res)
 		{
 
-			$vn_label = $qr_res->get("ca_occurrences.preferred_labels.name");
+			//$vn_label = $qr_res->get("ca_occurrences.preferred_labels");
 								
 			$preDetails = ""; 
 			$postDetails = $qr_res->getWithTemplate("<h7>

@@ -34,6 +34,8 @@ require_once(__CA_MODELS_DIR__."/ca_objects.php");
 require_once(__CA_MODELS_DIR__."/ca_entities.php");
 require_once(__CA_MODELS_DIR__."/ca_occurrences.php");
 require_once(__CA_LIB_DIR__.'/pawtucket/BasePawtucketController.php');
+require_once(__CA_LIB_DIR__.'/ca/Search/EntitySearch.php');
+require_once(__CA_LIB_DIR__.'/ca/Browse/EntityBrowse.php');
 
 
 Class IntroController extends ActionController {
@@ -71,9 +73,10 @@ Class IntroController extends ActionController {
 		$format = $options["format"]; 
 		
 		$t_entity = new ca_entities();
-		
-		$tmp = $t_entity->getRandomItems(10*$limit, array('searh' => "type:Artista", 'checkAccess' => $va_access_values, 'hasRepresentations' => 1));		
-		//$tmp = $t_entity->getRandomItems(30, array('checkAccess' => $va_access_values, 'hasRepresentations' => 1));
+
+		$type_id = ca_lists::getItemID('entity_types', 'Artista');
+				
+		$tmp = $t_entity->getRandomItems(3*$limit, array('checkAccess' => $va_access_values, 'hasRepresentations' => 1, 'restrictByIntrinsic'=> array('type_id'=> $type_id)));		
 		
 		$va_featured_ids = array_keys($tmp);
 	
@@ -89,49 +92,40 @@ Class IntroController extends ActionController {
 
 		$this->render($vs_path);
 	}	
+
 	public function exhibitions(){
 		$table = "ca_occurrences";
 
-		$va_access_values = caGetUserAccessValues($this->request);
-
-		$o_browse = caGetBrowseInstance($table);
-		$o_browse->addCriteria("tipo_exposicao_facet", 1064);
-		$o_browse->execute(array('checkAccess' => $va_access_values, 'hasRepresentations' => 1, 'restrictByIntrinsic'=> array('type_id'=> '113')));
-
-		$qr_res = $o_browse->getResults(); 
-
+		//$va_access_values = caGetUserAccessValues($this->request);
+				// A list of works is generated randomly
 		$options = $this->opo_config->get('exhibitions');
-
-		$all = $qr_res->numHits(); 
+		
 		$limit = intval($options["examples"]["limit"]); 
 		$format = $options["format"]; 
-
-		for ($i = 1; $i <= 3*$limit; $i++) {
-			$id = rand(0, $all); 
-
-			$qr_res->seek($id);                        
-			
-			$access = $qr_res->get("ca_occurrences.access");
-			$rank = $qr_res->get("ca_occurrences.rank"); 
-
-			if (trim($access) === "1" && trim($rank)){
-				$ids[] = $qr_res->get("ca_occurrences.rank");                        
-			}
-		}
-
-		$this->view->setVar("featured_set_ids", $ids);
-		$this->view->setVar("table", $table);	
-		$this->view->setVar("file", $options);
-		$this->view->setVar("limit", $limit);
-		$this->view->setVar("access_values", $va_access_values);
 		
- 		$vs_path = "Macusp/frontpage_$format.php";  
+		$t_entity = new ca_occurrences();
+
+		$type_id = ca_lists::getItemID('occurrence_types', 'exhibition');
+
+		$tmp = $t_entity->getRandomItems(3*$limit, array('checkAccess' => $va_access_values, 'hasRepresentations' => 1, 'restrictByIntrinsic'=> array('type_id'=> $type_id)));		
+		//$tmp = $t_entity->getRandomItems(30, array('checkAccess' => $va_access_values, 'hasRepresentations' => 1));
+		
+		$va_featured_ids = array_keys($tmp);
+		
+		// A list of exhibitions is generated randomly
+		//$this->view->setVar('featured_set_exhibitions_as_search_result', $o_browse);
+		$this->view->setVar('featured_set_ids', $va_featured_ids);	
+		$this->view->setVar("table", $table);	
+		$this->view->setVar("limit", $limit);	
+		$this->view->setVar("file", $options);
+		$this->view->setVar("access_values", $va_access_values);
+
+		$vs_path = "Macusp/frontpage_$format.php"; 
 
 		$this->render($vs_path);
 	}
 
-	public function works() {
-			
+	public function works() {			
 		$table = "ca_objects";
 
 		$va_access_values = caGetUserAccessValues($this->request);
@@ -141,9 +135,11 @@ Class IntroController extends ActionController {
 		$limit = intval($options["examples"]["limit"]); 
 		$format = $options["format"]; 
 		
-		$t_entity = new ca_objects();
+		$t_object = new ca_objects();
+
+		$type_id = ca_lists::getItemID('object_types', 'art');
 		
-		$tmp = $t_entity->getRandomItems(3*$limit, array('checkAccess' => $va_access_values, 'hasRepresentations' => 1));		
+		$tmp = $t_object->getRandomItems(3*$limit, array('checkAccess' => $va_access_values, 'hasRepresentations' => 1, 'restrictByIntrinsic'=> array('type_id'=> $type_id)));		
 		//$tmp = $t_entity->getRandomItems(30, array('checkAccess' => $va_access_values, 'hasRepresentations' => 1));
 		
 		$va_featured_ids = array_keys($tmp);

@@ -28,7 +28,7 @@
  	require_once(__CA_MODELS_DIR__."/ca_collections.php");
  	require_once(__CA_APP_DIR__."/controllers/FindController.php");
  	require_once(__CA_APP_DIR__."/helpers/browseHelpers.php");
- 	
+	 	
  	class BrowseController extends FindController {
  		# -------------------------------------------------------
  		/**

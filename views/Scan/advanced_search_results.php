@@ -32,6 +32,7 @@
             if(!$vn_row_id){
                 $vb_row_id_loaded = true;
             }
+
             
             $va_views			= $this->getVar('views');
             $vs_current_view	= $this->getVar('view');
@@ -41,7 +42,7 @@
             $t_instance			= $this->getVar('t_instance');
             $vs_table 			= $this->getVar('table');
             $vs_pk				= $this->getVar('primaryKey');
-            $o_config = $this->getVar("config");	
+            $o_config           = $this->getVar("config");	
             
             $va_options			= $this->getVar('options');
             $vs_extended_info_template = caGetOption('extendedInformationTemplate', $va_options, null);
@@ -72,21 +73,22 @@
                 $vn_col_span_sm = 12;
                 $vn_col_span_xs = 12;
 
-
-                
             }
             if ($vs_table != 'ca_objects') {
 				$va_ids = array();
-				while($qr_res->nextHit() && ($vn_c < $vn_hits_per_block)) {
+                
+				while($qr_res->nextHit()){
 					$va_ids[] = $qr_res->get($vs_pk);
 					$vn_c++;
-				}
-				$va_images = caGetDisplayImagesForAuthorityItems($vs_table, $va_ids, array('version' => 'icon', 'relationshipTypes' => caGetOption('selectMediaUsingRelationshipTypes', $va_options, null), 'objectTypes' => caGetOption('selectMediaUsingTypes', $va_options, null), 'checkAccess' => $va_access_values));
-			
+                }
+
+                $va_images = caGetDisplayImagesForAuthorityItems($vs_table, $va_ids, array('version' => 'icon', 'relationshipTypes' => caGetOption('selectMediaUsingRelationshipTypes', $va_options, null), 'objectTypes' => caGetOption('selectMediaUsingTypes', $va_options, null), 'checkAccess' => $va_access_values));
+                
 				$vn_c = 0;	
-				$qr_res->seek(0);
+				$qr_res->seek(1);
 			}
 			
+
             
             $t_list_item = new ca_list_items();
             

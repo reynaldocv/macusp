@@ -97,7 +97,7 @@
 					$vn_c++;
 				}
 				$va_images = caGetDisplayImagesForAuthorityItems($vs_table, $va_ids, array('version' => 'icon', 'relationshipTypes' => caGetOption('selectMediaUsingRelationshipTypes', $va_options, null), 'objectTypes' => caGetOption('selectMediaUsingTypes', $va_options, null), 'checkAccess' => $va_access_values));
-			
+				
 				$vn_c = 0;	
 				$qr_res->seek($vn_start);
 			}

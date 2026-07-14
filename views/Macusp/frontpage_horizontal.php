@@ -5,7 +5,7 @@
     $vn_file            = $this->getVar('file');
     $vn_view            = $vn_file["examples"]["view"]; 
     $va_access_values 	= $this->getVar('access_values');	
-
+    
     $o_icons_conf = caGetIconsConfig();
 	$va_object_type_specific_icons = $o_icons_conf->getAssoc("placeholders");
 
@@ -96,7 +96,7 @@
                     $vs_image = ($vs_table === 'ca_objects') ? $qr_res->get("ca_object_representations.media", 'medium', array("checkAccess" => $va_access_values)) : $va_images[$vn_id];
 
                     if(!$vs_image){
-                        $vs_thumbnail = False;  
+                        //$vs_thumbnail = False;  
                         if ($vs_table == 'ca_objects') {
                             $t_list_item->load($qr_res->get("type_id"));
                             $vs_typecode = $t_list_item->get("idno");

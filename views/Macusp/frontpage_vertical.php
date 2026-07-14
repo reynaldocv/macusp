@@ -3,8 +3,7 @@
     $vs_table           = $this->getVar('table');
     $vn_limit           = $this->getVar('limit');
     $vn_file            = $this->getVar('file');
-    $vn_view            = $vn_file["examples"]["view"]; 
-    $afiches            = $vn_file["afiches"]; 
+    $vn_view            = $vn_file["examples"]["view"];     
     $va_access_values 	= $this->getVar('access_values');	
 
     $o_icons_conf = caGetIconsConfig();

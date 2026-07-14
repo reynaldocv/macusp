@@ -301,10 +301,10 @@
 									//Os códigos estão vindo com espaço
 									// Lê a publicação do banco
 									$qr_res = new ca_occurrences($vn_id);
-									//$vs_table = "ca_occurrences"; 
+									$vs_table = "ca_occurrences"; 
 									
 									//$vs_idno_detail_link 	= caDetailLink($this->request, $qr_res->get("{$vs_table}.idno"), '', $vs_table, $vn_id);
-									//$vs_label_detail_link 	= caDetailLink($this->request, $qr_res->get("{$vs_table}.preferred_labels"), '', $vs_table, $vn_id);
+									$vs_label_detail_link 	= caDetailLink($this->request, $qr_res->get("{$vs_table}.preferred_labels"), '', $vs_table, $vn_id);
 									//$vs_label_detail_link = "hola"; 
 
 									$info = True; 
@@ -373,10 +373,10 @@
 									//Os códigos estão vindo com espaço
 									// Lê a publicação do banco
 									$qr_res = new ca_occurrences($vn_id);
-									//$vs_table = "ca_occurrences"; 
+									$vs_table = "ca_occurrences"; 
 									
 									//$vs_idno_detail_link 	= caDetailLink($this->request, $qr_res->get("{$vs_table}.idno"), '', $vs_table, $vn_id);
-									//$vs_label_detail_link 	= caDetailLink($this->request, $qr_res->get("{$vs_table}.preferred_labels"), '', $vs_table, $vn_id);
+									$vs_label_detail_link 	= caDetailLink($this->request, $qr_res->get("{$vs_table}.preferred_labels"), '', $vs_table, $vn_id);
 									//$vs_label_detail_link = "hola"; 
 
 									$info = True; 
