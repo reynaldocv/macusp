@@ -63,19 +63,19 @@ Class IntroController extends ActionController {
 	 *
 	 */
 	public function artists(){
-		$table = "ca_entities";
+		$options = $this->opo_config->get('artists');		
+		$table = "ca_entities"; 
+		$type = $options["examples"]["type"];
+		$limit = intval($options["examples"]["limit"]);
+		$view = $options["examples"]["view"];
+		$format = $options["format"];
 
 		$va_access_values = caGetUserAccessValues($this->request);
-				// A list of works is generated randomly
-		$options = $this->opo_config->get('artists');
-		
-		$limit = intval($options["examples"]["limit"]); 
-		$format = $options["format"]; 
+		// A list of works is generated randomly
 		
 		$t_entity = new ca_entities();
+		$type_id = ca_lists::getItemID('entity_types', $type);		
 
-		$type_id = ca_lists::getItemID('entity_types', 'Artista');
-				
 		$tmp = $t_entity->getRandomItems(3*$limit, array('checkAccess' => $va_access_values, 'hasRepresentations' => 1, 'restrictByIntrinsic'=> array('type_id'=> $type_id)));		
 		
 		$va_featured_ids = array_keys($tmp);
@@ -85,7 +85,8 @@ Class IntroController extends ActionController {
 		$this->view->setVar('featured_set_ids', $va_featured_ids);	
 		$this->view->setVar("table", $table);	
 		$this->view->setVar("limit", $limit);	
-		$this->view->setVar("file", $options);
+		$this->view->setVar("file", $options);	
+		$this->view->setVar("view", $view);	
 		$this->view->setVar("access_values", $va_access_values);
 		
 		$vs_path = "Macusp/frontpage_$format.php"; 
@@ -94,14 +95,15 @@ Class IntroController extends ActionController {
 	}	
 
 	public function exhibitions(){
-		$table = "ca_occurrences";
+		$options = $this->opo_config->get('exhibitions');		
+		$table = "ca_occurrences"; 
+		$type = $options["examples"]["type"];
+		$limit = intval($options["examples"]["limit"]);
+		$view = $options["examples"]["view"];
+		$format = $options["format"];
 
-		//$va_access_values = caGetUserAccessValues($this->request);
-				// A list of works is generated randomly
-		$options = $this->opo_config->get('exhibitions');
-		
-		$limit = intval($options["examples"]["limit"]); 
-		$format = $options["format"]; 
+		$va_access_values = caGetUserAccessValues($this->request);
+		// A list of works is generated randomly
 		
 		$t_entity = new ca_occurrences();
 
@@ -118,6 +120,7 @@ Class IntroController extends ActionController {
 		$this->view->setVar("table", $table);	
 		$this->view->setVar("limit", $limit);	
 		$this->view->setVar("file", $options);
+		$this->view->setVar("view", $view);
 		$this->view->setVar("access_values", $va_access_values);
 
 		$vs_path = "Macusp/frontpage_$format.php"; 
@@ -126,14 +129,15 @@ Class IntroController extends ActionController {
 	}
 
 	public function works() {			
-		$table = "ca_objects";
+		$options = $this->opo_config->get('works');		
+		$table = "ca_objects"; 
+		$type = $options["examples"]["type"];
+		$limit = intval($options["examples"]["limit"]);
+		$view = $options["examples"]["view"];
+		$format = $options["format"];
 
 		$va_access_values = caGetUserAccessValues($this->request);
-				// A list of works is generated randomly
-		$options = $this->opo_config->get('works');
-		
-		$limit = intval($options["examples"]["limit"]); 
-		$format = $options["format"]; 
+		// A list of works is generated randomly
 		
 		$t_object = new ca_objects();
 
@@ -153,6 +157,7 @@ Class IntroController extends ActionController {
 		$this->view->setVar("table", $table);	
 		$this->view->setVar("limit", $limit);	
 		$this->view->setVar("file", $options);
+		$this->view->setVar("view", $view);
 		$this->view->setVar("access_values", $va_access_values);
 		
 		$vs_path = "Macusp/frontpage_$format.php"; 
@@ -160,6 +165,87 @@ Class IntroController extends ActionController {
 		$this->render($vs_path);
 		
 	}
+	public function __call($ps_function, $pa_args) {	
+		// If the function is not defined, we can try to render a view with the same name as the function
+		$file = $this->opo_config->get('others');
+		
+		try{
+			$options = $file[$ps_function];
+
+			$table = $options["examples"]["table"]; 
+			$parameter = $options["examples"]["parameter"];
+			$type = $options["examples"]["type"];
+			$limit = intval($options["examples"]["limit"]);
+			$view = $options["examples"]["view"];
+			$format = $options["format"];
+
+			$va_access_values = caGetUserAccessValues($this->request);
+			// A list of works is generated randomly
+			$o_dm = Datamodel::load();
+
+			$t_instance = $o_dm->getInstanceByTableName($table);
+
+			$type_id = ca_lists::getItemID($parameter, $type);		
+
+			$tmp = $t_instance->getRandomItems(3*$limit, array('checkAccess' => $va_access_values, 'hasRepresentations' => 1, 'restrictByIntrinsic'=> array('type_id'=> $type_id)));				
+			
+			$va_featured_ids = array_keys($tmp);
+
+			$this->view->setVar('featured_set_ids', $va_featured_ids);	
+			$this->view->setVar("table", $table);	
+			$this->view->setVar("limit", $limit);	
+			$this->view->setVar("view", $view);	
+			$this->view->setVar("file", $options);
+			$this->view->setVar("access_values", $va_access_values);
+
+			$vs_path = "Macusp/frontpage_$format.php"; 
+			$this->render($vs_path);
+
+		} catch (Exception $e) {
+			$this->view->setVar('items', "error: ".$e->getMessage());
+			$this->render("Macusp/test.php");
+		}
+	}
+	
+	public function others(){
+		$options = $this->opo_config->get('artists');		
+		
+		$table = $options["examples"]["table"];
+		$parameter = $options["examples"]["parameter"];
+		$type = $options["examples"]["type"];
+		$limit = intval($options["examples"]["limit"]);
+		$format = $options["format"];
+
+		$va_access_values = caGetUserAccessValues($this->request);
+		// A list of works is generated randomly
+		$o_dm = Datamodel::load();
+
+		// Check if the string is actually a valid table in the system
+		if ($o_dm->isValidTable($table)) {    
+    		// Instantiates a new ca_entities() object dynamically
+			$t_instance = $o_dm->getInstanceByTableName($table_name);
+			
+			$t_entity = new ca_entities();
+			$type_id = ca_lists::getItemID($parameter, $type);				
+			
+			$tmp = $t_entity->getRandomItems(3*$limit, array('checkAccess' => $va_access_values, 'hasRepresentations' => 1, 'restrictByIntrinsic'=> array('type_id'=> $type_id)));		
+			
+			$va_featured_ids = array_keys($tmp);
+		
+			// A list of exhibitions is generated randomly
+			//$this->view->setVar('featured_set_exhibitions_as_search_result', $o_browse);
+			$this->view->setVar('featured_set_ids', $va_featured_ids);	
+			$this->view->setVar("table", $table);	
+			$this->view->setVar("limit", $limit);	
+			$this->view->setVar("file", $options);
+			$this->view->setVar("access_values", $va_access_values);
+			
+			$vs_path = "Macusp/frontpage_$format.php"; 
+
+			$this->render($vs_path);
+		}
+	}	
+
 	public function test(){
 		
 		$t_entity = new ca_entities();

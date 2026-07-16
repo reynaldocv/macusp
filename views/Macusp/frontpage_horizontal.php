@@ -3,7 +3,7 @@
     $vs_table           = $this->getVar('table');
     $vn_limit           = $this->getVar('limit');
     $vn_file            = $this->getVar('file');
-    $vn_view            = $vn_file["examples"]["view"]; 
+    $vn_view            = $this->getVar('view');
     $va_access_values 	= $this->getVar('access_values');	
     
     $o_icons_conf = caGetIconsConfig();
@@ -79,8 +79,7 @@
                     if ($vs_table === "ca_entities"){
                         $qr_res = new ca_entities($vn_id);
                     }
-                    elseif ($vs_table === "ca_occurrences")
-                    {
+                    elseif ($vs_table === "ca_occurrences"){
                         $qr_res = new ca_occurrences($vn_id);
                     }
                     else{
@@ -122,8 +121,6 @@
                         if(($vs_table == 'ca_objects') && is_array($va_add_to_set_link_info) && sizeof($va_add_to_set_link_info)){
                             $vs_add_to_set_link = "<a href='#' onclick='caMediaPanel.showPanel(\"".caNavUrl($this->request, '', $va_add_to_set_link_info["controller"], 'addItemForm', array($vs_pk => $vn_id))."\"); return false;' title='".$va_add_to_set_link_info["link_text"]."'>".$va_add_to_set_link_info["icon"]."</a>";
                         }
-                    
-                        $vs_expanded_info = $qr_res->getWithTemplate($vs_extended_info_template);
 
                         $info = False; 
                         include("boxes/$vs_table"."_"."$vn_view.php"); 

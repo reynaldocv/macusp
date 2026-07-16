@@ -3,6 +3,3 @@
 
     var_dump($items); 
 ?>
-
-
-this is a test!
