@@ -66,11 +66,9 @@
 						<ul>
 						{{{
 							<unit relativeTo='ca_entities.related' restrictToRelationshipTypes='integrante' delimiter=' '>
-								<li> <l>^ca_entities.preferred_labels </l> 
-								(
-									^ca_entities.DadosBiograficos.AnoNascimento
-									<ifdef code='ca_entities.DadosBiograficos.AnoMorte'> - ^ca_entities.DadosBiograficos.AnoMorte </ifdef>
-								)
+								<li> <l>^ca_entities.preferred_labels </l> 								
+									<ifdef code='ca_entities.DadosBiograficos.AnoNascimento'>  : ☼ ^ca_entities.DadosBiograficos.AnoNascimento </ifdef>									
+									<ifdef code='ca_entities.DadosBiograficos.AnoMorte'> : † ^ca_entities.DadosBiograficos.AnoMorte </ifdef>								
 							</unit>
 						}}}
  						</ul>
