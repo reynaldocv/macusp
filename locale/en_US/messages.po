@@ -1103,6 +1103,36 @@ msgstr ""
 msgid "Number of works avaliable online"
 msgstr ""
 
+# Details exhibitions (macusp/views/Details/macusp_ca_occurrences_default_html.php)
+
+msgid "Start"
+msgstr "Start"
+
+msgid "End"
+msgstr "End"
+
+msgid "Synopsis"
+msgstr "Synopsis"
+
+msgid "Exhibition venue"
+msgstr "Exhibition venue"
+
+msgid "Responsible institution"
+msgstr "Responsible institution"
+
+msgid "Institution"
+msgstr "Institution"
+
+msgid "Institutions"
+msgstr "Institutions"
+
+msgid "Responsible"
+msgstr "Responsible"
+
+msgid "Responsibles"
+msgstr "Responsibles"
+
+
 
 
 

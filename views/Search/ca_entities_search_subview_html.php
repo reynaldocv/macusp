@@ -75,10 +75,20 @@
 		$vb_div_open = false;
 		while($qr_results->nextHit()) {
 			if ($vn_i == 0) { print "<div class='{{{block}}}Set authoritySet'>\n"; $vb_div_open = true;}
-				$name = $qr_results->get('ca_entities.preferred_labels.displayname', array('returnAsLink' => true)); 
-				$birthplace = $qr_results->getWithTemplate('^ca_entities.DadosBiograficos.LocalNascimento.hierarchy.preferred_labels.name%restrictToLevels=2');
-				
-				print "<div class='entitiesResult authorityResult'> $name <br> $birthplace </div>";
+			
+			$name = $qr_results->get('ca_entities.preferred_labels.displayname', array('returnAsLink' => true)); 
+			$birthplace = $qr_results->getWithTemplate('^ca_objects.LocalNascimento.hierarchy.preferred_labels.display_name%restrictToTypes=country');
+
+			//$o_place = new ca_places();
+
+			
+			//$o_place->load($birthplace);  
+
+
+			//$s_label = $o_place->getLabelForDisplay();
+						
+			print "<div class='entitiesResult authorityResult'> $name <br> $birthplace $s_label </div>";
+			
 			$vn_count++;
 			$vn_i++;
 			if ($vn_i >= $vn_items_per_column) {

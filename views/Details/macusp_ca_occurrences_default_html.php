@@ -39,7 +39,7 @@
 				<div class="container">
 					<div>
 						{{{<ifdef code = 'ca_entities' restrictToRelationshipTypes='local_exposicao'>
-								<b><?php print _t("Local da exposição").":"; ?></b><br>
+								<b><?php print _t("Exhibition venue").":"; ?></b><br>
 								<unit relativeTo='ca_entities' restrictToRelationshipTypes='local_exposicao'>
 									^ca_entities.preferred_labels
 								</unit>
@@ -72,31 +72,31 @@
 
 					<ifdef code="ca_occurrences.exhibitionBeginDate">
 					<div>
-						<b>Início:</b> 
+						<b><?php print _t("Start") ?>:</b> 
 							{{{^ca_occurrences.exhibitionBeginDate}}}
 							
 						<ifdef code="ca_occurrences.exhibitionEndDate"> |
-							<b> Fim:</b> {{{^ca_occurrences.exhibitionEndDate}}}
+							<b> <?php print _t("End") ?>:</b> {{{^ca_occurrences.exhibitionEndDate}}}
 						</ifdef>
 					</div>
 					</ifdef>
 					<br>
 					<div>
 						{{{
-						<ifdef code ="ca_occurrences.conceito_exposicao"><b>Sinopse:</b> ^ca_occurrences.conceito_exposicao <br></ifdef>
+						<ifdef code ="ca_occurrences.conceito_exposicao"><b><?php print _t("Sinopse") ?>:</b> ^ca_occurrences.conceito_exposicao <br></ifdef>
 						}}}
 					</div>	
 				</div>		
 				
 			</div><!-- end col -->
 			<div class='col-md-6 col-lg-6'>
-				<!--<div><b><?php print _t("Instituição responsável").":"; ?></b> 
+				<!--<div><b><?php print _t("Responsible institution").":"; ?></b> 
 					{{{<unit relativeTo='ca_entities'>
 						^ca_entities.preferred_labels (^relationship_typename)
 					</unit>}}}
 				</div>-->
 
-				<!--<div><b><?php print _t("Instituição responsável").":"; ?></b> 
+				<!--<div><b><?php print _t("Responsible institution").":"; ?></b> 
 					{{{<unit relativeTo='ca_entities' restrictToRelationshipTypes='Instituicao_responsavel'>
 						^ca_entities.preferred_labels
 					</unit>}}}
@@ -106,11 +106,11 @@
 					<div><b>
 						
 						{{{<ifcount code='ca_entities' restrictToRelationshipTypes='Instituicao_responsavel' delimiter=' ' min='1' max='1'>
-								<?php print _t("Instituição").":"; ?>
+								<?php print _t("Institution").":"; ?>
 						</ifcount>}}}
 
 						{{{<ifcount code='ca_entities' restrictToRelationshipTypes='Instituicao_responsavel' delimiter=' ' min='2'>
-								<?php print _t("Instituições").":"; ?>
+								<?php print _t("Institutions").":"; ?>
 						</ifcount>}}}
 			
 						</b> 
@@ -127,11 +127,11 @@
 					<div><b>
 
 						{{{<ifcount code='ca_entities' restrictToRelationshipTypes='Organizador|Curator|Auditor|Avaliador|Editor|' delimiter=' ' min='1' max='1'>
-								<?php print _t("Responsável").":"; ?>
+								<?php print _t("Responsible").":"; ?>
 						</ifcount>}}}
 
 						{{{<ifcount code='ca_entities' restrictToRelationshipTypes='Organizador|Curator|Auditor|Avaliador|Editor|' delimiter=' ' min='2'>
-								<?php print _t("Responsáveis").":"; ?>
+								<?php print _t("Responsibles").":"; ?>
 						</ifcount>}}}
 						</b> 
 
