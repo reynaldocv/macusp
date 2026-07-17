@@ -101,20 +101,41 @@
 			<div class="container">
 			
 			<?php
-				// Vamos acrescentar aqui a lista das exposições em que obras desse artista foram exibidas
-				$vs_template = '<unit relativeTo="ca_objects"><unit relativeTo="ca_occurrences" restrictToTypes="exhibition">^ca_occurrences.occurrence_id</unit></unit>';
-				
-				$exposicoes_ids = $t_item->getWithTemplate($vs_template);
+				$obras_count = 0;  
 
-				
+				$vs_template = '<unit relativeTo="ca_objects_x_entities" restrictToTypes="art" restrictToRelationshipTypes="coletivo,artista" delimiter=" ">    					
+					<if rule="^ca_objects.access !~ /n/">
+        				^ca_objects.object_id $ 
+					</if>
+				</unit>'; 
+
+				$obras_ids = $t_item->getWithTemplate($vs_template);
+
+				//print $obras_ids; 
+
+				if (trim($obras_ids))
+				{
+					$obras_count = substr_count($obras_ids, "$"); 
+				}
+
+				$vs_template = '<unit relativeTo="ca_objects" restrictToTypes="art" restrictToRelationshipTypes="coletivo,artista" delimiter=" ">
+					<if rule="^ca_objects.access !~ /n/">
+						<unit relativeTo="ca_occurrences" restrictToTypes="exhibition" delimiter=" ">
+							^ca_occurrences.occurrence_id; 
+						</unit>
+					</if>
+					</unit>';
+
+				$exposicoes_ids = $t_item->getWithTemplate($vs_template);
 				
 				$tem_exposicoes = false;
-				if ($exposicoes_ids)
+				if (trim($exposicoes_ids))
 				{
 					$tem_exposicoes = true;
 					
 					// Separa os códigos das obras num array
 					$exposicoes_ids = str_replace(';', ',', $exposicoes_ids);
+					$exposicoes_ids .="0"; 
 
 					$sql = "select distinct ca_attributes.row_id, ca_attribute_values.value_decimal1
 						from ca_attributes
@@ -129,17 +150,24 @@
 				}
 						
 				// Vamos acrescentar aqui a lista das publicações em que obras desse artista foram exibidas
-				$vs_template = '<unit relativeTo="ca_objects"><unit relativeTo="ca_occurrences" restrictToTypes="publicacao">^ca_occurrences.occurrence_id</unit></unit>';
+				$vs_template = '<unit relativeTo="ca_objects"  restrictToTypes="art" restrictToRelationshipTypes="creator"  delimiter=" ">		
+					<if rule="^ca_objects.access !~ /n/">							
+						<unit relativeTo="ca_occurrences" restrictToTypes="publicacao"  delimiter=" ">
+							^ca_occurrences.occurrence_id; 
+						</unit>					
+					</if>
+					</unit>';
 				
 				$publicacoes_ids = $t_item->getWithTemplate($vs_template);
 				
 				$tem_publicacoes = false;
-				if ($publicacoes_ids)
+				if (trim($publicacoes_ids))
 				{
 					$tem_publicacoes = true;
 					
 					// Separa os códigos das obras num array
 					$publicacoes_ids = str_replace(';', ',', $publicacoes_ids);
+					$publicacoes_ids .="0"; 
 
 					$sql = "select distinct ca_attributes.row_id, ca_attribute_values.value_decimal1
 						from ca_attributes
@@ -164,7 +192,7 @@
 					<div class="col-sm-12 ">
 						<H6>
 					<span style="font-weight:bold; font-size:13px">
-						<?php print _t("Objects") ?> (^ca_objects.related._count)
+						<?php print _t("Objects") ?> (<?php print $obras_count ?>) 
 					</span>
 					
 					<?php if ($tem_exposicoes)
@@ -225,7 +253,7 @@
 					<H6>
 						<span style="">
 							<a href="#obras" style="text-decoration:none; color:#454545">
-							<?php print _t("Objects") ?> ({{{^ca_objects.related._count}}})
+							<?php print _t("Objects") ?> (<?php print $obras_count ?>)
 							</a>
 						</span>
 						
@@ -288,7 +316,7 @@
 						<H6>
 						<span style="">
 							<a href="#obras" style="text-decoration:none; color:#454545">
-							<?php print _t("Objects") ?> ({{{^ca_objects._count}}})
+							<?php print _t("Objects") ?> (<?php print $obras_count ?>)
 							</a>
 						</span>
 						
