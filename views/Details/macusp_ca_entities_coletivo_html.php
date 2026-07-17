@@ -103,9 +103,9 @@
 			<?php
 				$obras_count = 0;  
 
-				$vs_template = '<unit relativeTo="ca_objects_x_entities" restrictToTypes="art" restrictToRelationshipTypes="coletivo,artista" delimiter=" ">    					
+				$vs_template = '<unit relativeTo="ca_objects_x_entities" restrictToTypes="art" excludeRelationshipTypes="doador" delimiter=" ">    					
 					<if rule="^ca_objects.access !~ /n/">
-        				^ca_objects.object_id $ 
+        				$
 					</if>
 				</unit>'; 
 
