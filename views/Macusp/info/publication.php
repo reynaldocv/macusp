@@ -1,8 +1,7 @@
 <?php
 $item = $this->getVar("item"); 
 
-
-$idno = $item->get("ca_occurrences.idno");
+$idno = $item->get("ca_occurrences.occurrence_id");
 $name = $item->get("ca_occurrences.preferred_labels.name");
 
 //$date = $publication->get("ca_occurrences.exhibitionBeginDate");
