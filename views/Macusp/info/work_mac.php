@@ -20,7 +20,7 @@ $details = $item->getWithTemplate("<ifdef code='ca_objects.datePeriod.datePeriod
 				</p>
 			</ifdef>"); 
 
-$button = caDetailLink($this->request, _t("More details"),'', 'ca_objects' ,'$vn_id'); 
+$button = caDetailLink($this->request, _t("More details"),'', 'ca_objects' ,$vn_id); 
 ?>
 
 
