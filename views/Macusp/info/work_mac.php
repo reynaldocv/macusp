@@ -23,8 +23,6 @@ $details = $item->getWithTemplate("<ifdef code='ca_objects.datePeriod.datePeriod
 $button = caDetailLink($this->request, _t("More details"),'', 'ca_objects' ,$vn_id); 
 ?>
 
-
-
 <h6><b><?php print $title ?></b></h6>
 <p><?php print  $idno ?></p>  
 <H4><?php print $artist ?></H4>

@@ -36,7 +36,7 @@
 					<div class='bResultListItem' id='row{$vn_id}' onmouseover='jQuery(\"#bResultListItemExpandedInfo{$vn_id}\").show();'  onmouseout='jQuery(\"#bResultListItemExpandedInfo{$vn_id}\").hide();'>
 						<div class='bSetsSelectMultiple'><input type='checkbox' name='object_ids[]' value='{$vn_id}'></div>
 						<div class='bResultListItemContent'><div class='text-center bResultListItemImg'>{$vs_rep_detail_link}</div>
-							<div class='bResultListItemText'>
+							<div class='bResultListItemText' style='text-align:left'>
 								$preDetails 
 								<small></small>{$vs_label_detail_link}
 								<div style='margin-top:5px; margin-left:10px'>{$postDetails}</div>

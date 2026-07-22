@@ -1,12 +1,13 @@
 <H1>ARTISTIC COLLECTION AND EXHIBITIONS OF MAC USP</H1>			
 
-<h4>We provide the public with information about the works that make up the MAC USP art collection and about the history of exhibitions held by the Museum.</h4>
+<h4>On this page, you will find information about the artworks in the MAC USP collection and the history of exhibitions held by the Museum.</h4>
 
-<h4>The images of the works available are for reference only. Most were produced by the MAC USP team,
-without the use of professional photographic equipment.</h4>
+<h4>Documentation procedures are constantly being improved; therefore, information regarding specific artworks or exhibitions may be unavailable in our online collection.</h4>
 
-<h4>The documentation procedures for the MAC USP Collection are constantly being improved. Therefore, works undergoing cataloging review may be temporarily unavailable in our online collection.</h4>
+<h4>Images of the artworks are for reference only. MAC USP assumes no responsibility for
+authorizations or payments regarding any copyrights arising from the use of these images.
+For publication or dissemination, interested parties must request the appropriate
+authorization in advance.</h4>
 
-<h4>MAC USP is not responsible for authorizations or payments of any copyright fees arising from the use of the images. For publication or dissemination, the interested party must request prior authorization.</h4>
-
-<h4><b>To supplement your research or request permission to use the images for reproduction, please contact the MAC USP team by email: docmac@usp.br.</b></h4>
+<h4><b>To supplement your research or request the use of images for reproduction, please contact the
+MAC USP team via email at: docmac@usp.br.</b></h4>

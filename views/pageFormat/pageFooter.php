@@ -36,15 +36,20 @@
 		
 		<footer id="pre-footer">
 			<?php print _t("The information presented is in constant updating. Should you need further information or in case of doubts, please contact the MAC USP staff") ?>: <b>docmac@usp.br</b>.
-		</footer>
-		<footer id="footer">
-			
-			<ul class="list-inline pull-right social">
+			<ul class="footerFicha">
 				<li><?php print caNavLink($this->request, '<i class="fa fa-file"> Ficha Tecnica</i>', '', '','Page', 'front1'); ?></li>
 				<!--<li><i class="fa fa-facebook-square"></i></li>
 				<li><i class="fa fa-youtube-play"></i></li>-->
 			</ul>
-			<!--<div>
+		</footer>
+		<!--<footer id="footer">
+			
+			<ul class="list-inline pull-right social">
+				<li><?php print caNavLink($this->request, '<i class="fa fa-file"> Ficha Tecnica</i>', '', '','Page', 'front1'); ?></li>
+					<li><i class="fa fa-facebook-square"></i></li>
+				<li><i class="fa fa-youtube-play"></i></li>
+			</ul>
+			<div>
 				Footer text here
 			</div>
 			<ul class="list-inline">
@@ -54,8 +59,8 @@
 				<li><?php print caNavLink($this->request, 'hola', '', '','Page', 'front4'); ?></li>
 				<li><a href="#"> link 1 </a></li>
 			</ul>
-			<div><small>powered by <a href="http://www.collectiveaccess.org">CollectiveAccess 2017</a></small></div>-->
-		</footer><!-- end footer -->
+			<div><small>powered by <a href="http://www.collectiveaccess.org">CollectiveAccess 2017</a></small></div>
+		</footer>--><!-- end footer -->
 <?php
 	//
 	// Output HTML for debug bar

@@ -657,6 +657,7 @@
   font-size: small;
   color: white;
   background-color: var(--macusp-color4);
+  border-bottom: 5px solid var(--macusp-color1);;
 }
 
 @media (max-width: 768px) {
@@ -667,8 +668,12 @@
   }
 }
 
-
-
+.footerFicha{
+  list-style-type: none;
+  text-align: right;
+  padding: 0px;
+  margin: 0px;
+}
 
 
 
