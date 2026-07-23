@@ -13,7 +13,7 @@
 
 			$vs_date_work = $qr_res->getWithTemplate("<ifdef code='ca_objects.datePeriod'><unit relativeTo='ca_objects.datePeriod' delimiter=' '>^ca_objects.datePeriod </unit></ifdef>"); 
 
-			$title = $qr_res->getWithTemplate("^ca_entities.preferred_labels.displayname"); 
+			$title = $qr_res->getWithTemplate("^ca_objects.preferred_labels.displayname"); 
 
 			if (strlen($title) > 30)
 			{
