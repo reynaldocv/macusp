@@ -12,7 +12,14 @@
 																		</unit>"); 
 
 			$vs_date_work = $qr_res->getWithTemplate("<ifdef code='ca_objects.datePeriod'><unit relativeTo='ca_objects.datePeriod' delimiter=' '>^ca_objects.datePeriod </unit></ifdef>"); 
-			
+
+			$title = $qr_res->getWithTemplate("^ca_entities.preferred_labels.displayname"); 
+
+			if (strlen($title) > 30)
+			{
+				$vs_label_detail_link 	= caDetailLink($this->request, substr($title, 0, 50)."...", '', $vs_table, $vn_id);
+			}
+						
 			$preDetails = "<h5>$vs_authors</h5>"; 
 			$postDetails = "<h7>$vs_date_work</h7>"; 
 

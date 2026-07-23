@@ -268,6 +268,10 @@ if (!$vb_ajax) {	// !ajax
 			print "<span class='resultCount'> / "._t('%1 %2', $vn_result_size, ($vn_result_size == 1) ? $va_browse_info["labelSingular"] : $va_browse_info["labelPlural"]);	
 ?>		
 			<input id="vn_result_size" type="hidden" value="<?php print $vn_result_size ?>">
+			<?php 
+			if ($vs_table === "ca_objects")
+			{
+?>			
 			<div class="btn-group">
 				<i class="fa fa-gear bGear" data-toggle="dropdown"></i>
 				<ul class="dropdown-menu" role="menu">
@@ -317,8 +321,8 @@ if (!$vb_ajax) {	// !ajax
 				
 				
 			</div><!-- end btn-group -->
-			
 <?php
+			}
 			if(is_array($va_facets) && sizeof($va_facets)){
 ?>
 			<a href='#' id='bRefineButton' onclick='jQuery("#bRefine").toggle(); return false;'><button type="button" class="btn btn-default btn-sm responsiveFilter">Filter By</button></a>
