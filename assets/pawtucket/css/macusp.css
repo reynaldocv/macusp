@@ -747,7 +747,8 @@
 
 #additional-info p{
   font-size: small;
-  text-transform: capitalize;
+  text-transform: capitalize;  
+  padding-left:20px; 
 }
 #additional-info span{
   font-size: small;
@@ -770,11 +771,6 @@
 #additional-info > h3{
   color: var(--macusp-color1);
  
-}
-
-#additional-info > p{
-  text-align: right;
-
 }
 
 #additional-info > ul{
@@ -1243,3 +1239,6 @@
   color: var(--macusp-color1);  
 }
 
+.searcher{
+  background-color: var(--macusp-color1e);
+}

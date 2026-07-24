@@ -154,7 +154,7 @@
 				<ul class="nav navbar-nav">
 					<form class="navbar-form navbar-right" role="search" action="<?php print caNavUrl($this->request, '', 'MultiSearch', 'index'); ?>">
 							<div class="formOutline">
-								<div class="form-group">
+								<div class="form-group searcher">
 									<input type="text" class="form-control" placeholder="Search" name="search">
 								</div>
 								<button type="submit" class="btn-search"><span class="glyphicon glyphicon-search"></span></button>

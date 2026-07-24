@@ -3,7 +3,7 @@ $item = $this->getVar("item");
 
 //$title = _t("Work"); 
 
-$artist = $item->getWithTemplate(   "<unit relativeTo='ca_entities' restrictToRelationshipTypes='creator,collective_creator,editor,produtor,organizador'>
+$artist = $item->getWithTemplate(   "<unit relativeTo='ca_entities' restrictToRelationshipTypes='creator,collective_creator,editor,produtor,organizador' delimiter=' '>
                                         ^ca_entities.preferred_labels.displayname <br>
                                     </unit>");
 

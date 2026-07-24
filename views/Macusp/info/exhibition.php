@@ -2,7 +2,8 @@
     $search = strtoupper($this->getVar("search")); 
     $item = $this->getVar("item"); 
 
-    $idno = $item->get("ca_occurrences.occurrence_id");
+    $id = $item->get("ca_occurrences.occurrence_id");
+    $idno = $item->get("ca_occurrences.idno");
     $name = $item->get("ca_occurrences.preferred_labels.name");
     $date = $item->get("ca_occurrences.exhibitionBeginDate");
 
@@ -79,7 +80,7 @@
     if ($works)
         $works = "<h6></span> "._t("List of Works").":</h6><br>".$works;*/
 
-    $button = caDetailLink($this->request, _t("More details"),"","ca_occurrences", $idno); 
+    $button = caDetailLink($this->request, _t("More details"),"","ca_occurrences", $id); 
 
 
 ?>

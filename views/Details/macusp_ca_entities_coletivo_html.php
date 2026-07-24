@@ -350,7 +350,7 @@
 								$vs_label_detail_link 	= caDetailLink($this->request, $qr_res->get("{$vs_table}.preferred_labels"), '', $vs_table, $vn_id);
 								
 								$info = True; 
-								include("boxes/ca_publications_list.php"); 
+								include("boxes/ca_occurrences_publications.php"); 
 
 								print $vs_result_output;		
 							}

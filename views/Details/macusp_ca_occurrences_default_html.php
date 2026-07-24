@@ -31,6 +31,7 @@
 					<BR>
 					<H1>{{{^ca_occurrences.preferred_labels.name}}}</H1>
 					<!--<H6>{{{^ca_occurrences.type_id}}}{{{<ifdef code="ca_occurrences.idno">, ^ca_occurrences.idno</ifdef>}}}</H6>-->
+					<!--<H6><i>{{{^ca_occurrences.tipo_exposicao}}}</i></H6>-->
 				</div><!-- end col -->
 			<div>
 		</div><!-- end row -->
@@ -380,7 +381,7 @@
 									//$vs_label_detail_link = "hola"; 
 
 									$info = True; 
-									include("boxes/ca_publications_list.php"); 						
+									include("boxes/ca_occurrences_publications.php"); 						
 									
 									print "$vs_result_output";
 								}

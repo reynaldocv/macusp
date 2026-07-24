@@ -1,7 +1,8 @@
 <?php
 $item = $this->getVar("item"); 
 
-$idno = $item->get("ca_occurrences.occurrence_id");
+$id = $item->get("ca_occurrences.occurrence_id");
+$idno = $item->get("ca_occurrences.idno");
 $name = $item->get("ca_occurrences.preferred_labels.name");
 
 //$date = $publication->get("ca_occurrences.exhibitionBeginDate");
@@ -57,7 +58,7 @@ if (trim($List_obrasMACUSP) !== "")
     }
 }
 
-$button = caDetailLink($this->request, _t("More details"),"","ca_occurrences", $idno); 
+$button = caDetailLink($this->request, _t("More details"),"","ca_occurrences", $id); 
 ?> 
 
 
