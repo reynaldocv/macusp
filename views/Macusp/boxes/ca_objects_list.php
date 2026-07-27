@@ -6,10 +6,22 @@
 			{
 				$vs_label_detail_link = substr($vs_label_detail_link, 0, 70); 
 			}*/
+			
 
-			$vs_authors = $qr_res->getWithTemplate("<unit relativeTo='ca_entities' excludeRelationshipTypes='doador' restrictToTypes='Artista' delimiter='<br>'>
-																			<b>^ca_entities.preferred_labels.displayname</b>
-																		</unit>"); 
+
+			$vs_authors = $qr_res->getWithTemplate("			
+    			<unit relativeTo='ca_entities' delimiter=' ' restrictToTypes='Coletivo' excludeRelationshipTypes='doador'>
+        			<b> ^ca_entities.preferred_labels.displayname </b>
+    			</unit>"); 
+
+			if (trim($vs_authors) === "")
+			{
+				$vs_authors = $qr_res->getWithTemplate("				
+					<unit relativeTo='ca_entities' delimiter=' ' restrictToTypes='Artista' excludeRelationshipTypes='doador'>
+						<b> ^ca_entities.preferred_labels.displayname </b>
+					</unit>"); 
+
+			}			
 
 			$vs_date_work = $qr_res->getWithTemplate("<ifdef code='ca_objects.datePeriod'><unit relativeTo='ca_objects.datePeriod' delimiter=' '>^ca_objects.datePeriod </unit></ifdef>"); 
 

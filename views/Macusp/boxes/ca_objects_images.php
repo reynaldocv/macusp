@@ -9,7 +9,7 @@
 			$vs_date_work = $qr_res->getWithTemplate("<ifdef code='ca_objects.datePeriod'><unit relativeTo='ca_objects.datePeriod' delimiter=' '>^ca_objects.datePeriod </unit></ifdef>"); 
 			
 			$preDetails = "<h5>$vs_authors</h5>"; 
-			$postDetails = "<h7>$vs_date_work</h7>"; 
+			$postDetails = "<h7>$vs_date_work</h7>"; 			
 
 			if ($info === True )
 			{
