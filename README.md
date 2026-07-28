@@ -294,11 +294,11 @@ Informação dos elementos (obras Mac, obras não Mac, Artistas, exposições, p
 graph LR
     %% Parte superior e inferior del primer puesto
     iconoI[" Icono (i)   <br> Controllers: Info <br> Views:  Macusp/info/"]
-    obras[" Obras Macusp <br> Controllers: Info <br> Views:  Macusp/info/work_mac.php"]
-    obrasN[" outras Obras <br> Controllers: Info <br> Views: Macusp/info/work_no_mac.php"]
-    artistas[" Artistas <br> Controllers: Info <br> Views: Macusp/info/artist.php"]
-    exposicoes[" Exposições <br> Controllers: Info <br> Views: Macusp/info/exhibition.php"]
-    publicacoes[" Publicações <br> Controllers: Info <br> Views: Macusp/info/publication.php"]
+    obras[" Obras Macusp <br> Macusp/info/work_mac.php"]
+    obrasN[" outras Obras <br> Macusp/info/work_no_mac.php"]
+    artistas[" Artistas <br> <br>Macusp/info/artist.php"]
+    exposicoes[" Exposições <br> Macusp/info/exhibition.php"]
+    publicacoes[" Publicações <br> Macusp/info/publication.php"]
     
     %% Conexión del organigrama (une la parte inferior de uno con la superior del otro)
     iconoI --> obras
