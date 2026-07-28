@@ -296,7 +296,7 @@ graph LR
     iconoI[" Icono (i)   <br> Controllers: Info <br> Views:  Macusp/info/"]
     obras[" Obras Macusp <br> Controllers: Info <br> Views:  Macusp/info/work_mac.php"]
     obrasN[" outras Obras <br> Controllers: Info <br> Views: Macusp/info/work_no_mac.php"]
-    artists[" Aristas <br> Controllers: Info <br> Views: Macusp/info/artist.php"]
+    artistas[" Artistas <br> Controllers: Info <br> Views: Macusp/info/artist.php"]
     exposicoes[" Exposições <br> Controllers: Info <br> Views: Macusp/info/exhibition.php"]
     publicacoes[" Publicações <br> Controllers: Info <br> Views: Macusp/info/publication.php"]
     
