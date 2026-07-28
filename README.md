@@ -556,9 +556,8 @@ devemos modificar os arquivos da pasta {macusp-theme}/views/Macusp/boxes/. Pelo 
 
     
 > [!CAUTION]
-> Esses arquivos são usados por outros controllers onde seus arquivos estão localizados em {macusp-theme}/views/,
-> para que seja usado o mesmo box (formato) e não estar modificando para cada controller, foi declarado 
-> un link simbólico (acceso direto à pasta {macusp-theme}/views/Macusp/boxes/) nas pastas: 
+> Esses arquivos são usados por outros controllers como Details, Browse, etc... Por tanto foi declarado 
+> um link simbólico (acceso direto à pasta {macusp-theme}/views/Macusp/boxes/) em cada umas das seguintes pastas: 
 > - {macusp-theme}/views/Details/
 > - {macusp-theme}/views/Browse/
 > - {macusp-theme}/views/Intro/
