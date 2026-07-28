@@ -518,7 +518,7 @@ Para modificar as seguintes visualizações:
       - [index.php/Detail/works/16316](http://143.107.130.173/admacervo/macusp/index.php/Detail/works/16316) 
       - Macusp/views/Details/macusp_ca_object_default.php
   - artistas 
-      -[index.php/Detail/artists/4996](http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/4996) 
+      - [index.php/Detail/artists/4996](http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/4996) 
       - Macusp/views/Details/macusp_ca_entities_default.php
   - groups 
       - [index.php/Detail/groups/10742](http://143.107.130.173/admacervo/macusp/index.php/Detail/groups/10742)
