@@ -281,12 +281,12 @@ graph LR
     style artists fill:#eee,stroke:#666
     style exhibitions fill:#eee,stroke:#666
 
-    style search fill:#ddd,stroke:#666
+    style search fill:#efe,stroke:#666
     
-    style advancedSearch fill:#eee,stroke:#333
-    style asWorks fill:#fff,stroke:#333
-    style asArtists fill:#fff,stroke:#666
-    style asExhibitions fill:#fff,stroke:#666
+    style advancedSearch fill:#ede,stroke:#222
+    style asWorks fill:#ede,stroke:#222
+    style asArtists fill:#ede,stroke:#222
+    style asExhibitions fill:#ede,stroke:#222
 ```
 
 ## 6- Browse
