@@ -515,20 +515,20 @@ em caso de não existir esse arquivo, a informação é mostrado num arquivo def
 
 Para modificar as seguintes visualizações:
   - obras 
-      - visualização: [http://143.107.130.173/admacervo/macusp/index.php/Detail/works/16316](http://143.107.130.173/admacervo/macusp/index.php/Detail/works/16316) 
-      - arquivo: Macusp/views/Details/macusp_ca_object_default.php
+      - [index.php/Detail/works/16316](http://143.107.130.173/admacervo/macusp/index.php/Detail/works/16316) 
+      - Macusp/views/Details/macusp_ca_object_default.php
   - artistas 
-      - visualização: [http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/4996](http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/4996) 
-      - arquivo: Macusp/views/Details/macusp_ca_entities_default.php
+      -[index.php/Detail/artists/4996](http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/4996) 
+      - Macusp/views/Details/macusp_ca_entities_default.php
   - groups 
-      - visualização: [http://143.107.130.173/admacervo/macusp/index.php/Detail/groups/10742](http://143.107.130.173/admacervo/macusp/index.php/Detail/groups/10742)
-      - arquivo: Macusp/views/Details/macusp_ca_entities_coletivo.php
+      - [index.php/Detail/groups/10742](http://143.107.130.173/admacervo/macusp/index.php/Detail/groups/10742)
+      - Macusp/views/Details/macusp_ca_entities_coletivo.php
   - exposições 
-      - visualização: [http://143.107.130.173/admacervo/macusp/index.php/Detail/exhibitions/2766](http://143.107.130.173/admacervo/macusp/index.php/Detail/exhibitions/2766)
+      - [index.php/Detail/exhibitions/2766](http://143.107.130.173/admacervo/macusp/index.php/Detail/exhibitions/2766)
       - Macusp/views/Details/macusp_ca_occurrences_default.php
   - publicações
-      - visualização: [http://143.107.130.173/admacervo/macusp/index.php/Detail/publications/1410](http://143.107.130.173/admacervo/macusp/index.php/Detail/publications/1410)
-      - arquivo: Macusp/views/Details/macusp_ca_occurrences_publicacao.php
+      - [index.php/Detail/publications/1410](http://143.107.130.173/admacervo/macusp/index.php/Detail/publications/1410)
+      - Macusp/views/Details/macusp_ca_occurrences_publicacao.php
 
 
 
