@@ -294,8 +294,8 @@ Informação dos elementos (obras Mac, obras não Mac, Artistas, exposições, p
 graph LR
     %% Parte superior e inferior del primer puesto
     iconoI[" Icono (i)   <br> Controllers: Info <br> Views:  Macusp/info/"]
-    works[" Obras Macusp <br> Controllers: Info <br> Views:  Macusp/info/work_mac.php"]
-    worksN[" outras Obras <br> Controllers: Info <br> Views: "Macusp/info/work_no_mac.php"]
+    obras[" Obras Macusp <br> Controllers: Info <br> Views:  Macusp/info/work_mac.php"]
+    obrasN[" outras Obras <br> Controllers: Info <br> Views: "Macusp/info/work_no_mac.php"]
     artists[" Aristas <br> Controllers: Info <br> Views: Macusp/info/artist.php"]
     exposicoes[" Exposições <br> Controllers: Info <br> Views: Macusp/info/exhibition.php"]
     publicacoes[" Publicações <br> Controllers: Info <br> Views: Macusp/info/publication.php"]
