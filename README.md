@@ -542,15 +542,15 @@ obras, exposições e publicações; para modificar
     - formato dos items 
     - a informação dos items (remover o agregar)
 devemos modificar os arquivos da pasta {macusp-theme}/views/Macusp/boxes/. Pelo momento, temos os seguintes arquivos:     
-      - ca_entities_displayname.php
-      - ca_entities_label.php
-      - ca_entities_surname.php
-      - ca_entities_list.php
-      - ca_objects_images.php
-      - ca_objects_list.php
-      - ca_objects_list_off.php    
-      - ca_occurrences_list.php    
-      - ca_occurrences_publications.php    
+  - ca_entities_displayname.php
+  - ca_entities_label.php
+  - ca_entities_surname.php
+  - ca_entities_list.php
+  - ca_objects_images.php
+  - ca_objects_list.php
+  - ca_objects_list_off.php    
+  - ca_occurrences_list.php    
+  - ca_occurrences_publications.php    
 
 
 
