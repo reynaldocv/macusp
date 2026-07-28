@@ -530,21 +530,54 @@ Para modificar as seguintes visualizações:
       - [index.php/Detail/publications/1410](http://143.107.130.173/admacervo/macusp/index.php/Detail/publications/1410)
       - Macusp/views/Details/macusp_ca_occurrences_publicacao.php
 
-
-
-
-
-
-
-
-
-
-
+Qualquer informação a mostrar nas visualizações deve ser trabalhado nos arquivos.
 
 ### Agregar Visualização 
 
 
 ## 8- Items (box)
+Nesse item é definido o formato como os items são mostrados. 
+Por exemplo em [index.php/Detail/artists/5023](http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/5023) temos 
+obras, exposições e publicações; para modificar 
+    - formato dos items 
+    - a informação dos items (remover o agregar)
+devemos modificar os arquivos da pasta {macusp-theme}/views/Macusp/boxes/. Pelo momento, temos os seguintes arquivos:     
+    - ca_entities_displayname.php
+    - ca_entities_label.php
+    - ca_entities_surname.php
+    - ca_entities_list.php
+    - ca_objects_images.php
+    - ca_objects_list.php
+    - ca_objects_list_off.php    
+    - ca_occurrences_list.php    
+    - ca_occurrences_publications.php    
+
+
+    
+    
+> [!CAUTION]
+> Esses arquivos são usados por outros controllers onde seus arquivos estão localizados em {macusp-theme}/views/,
+> para que seja usado o mesmo box (formato) e não estar modificando para cada controller, foi declarado 
+> un link simbólico (acceso direto à pasta {macusp-theme}/views/Macusp/boxes/) nas pastas: 
+> - {macusp-theme}/views/Details/
+> - {macusp-theme}/views/Browse/
+> - {macusp-theme}/views/Intro/
+> - {macusp-theme}/views/Search/
+> - {macusp-theme}/views/Scan/
+
+    
+
+
+
+
+  
+
+
+
+
+
+
+
 
 ### Agregar Visualização 
 
