@@ -254,10 +254,10 @@ graph LR
     artists["        <a href='http://143.107.130.173/admacervo/macusp/index.php/Intro/artists'>Artistas</a>  <br> Controllers: Intro <br> Views: Macusp"]
     exhibitions["    <a href='http://143.107.130.173/admacervo/macusp/index.php/Intro/exhibitions'>Exposições</a> <br> Controllers: Intro <br> Views: Macusp"]
     search["         <a href='https://link.com'> Busca Geral </a> <br>  Controllers: MultiSearch <br>  Views: Search "]
-    advancedSearch[" <a href='https://link.com'> Busca Avançada</a> <br>  Controllers: </strong> asdf <br>  Views: "]
-    viewWorks[" <a href='https://link.com'> Ver todos as obras</a> <br>  Controllers: </strong> asdf <br>  Views: "]
-    viewArtists[" <a href='https://link.com'> Ver todos os artistas</a> <br>  Controllers: </strong> asdf <br>  Views: "]
-    viewExhibitions[" <a href='https://link.com'> Ver todos as exposições</a> <br>  Controllers: </strong> asdf <br>  Views: "]
+    advancedSearch[" <a href='https://link.com'> Busca Avançada</a> <br>  Controllers: </strong> Scan <br>  Views: Scan"]
+    viewWorks[" <a href='https://link.com'> Ver todos as obras</a> <br>  Controllers: </strong> Browse <br>  Views: Browse"]
+    viewArtists[" <a href='https://link.com'> Ver todos os artistas</a> <br>  Controllers: </strong> Browse <br>  Views: Browse"]
+    viewExhibitions[" <a href='https://link.com'> Ver todos as exposições</a> <br>  Controllers: </strong> Browse <br>  Views: Browse"]
     asWorks["<a href='http://143.107.130.173/admacervo/macusp/index.php/Scan/advanced/works'> Busca - Obras</a> <br>  Controllers: Scan <br> Views: Scan"]
     asArtists["<a href='http://143.107.130.173/admacervo/macusp/index.php/Scan/advanced/artists'> Busca - Artistas</a> <br>  Controllers: Scan <br> Views: Scan "]
     asExhibitions["<a href='http://143.107.130.173/admacervo/macusp/index.php/Scan/advanced/exhibitions'> Busca Exposições </a> <br> Controllers: scan <br>  Views: Scan  "]
@@ -275,12 +275,18 @@ graph LR
     advancedSearch --> asArtists
     advancedSearch --> asExhibitions
 
-
     %% Estilos para que parezcan una sola pieza
     style home fill:#eee,stroke:#333
     style works fill:#eee,stroke:#333
     style artists fill:#eee,stroke:#666
     style exhibitions fill:#eee,stroke:#666
+
+    style search fill:#ddd,stroke:#666
+    
+    style advancedSearch fill:#eee,stroke:#333
+    style asWorks fill:#fff,stroke:#333
+    style asArtists fill:#fff,stroke:#666
+    style asExhibitions fill:#fff,stroke:#666
 ```
 
 ## 6- Browse
