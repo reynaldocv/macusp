@@ -296,7 +296,7 @@ graph LR
     iconoI[" Icono (i)   <br> Controllers: Info <br> Views:  Macusp/info/"]
     obras[" Obras Macusp <br> Macusp/info/work_mac.php"]
     obrasN[" outras Obras <br> Macusp/info/work_no_mac.php"]
-    artistas[" Artistas <br> <br>Macusp/info/artist.php"]
+    artistas[" Artistas <br> Macusp/info/artist.php"]
     exposicoes[" Exposições <br> Macusp/info/exhibition.php"]
     publicacoes[" Publicações <br> Macusp/info/publication.php"]
     
@@ -311,6 +311,7 @@ graph LR
     %% Estilos para que parezcan una sola pieza
     style iconoI fill:#eee,stroke:#333
     style obras fill:#eee,stroke:#333
+    style obrasN fill:#eee,stroke:#333
     style artistas fill:#eee,stroke:#333
     style exposicoes fill:#eee,stroke:#666
     style publicacoes fill:#eee,stroke:#666
@@ -501,6 +502,38 @@ Para o macusp-theme, temos:
         restrictToTypes = [publicacao],        
       },      
     }
+
+O arquivos de visualização dos Details está localizado no {macusp-theme}/views/Details/. 
+Para cada detailTypes (works, artists, groups, etc...) devemos tener um arquivo definido 
+como: 
+    - macusp_{table}_{restrictToTypes}.php 
+
+Por exemplo: a informação de uma publicação é visualizado no arquivo: /views/Details/macusp_ca_occurrences_publicacao.php, 
+em caso de não existir esse arquivo, a informação é mostrado num arquivo default nomeado como 
+/views/Details/macusp_ca_occurrences_default.php, 
+
+Para modificar as seguintes visualizações:
+    - obras 
+      - [http://143.107.130.173/admacervo/macusp/index.php/Detail/works/16316](http://143.107.130.173/admacervo/macusp/index.php/Detail/works/16316) 
+      - 
+    - artistas 
+      -[http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/4996](http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/4996) 
+      -   
+    - groups 
+      - [http://143.107.130.173/admacervo/macusp/index.php/Detail/groups/10742](http://143.107.130.173/admacervo/macusp/index.php/Detail/groups/10742)
+      - 
+    - exposições 
+      - [http://143.107.130.173/admacervo/macusp/index.php/Detail/exhibitions/2766](http://143.107.130.173/admacervo/macusp/index.php/Detail/exhibitions/2766)
+      - 
+    - publicações
+      - [http://143.107.130.173/admacervo/macusp/index.php/Detail/publications/1410](http://143.107.130.173/admacervo/macusp/index.php/Detail/publications/1410)
+      - 
+
+
+
+
+
+
 
 
 
