@@ -277,10 +277,10 @@ graph LR
 
 
     %% Estilos para que parezcan una sola pieza
-    style home fill:#111,stroke:#333,color:#111
-    style works fill:#111,stroke:#333
-    style artists fill:#111,stroke:#666,color:#111
-    style exhibitions fill:#111,stroke:#666
+    style home fill:#666,stroke:#333,color:#eee
+    style works fill:#666,stroke:#333
+    style artists fill:#666,stroke:#666,color:#eee
+    style exhibitions fill:#666,stroke:#666
 ```
 
 ## 6- Browse
