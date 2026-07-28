@@ -513,21 +513,21 @@ em caso de não existir esse arquivo, a informação é mostrado num arquivo def
 /views/Details/macusp_ca_occurrences_default.php, 
 
 Para modificar as seguintes visualizações:
-    - obras 
+  - obras 
       - [http://143.107.130.173/admacervo/macusp/index.php/Detail/works/16316](http://143.107.130.173/admacervo/macusp/index.php/Detail/works/16316) 
-      - 
-    - artistas 
+      - Macusp/views/Details/macusp_ca_object_default.php
+  - artistas 
       -[http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/4996](http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/4996) 
-      -   
-    - groups 
+      - Macusp/views/Details/macusp_ca_entities_default.php
+  - groups 
       - [http://143.107.130.173/admacervo/macusp/index.php/Detail/groups/10742](http://143.107.130.173/admacervo/macusp/index.php/Detail/groups/10742)
-      - 
-    - exposições 
+      - Macusp/views/Details/macusp_ca_entities_coletivo.php
+  - exposições 
       - [http://143.107.130.173/admacervo/macusp/index.php/Detail/exhibitions/2766](http://143.107.130.173/admacervo/macusp/index.php/Detail/exhibitions/2766)
-      - 
-    - publicações
+      - Macusp/views/Details/macusp_ca_occurrences_default.php
+  - publicações
       - [http://143.107.130.173/admacervo/macusp/index.php/Detail/publications/1410](http://143.107.130.173/admacervo/macusp/index.php/Detail/publications/1410)
-      - 
+      - Macusp/views/Details/macusp_ca_occurrences_publicacao.php
 
 
 
