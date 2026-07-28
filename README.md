@@ -293,12 +293,12 @@ Informação dos elementos (obras Mac, obras não Mac, Artistas, exposições, p
 ```mermaid
 graph LR
     %% Parte superior e inferior del primer puesto
-    iconoI[" Icono (i)   <br> Controllers: Info <br> Views: Macusp"Views: Macusp/info/"]
-    works[" Obras Macusp <br> Controllers: Info <br> Views: Macusp"Views: Macusp/info/work_mac.php"]
-    worksN[" Obras Macusp <br> Controllers: Info <br> Views: Macusp"Views: Macusp/info/work_no_mac.php"]
-    artists[" Obras Macusp <br> Controllers: Info <br> Views: Macusp"Views: Macusp/info/artist.php"]
-    exposicoes[" Obras Macusp <br> Controllers: Info <br> Views: Macusp"Views: Macusp/info/exhibition.php"]
-    publicacoes[" Obras Macusp <br> Controllers: Info <br> Views: Macusp"Views: Macusp/info/publication.php"]
+    iconoI[" Icono (i)   <br> Controllers: Info <br> Views:  Macusp/info/"]
+    works[" Obras Macusp <br> Controllers: Info <br> Views:  Macusp/info/work_mac.php"]
+    worksN[" outras Obras <br> Controllers: Info <br> Views: "Macusp/info/work_no_mac.php"]
+    artists[" Aristas <br> Controllers: Info <br> Views: Macusp/info/artist.php"]
+    exposicoes[" Exposições <br> Controllers: Info <br> Views: Macusp/info/exhibition.php"]
+    publicacoes[" Publicações <br> Controllers: Info <br> Views: Macusp/info/publication.php"]
     
     %% Conexión del organigrama (une la parte inferior de uno con la superior del otro)
     iconoI --> obras
