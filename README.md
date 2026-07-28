@@ -288,6 +288,34 @@ graph LR
     style asArtists fill:#ede,stroke:#222
     style asExhibitions fill:#ede,stroke:#222
 ```
+Informação dos elementos (obras Mac, obras não Mac, Artistas, exposições, publicações)
+
+```mermaid
+graph LR
+    %% Parte superior e inferior del primer puesto
+    iconoI[" Icono (i)   <br> Controllers: Info <br> Views: Macusp"Views: Macusp/info/"]
+    works[" Obras Macusp <br> Controllers: Info <br> Views: Macusp"Views: Macusp/info/work_mac.php"]
+    worksN[" Obras Macusp <br> Controllers: Info <br> Views: Macusp"Views: Macusp/info/work_no_mac.php"]
+    artists[" Obras Macusp <br> Controllers: Info <br> Views: Macusp"Views: Macusp/info/artist.php"]
+    exposicoes[" Obras Macusp <br> Controllers: Info <br> Views: Macusp"Views: Macusp/info/exhibition.php"]
+    publicacoes[" Obras Macusp <br> Controllers: Info <br> Views: Macusp"Views: Macusp/info/publication.php"]
+    
+    %% Conexión del organigrama (une la parte inferior de uno con la superior del otro)
+    iconoI --> obras
+    iconoI --> obrasN
+    iconoI --> artistas
+    iconoI --> exposicoes
+    iconoI --> publicacoes
+    
+
+    %% Estilos para que parezcan una sola pieza
+    style iconoI fill:#eee,stroke:#333
+    style obras fill:#eee,stroke:#333
+    style artistas fill:#eee,stroke:#333
+    style exposicoes fill:#eee,stroke:#666
+    style publicacoes fill:#eee,stroke:#666
+
+```
 
 ## 6- Browse
 Temos 3 tipos de browse (broseTypes) definidos no arquivo config (browse.conf)
