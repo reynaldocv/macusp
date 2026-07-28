@@ -542,19 +542,22 @@ obras, exposições e publicações; para modificar
     - formato dos items 
     - a informação dos items (remover o agregar)
 devemos modificar os arquivos da pasta {macusp-theme}/views/Macusp/boxes/. Pelo momento, temos os seguintes arquivos:     
-  - ca_entities_displayname.php
-  - ca_entities_label.php
-  - ca_entities_surname.php
-  - ca_entities_list.php
-  - ca_objects_images.php
-  - ca_objects_list.php
-  - ca_objects_list_off.php    
-  - ca_occurrences_list.php    
-  - ca_occurrences_publications.php    
+  - **ca_entities_displayname.php**: é usado com o controller Browse para mostrar a visualização dos artistas contendo 
+  só os displaynames []().  
+  - **ca_entities_label.php**
+  - **ca_entities_surname.php**
+  - **ca_entities_list.php**
+  - **ca_objects_images.php**
+  - **ca_objects_list.php**
+  - **ca_objects_list_off.php**
+  - **ca_occurrences_list.php**
+  - **ca_occurrences_publications.php**
 
+> [!TIP]
+> Para modificar o formato (cores, tamanho e outros) devemos accesar aos arquivos:
+> - {macusp}/assets/css/main.css
+> - {macusp}/assets/css/macusp.css
 
-
-    
 > [!CAUTION]
 > Esses arquivos são usados por outros controllers como Details, Browse, etc... Por tanto foi declarado 
 > um link simbólico (acceso direto à pasta {macusp-theme}/views/Macusp/boxes/) em cada umas das seguintes pastas: 
