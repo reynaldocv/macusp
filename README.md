@@ -546,7 +546,8 @@ devemos modificar os arquivos da pasta {macusp-theme}/views/Macusp/boxes/. Pelo 
     - é usado com o controller Browse para mostrar a visualização dos artistas contendo 
   só os displaynames [link](http://143.107.130.173/admacervo/macusp/index.php/Browse/artists/view/displayname/key/b32d28461022288063f9c8e05db41d6d/sort/displayname/_advanced/0).    
   - **ca_entities_surname.php**
-    - usado com o controller Browse: [link](http://localhost/pawtucket/index.php/Browse/artists/view/surname/key/b32d28461022288063f9c8e05db41d6d). 
+    - usado com o controller Browse: [link](http://localhost/pawtucket/index.php/Browse/artists/view/surname/key/b32d28461022288063f9c8e05db41d6d). Mostra 
+    os artistas no formato **sobrenome, nome**. 
 
   - **ca_entities_list.php**
   - **ca_objects_images.php**
