@@ -31,8 +31,7 @@
 		?>
 					<a name='<?php print $vs_block; ?>'></a>
 					<div id="<?php print $vs_block; ?>Block" class='resultBlock'>
-						<?php print $va_results[$vs_block]['html']; ?>
-						
+						<?php print $va_results[$vs_block]['html']; ?>						
 					</div>
 		<?php
 				} 

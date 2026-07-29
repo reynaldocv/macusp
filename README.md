@@ -1,4 +1,4 @@
-theme# "Macusp" - pawtucket2 - Collectiveaccess 
+# "Macusp" - pawtucket2 - Collectiveaccess 
 
 Esse é um tema (theme) "MACUSP" para o pawtucket2 - collectiveaccess. 
 O pawtucket2 é a interface para o usuario final do acervo online MACUSP. 
@@ -558,9 +558,11 @@ devemos modificar os arquivos da pasta {macusp-theme}/views/Macusp/boxes/. Pelo 
   - **ca_objects_list_off.php**
     - [link](http://143.107.130.173/admacervo/macusp/index.php/Browse/works/view/list/key/adb93581741bafb148fc34f1e5eff181). Mostra as obras en formato pequeno (a imagem em tamanho pequeno) sem o icono (i). 
   - **ca_occurrences_list.php**
-    - [link](http://143.107.130.173/admacervo/macusp/index.php/Browse/exhibitions/key/98f45dfc87d2f12ea8d52aae77d225fa/l/g). Mostra as exposições en formato list. 
+    - usado com o controller:
+      - Browse: [link](http://143.107.130.173/admacervo/macusp/index.php/Browse/exhibitions/key/98f45dfc87d2f12ea8d52aae77d225fa/l/g). Mostra as exposições en formato list. 
+      - Details em obras e artistas [link](http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/5023). 
   - **ca_occurrences_publications.php**
-    - [link](http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/5023). Mostra as publicações no seu formato.  
+    - usado com controller Details nas obras, artistas e exposições [link](http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/5023). Mostra as publicações no seu formato.  
 
 > [!TIP]
 > Para modificar o formato (cores, tamanho e outros) devemos accesar aos arquivos:
@@ -575,29 +577,89 @@ devemos modificar os arquivos da pasta {macusp-theme}/views/Macusp/boxes/. Pelo 
 > - {macusp-theme}/views/Intro/
 > - {macusp-theme}/views/Search/
 > - {macusp-theme}/views/Scan/
-
     
-
-
-
-
-  
-
-
-
-
-
-
-
-
-### Agregar Visualização 
-
-
 ## 9-Info 
+O controller Info foi implmentado para mostrar a informação dos items (obra do Mac, obras de não Mac, artistas, exposições e publicações)
+quando o icono (i) é clickado. 
 
+O Controller é InfoController e contém 5 funções que estâo no arquivo arquivo {macusp}/controllers/InfoController.php. 
+Cada item é mostrado no seu corresponde arquivo view: 
+ - obras 
+  - função **Work**: 
+  - views: arquivo {macusp-theme}/views/Macusp/info/work_mac.php. 
+- obras que não pertencem ao MAC 
+  - função **NoWorks**
+  - views: arquivo {macusp-theme}/views/Macusp/info/work_no_mac.php. 
+- artistas
+  - função **Artist**: arquivo 
+  - views: arquivo {macusp-theme}/views/Macusp/info/artist.php. 
+- exposições
+  - função **Exhibition**: 
+  - views: arquivo {macusp-theme}/views/Macusp/info/exhibition.php. 
+- publicações
+  - função  **Publication** 
+  - views: arquivo {macusp-theme}/views/Macusp/info/publication.php. 
+  
+> [!CAUTION]
+> Recomendamos não modificar o código do arquivo InfoController.php 
+> Os estilos css está declarado no arquivo {macusp-theme}/assets/css/macusp.css.
 
 ## 10- MultiSearch
+O multisearch é a função da busca geral donde a busca é feita nos artisas, obras e exposiçoes 
+(exemplo [multisearch](http://143.107.130.173/admacervo/macusp/index.php/MultiSearch/index?search=*))
 
+O multisearch funciona com os seguintes arquivos: 
+  - search.conf (ubicado en {macusp-theme}/conf/)
+    No arquivo search.conf tém um parâmetro multisearchTypes
+
+    multisearchTypes = {
+      works = {
+        displayName = _(Works),
+        table = ca_objects,
+        restrictToTypes = [art],
+        view = Search/ca_objects_search_subview_html.php,
+        itemsPerPage = 10,
+        # --- sortControlType = dropdown or list
+        sortControlType = list,
+        sortBy = {
+          Title = ca_object_labels.name
+        },
+        sortDirection = {			
+          Title = asc
+        }
+      },
+      artists = {
+        ...
+      },
+      groups = {
+        ...
+      },
+      exhibitions = {
+        ...        
+      }	
+    } 
+  
+  A busca geral é feita en:
+  - works (ca_objects - art)
+  - artists (ca_entities - Artista)
+  - groups (ca_entities - coletivo)
+  - exhibitions (ca_occurrences - Exhibition), 
+
+  Cada multisearchTypes tem o parâmetro view **view = Search/ca_objects_search_subview_html.php,** 
+  que mostra onde está localizado o arquivo que contém o formato de como o resultado da busca será mostrada. 
+
+  Temos 4 multisearchTypes com os seguintes parâmetros views. Esses arquivos estão em {Macusp/views/Search/}: 
+
+  - works (ca_objects_search_subview_html)
+  - artists (ca_entities_search_subview_html)
+  - groups (ca_entities_search_subview_html)
+  - exhibitions (ca_occurrences_search_subview_html), 
+
+- SearchController.php (ubicado en {macusp-theme}/controllers/)
+
+> [!CAUTION]
+> Para remover o agregar outro criterio de busca devemos declarar no parâmetro multiseacrhTypes no arquivo search.conf
+> (não esqueça de definir a view) e devemos criar o arquivo view.  
 
 ## 11- Advanced Search 
 
@@ -611,39 +673,6 @@ devemos modificar os arquivos da pasta {macusp-theme}/views/Macusp/boxes/. Pelo 
 
 
 
-
-> [!CAUTION]
-> Como vas
-
-> [!NOTE]
-> Como vas
-
-## Conteudo
-
-# Example headings
-
-## Sample Section
-
-## This'll be a _Helpful_ Section About the Greek Letter Θ!
-A heading containing characters not allowed in fragments, UTF-8 characters, two consecutive spaces between the first and second words, and formatting.
-
-## This heading is not unique in the file
-
-TEXT 1
-
-## This heading is not unique in the file
-
-TEXT 2
-
-# Links to the example headings above
-
-Link to the sample section: [Link Text](#sample-section).
-
-Link to the helpful section: [Link Text](#thisll-be-a-helpful-section-about-the-greek-letter-Θ).
-
-Link to the first non-unique section: [Link Text](#this-heading-is-not-unique-in-the-file).
-
-Link to the second non-unique section: [Link Text](#this-heading-is-not-unique-in-the-file-1).
 
 > [!IMPORTANT]
 > O arquivo de configuração dele é o detail.conf, que são declarados todas a visualizações individuais. 
