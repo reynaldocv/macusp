@@ -551,12 +551,16 @@ devemos modificar os arquivos da pasta {macusp-theme}/views/Macusp/boxes/. Pelo 
   - **ca_entities_list.php**
     - usado com o controller Browse: [link](http://localhost/pawtucket/index.php/Browse/artists/view/surname/key/b32d28461022288063f9c8e05db41d6d). Mostra 
     os artistas con sos lugares e datas de nacimento e morte. 
-  - **ca_objects_images.php**
-    - 
+  - **ca_objects_images.php**  
+    -  usado com o controller Browse: [link](http://143.107.130.173/admacervo/macusp/index.php/Browse/works/view/images/key/adb93581741bafb148fc34f1e5eff181). Mostra as obras en formato regular(a imagem em tamanho normal). 
   - **ca_objects_list.php**
+    - [link](http://143.107.130.173/admacervo/macusp/index.php/Browse/works/view/list/key/adb93581741bafb148fc34f1e5eff181). Mostra as obras en formato pequeno (a imagem em tamanho pequeno) e com o icono (i). 
   - **ca_objects_list_off.php**
+    - [link](http://143.107.130.173/admacervo/macusp/index.php/Browse/works/view/list/key/adb93581741bafb148fc34f1e5eff181). Mostra as obras en formato pequeno (a imagem em tamanho pequeno) sem o icono (i). 
   - **ca_occurrences_list.php**
+    - [link](http://143.107.130.173/admacervo/macusp/index.php/Browse/exhibitions/key/98f45dfc87d2f12ea8d52aae77d225fa/l/g). Mostra as exposições en formato list. 
   - **ca_occurrences_publications.php**
+    - [link](http://143.107.130.173/admacervo/macusp/index.php/Detail/artists/5023). Mostra as publicações no seu formato.  
 
 > [!TIP]
 > Para modificar o formato (cores, tamanho e outros) devemos accesar aos arquivos:
