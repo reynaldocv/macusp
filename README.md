@@ -548,9 +548,11 @@ devemos modificar os arquivos da pasta {macusp-theme}/views/Macusp/boxes/. Pelo 
   - **ca_entities_surname.php**
     - usado com o controller Browse: [link](http://localhost/pawtucket/index.php/Browse/artists/view/surname/key/b32d28461022288063f9c8e05db41d6d). Mostra 
     os artistas no formato **sobrenome, nome**. 
-
   - **ca_entities_list.php**
+    - usado com o controller Browse: [link](http://localhost/pawtucket/index.php/Browse/artists/view/surname/key/b32d28461022288063f9c8e05db41d6d). Mostra 
+    os artistas con sos lugares e datas de nacimento e morte. 
   - **ca_objects_images.php**
+    - 
   - **ca_objects_list.php**
   - **ca_objects_list_off.php**
   - **ca_occurrences_list.php**
