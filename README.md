@@ -612,6 +612,7 @@ O multisearch funciona com os seguintes arquivos:
   - search.conf (ubicado en {macusp-theme}/conf/)
     No arquivo search.conf tém um parâmetro multisearchTypes
 
+
     multisearchTypes = {
       works = {
         displayName = _(Works),
@@ -684,21 +685,22 @@ A Busca avançada (advanced search) funciona com o seguintes arquivo de configur
   - search.conf (ubicado en {macusp-theme}/conf/)
     Nesse arquivo search.conf tém um parâmetro *advancedSearchTypes*
 
-      advancedSearchTypes = {
-        works = {
-          displayName = _(works),
-          table = ca_objects,
-          restrictToTypes = [art],
-          view = Scan/macusp_advanced_search_ca_objects_html.php, 
-          itemsPerPage = 10,               
-          sortBy = {
-            Entity = ca_entity_labels.surname;ca_entity_labels.forename,
-            Identifier = ca_objects.idno,
-            Name = ca_object_labels.name
-          }
-        }
-        ...
-      }
+
+                                                advancedSearchTypes = {
+                                                  works = {
+                                                    displayName = _(works),
+                                                    table = ca_objects,
+                                                    restrictToTypes = [art],
+                                                    view = Scan/macusp_advanced_search_ca_objects_html.php, 
+                                                    itemsPerPage = 10,               
+                                                    sortBy = {
+                                                      Entity = ca_entity_labels.surname;ca_entity_labels.forename,
+                                                      Identifier = ca_objects.idno,
+                                                      Name = ca_object_labels.name
+                                                    }
+                                                  }
+                                                  ...
+                                                }
         
 Para criar um novo formulário devemos criar uma instancia no *advancedSearchTypes*, é importante 
 especificar o *table*, *restrictToTypes* e especificar onde está localizado seu arquivo *view*. 
