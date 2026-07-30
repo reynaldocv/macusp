@@ -24,6 +24,17 @@ O Conteudo está dividido nas seguintes seções:
 
 5. [Browse](#5--Browse). 
 
+6. [Browse](#6--browse)
+
+7.[Details](#7--details)
+
+8. [Formato dos items - Boxes](#8--items-box)
+
+9. [Icono (i)](#9-info)
+
+10. [Busca geral - multisearch](#10--multisearch)
+
+11. [Advanced Search](#11--advanced-search)
 
 
 ## 1- Conteudo do tema MACUSP
