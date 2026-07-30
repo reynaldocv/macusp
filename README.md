@@ -690,8 +690,7 @@ Nesse arquivo search.conf tém um parâmetro *advancedSearchTypes*
         table = ca_objects,
         restrictToTypes = [art],
         view = Scan/macusp_advanced_search_ca_objects_html.php, 
-        itemsPerPage = 10,
-        
+        itemsPerPage = 10,               
         sortBy = {
           Entity = ca_entity_labels.surname;ca_entity_labels.forename,
           Identifier = ca_objects.idno,
@@ -701,4 +700,6 @@ Nesse arquivo search.conf tém um parâmetro *advancedSearchTypes*
       ...
     }
     
+Para criar um novo formulário devemos criar uma instancia no *advancedSearchTypes*, é importante 
+especificar o *table*, *restrictToTypes* e especificar onde está localizado seu arquivo *view*. 
 
