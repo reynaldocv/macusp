@@ -610,7 +610,7 @@ O multisearch é a função da busca geral donde a busca é feita nos artisas, o
 
 O multisearch funciona com os seguintes arquivos: 
   - search.conf (ubicado en {macusp-theme}/conf/)
-    No arquivo search.conf tém um parâmetro multisearchTypes
+No arquivo search.conf tém um parâmetro multisearchTypes
 
 
     multisearchTypes = {
