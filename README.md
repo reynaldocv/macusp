@@ -683,7 +683,7 @@ mostrada no aquivo *advanced_search_template.php*. Esse arquivo mostra:
 ### Para Agregar un Novo Formulário de Busca Avançada: 
 A Busca avançada (advanced search) funciona com o seguintes arquivo de configuração: 
 - search.conf (ubicado en {macusp-theme}/conf/)
-  Nesse arquivo search.conf tém um parâmetro *advancedSearchTypes*
+Nesse arquivo search.conf tém um parâmetro *advancedSearchTypes*
 
 
     advancedSearchTypes = {
