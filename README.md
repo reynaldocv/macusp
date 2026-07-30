@@ -664,28 +664,41 @@ O multisearch funciona com os seguintes arquivos:
 ## 11- Advanced Search 
 
 - **Controller**: ScanController.php  
-- **Views**: {macusp-theme}/views/Scan/
-  - 
-  - 
-  - 
+- **Views**: {macusp-theme}/views/Scan/  
+  - advanced_search_template.php 
+  - advanced_search_results.php 
+  - macusp_advanced_search_ca_artists_html.php
+  - macusp_advanced_search_ca_objects_html.php
+  - macusp_advanced_search_ca_occurrences_exhibitions_html.php
 
+Funcionamento: A informação é processada pelo controller *ScanController.php* para ser 
+mostrada no aquivo *advanced_search_template.php*. Esse arquivo mostra:
+  - os formulários de busca: 
+    - macusp_advanced_search_ca_artists_html.php
+    - macusp_advanced_search_ca_objects_html.php
+    - macusp_advanced_search_ca_occurrences_exhibitions_html.php
+  - e o resultado da busca se tiver (*advanced_search_results.php *). 
 
+### Para Agregar un Novo Formulário de Busca Avançada: 
+A Busca avançada (advanced search) funciona com o seguintes arquivo de configuração: 
+  - search.conf (ubicado en {macusp-theme}/conf/)
+Nesse arquivo search.conf tém um parâmetro *advancedSearchTypes*
 
+    advancedSearchTypes = {
+      works = {
+        displayName = _(works),
+        table = ca_objects,
+        restrictToTypes = [art],
+        view = Scan/macusp_advanced_search_ca_objects_html.php, 
+        itemsPerPage = 10,
+        
+        sortBy = {
+          Entity = ca_entity_labels.surname;ca_entity_labels.forename,
+          Identifier = ca_objects.idno,
+          Name = ca_object_labels.name
+        }
+      }
+      ...
+    }
+    
 
-> [!IMPORTANT]
-> O arquivo de configuração dele é o detail.conf, que são declarados todas a visualizações individuais. 
-
-> [!NOTE]
-> Useful information that users should know, even when skimming content.
-
-> [!TIP]
-> Helpful advice for doing things better or more easily.
-
-> [!IMPORTANT]
-> Key information users need to know to achieve their goal.
-
-> [!WARNING]
-> Urgent info that needs immediate user attention to avoid problems.
-
-> [!CAUTION]
-> Advises about risks or negative outcomes of certain actions.
