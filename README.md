@@ -613,32 +613,32 @@ O multisearch funciona com os seguintes arquivos:
 No arquivo search.conf tém um parâmetro multisearchTypes
 
 
-      multisearchTypes = {
-        works = {
-          displayName = _(Works),
-          table = ca_objects,
-          restrictToTypes = [art],
-          view = Search/ca_objects_search_subview_html.php,
-          itemsPerPage = 10,
-          # --- sortControlType = dropdown or list
-          sortControlType = list,
-          sortBy = {
-            Title = ca_object_labels.name
+        multisearchTypes = {
+          works = {
+            displayName = _(Works),
+            table = ca_objects,
+            restrictToTypes = [art],
+            view = Search/ca_objects_search_subview_html.php,
+            itemsPerPage = 10,
+            # --- sortControlType = dropdown or list
+            sortControlType = list,
+            sortBy = {
+              Title = ca_object_labels.name
+            },
+            sortDirection = {			
+              Title = asc
+            }
           },
-          sortDirection = {			
-            Title = asc
-          }
-        },
-        artists = {
-          ...
-        },
-        groups = {
-          ...
-        },
-        exhibitions = {
-          ...        
-        }	
-      } 
+          artists = {
+            ...
+          },
+          groups = {
+            ...
+          },
+          exhibitions = {
+            ...        
+          }	
+        } 
   
   A busca geral é feita en:
   - works (ca_objects - art)
