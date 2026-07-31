@@ -1,10 +1,10 @@
 # "Macusp" - pawtucket2 - Collectiveaccess 
 
-Esse é um tema (theme) "MACUSP" para o pawtucket2 - collectiveaccess. 
-O pawtucket2 é a interface para o usuario final do acervo online MACUSP. 
-A seguir é descrito em detalhes a funcionalidade de esse tema. 
+Este é o tema "MACUSP" para o Pawtucket2 – CollectiveAccess. O Pawtucket2 
+é a interface do usuário final para o acervo online do MAC USP. A seguir, 
+é descrita em detalhes a funcionalidade deste tema.
 
-O Conteudo está dividido nas seguintes seções: 
+O conteúdo está dividido nas seguintes seções:
 
 1. [Conteúdo ](#1--conteudo-do-tema-macusp).  
     - [assets](#11-assets)
@@ -26,18 +26,16 @@ O Conteudo está dividido nas seguintes seções:
 10. [Busca geral - multisearch](#10--multisearch)
 11. [Advanced Search](#11--advanced-search)
 
-
 ## 1- Conteudo do tema MACUSP
 
-Esse tema contém 6 pastas, a seguir mencionamos a sua funcionalidade e seu conteudo: 
+Este tema contém 6 pastas. A seguir, mencionamos as suas funcionalidades e os seus conteúdos:
 ### 1.1 assets: 
-  contem os arquivos (logos e gráficos) de imagens e de estilos (css). 
-
-  - **pawtucket/css/**: contém a lista de arquivos de estilos (css). Nesse pastas dois arquivos são importantes: main.css e macusp.css. 
-    - **main.css**: arquivo principal de pawtucket2; nesse arquivo foi agregado as cores do macusp.  
-    - **macusp.css**: arquivo que contém os estilos con relação ao tema macusp. 
-  - **pawtucket/graphics/**: contém os gráficos mostrados do tema, como arquivos de imagens.    
-
+  Contém os arquivos de imagens (logos e gráficos) e de estilos (CSS).
+  - **pawtucket/css/:**   contém a lista de arquivos de estilos (CSS). Nesta pasta, dois arquivos são importantes: 
+    - main.css e macusp.css.main.css: arquivo principal do Pawtucket2; neste arquivo foram agregadas as cores do MAC USP.
+    - macusp.css: arquivo que contém os estilos com relação ao tema MAC USP     
+  - pawtucket/graphics/: contém os gráficos mostrados no tema, como arquivos de imagens.
+  
 ### 1.2 *conf: 
   - **app.conf**
   - **assets.conf**
