@@ -34,15 +34,15 @@ Este tema contém 6 pastas. A seguir, mencionamos as suas funcionalidades e os s
   - **pawtucket/css/:**   contém a lista de arquivos de estilos (CSS). Nesta pasta, dois arquivos são importantes: 
     - main.css e macusp.css.main.css: arquivo principal do Pawtucket2; neste arquivo foram agregadas as cores do MAC USP.
     - macusp.css: arquivo que contém os estilos com relação ao tema MAC USP     
-  - pawtucket/graphics/: contém os gráficos mostrados no tema, como arquivos de imagens.
-  
-### 1.2 *conf: 
-  - **app.conf**
-  - **assets.conf**
-  - **browse.conf**   
-  - **detail.conf**
-  - **macusp_frontpage.conf**
-  - **search.conf**
+  - **pawtucket/graphics/:** contém os gráficos mostrados no tema, como arquivos de imagens.
+
+### 1.2 conf: 
+  - **app.conf** 
+  - **assets.conf**: arquivo configuração dos arquivos css. 
+  - **browse.conf**:  
+  - **detail.conf**:
+  - **macusp_frontpage.conf**: [!eye]()
+  - **search.conf**:
 
 > [!IMPORTANT]
 > Os arquivos browse.conf, detail.conf, macusp_frontpage.conf e search.conf estão configurados 
