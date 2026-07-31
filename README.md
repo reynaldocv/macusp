@@ -50,7 +50,7 @@ Este tema contém 6 pastas. A seguir, mencionamos as suas funcionalidades e os s
 > - *works* (em relação às obras de arte)
 > - *artists* (em relacção às entidades artistas)
 > - *exhibitions* (em relacção às ocurrências exposições)
-> mais detalhes (see [Configuração](#configuraçao)). 
+> mais detalhes ([Configuração](#configuraçao)). 
 
 ### 1.3 controllers: 
   Contém os arquivos controllers (são arquivos backend, eles têm accesso ao banco de dados, queries, etc...).
