@@ -37,12 +37,12 @@ Este tema contém 6 pastas. A seguir, mencionamos as suas funcionalidades e os s
   - **pawtucket/graphics/:** contém os gráficos mostrados no tema, como arquivos de imagens.
 
 ### 1.2 conf: 
-  - **app.conf** 
-  - **assets.conf**: arquivo configuração dos arquivos css. 
-  - **browse.conf**:  
-  - **detail.conf**:
-  - **macusp_frontpage.conf**: [:paperclips:](123)
-  - **search.conf**:
+  - **app.conf**. 
+  - **assets.conf**: [:paperclips:](#2--webpage---estrutura). 
+  - **browse.conf**: [:paperclips:](#6--browse). 
+  - **detail.conf**: [:paperclips:](#7--details).
+  - **macusp_frontpage.conf**: [:paperclips:](#3--pagina-home).
+  - **search.conf**: [:paperclips:](#11--advanced-search) e [:paperclips:](#10--multisearch).
 
 > [!IMPORTANT]
 > Os arquivos browse.conf, detail.conf, macusp_frontpage.conf e search.conf estão configurados 
