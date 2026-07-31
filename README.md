@@ -39,10 +39,10 @@ Este tema contém 6 pastas. A seguir, mencionamos as suas funcionalidades e os s
 ### 1.2 conf: 
   - **app.conf**. 
   - **assets.conf**: [:paperclips: Web page css](#2--webpage---estrutura). 
-  - **browse.conf**: [:paperclips: Browse](#6--browse). 
-  - **detail.conf**: [:paperclips: Details](#7--details).
-  - **macusp_frontpage.conf**: [:paperclips: Web home](#3--pagina-home).
-  - **search.conf**: [:paperclips: Search ](#11--advanced-search) e [:paperclips: Multisearch](#10--multisearch).
+  - **browse.conf**: [:paperclips: Browse](#6--browse). Define a interface e a lógica de navegação facetada. Configura quais critérios/atributos (como assunto, tipo de objeto, data, criador) aparecem na barra lateral para que o usuário possa filtrar e afunilar os resultados da coleção.  
+  - **detail.conf**: [:paperclips: Details](#7--details). egula a página de detalhe / exibição individual de um registro (seja objeto, entidade, lugar, evento ou lote). Determina quais metadados são mostrados nessa tela, o layout das mídias (imagens, PDFs, modelos 3D), os mapas de localização e as seções de relacionamentos entre itens.
+  - **macusp_frontpage.conf**: [:paperclips: Web home](#3--pagina-home). Arquivo de configuração específico do tema (neste caso, do Museu de Arte Contemporânea da USP). Controla os elementos da página inicial e textos introdutórios.
+  - **search.conf**: [:paperclips: Search ](#11--advanced-search) e [:paperclips: Multisearch](#10--multisearch). Define o comportamento e a apresentação das buscas textuais e pesquisas avançadas. Configura quais campos são pesquisáveis, os critérios de ordenação (sort options), os filtros de busca e a quantidade de resultados exibidos por página na lista de resultados.
 
 > [!IMPORTANT]
 > Os arquivos browse.conf, detail.conf, macusp_frontpage.conf e search.conf estão configurados 
