@@ -41,7 +41,7 @@ Este tema contém 6 pastas. A seguir, mencionamos as suas funcionalidades e os s
   - **assets.conf**: arquivo configuração dos arquivos css. 
   - **browse.conf**:  
   - **detail.conf**:
-  - **macusp_frontpage.conf**: [!eye](123)
+  - **macusp_frontpage.conf**: [:paperclips:](123)
   - **search.conf**:
 
 > [!IMPORTANT]
