@@ -45,7 +45,7 @@ Este tema contém 6 pastas. A seguir, mencionamos as suas funcionalidades e os s
   - **search.conf**: [:paperclips: Search ](#11--advanced-search) e [:paperclips: Multisearch](#10--multisearch). Define o comportamento e a apresentação das buscas textuais e pesquisas avançadas. Configura quais campos são pesquisáveis, os critérios de ordenação (sort options), os filtros de busca e a quantidade de resultados exibidos por página na lista de resultados.
 
 > [!IMPORTANT]
-> Os arquivos browse.conf, detail.conf, macusp_frontpage.conf e search.conf estão configurados 
+> Os arquivos *browse.conf*, *detail.conf*, *macusp_frontpage.conf* e *search.conf* estão configurados 
 > com relação às definições:  
 > - *works* (em relação às obras de arte)
 > - *artists* (em relacção às entidades artistas)
