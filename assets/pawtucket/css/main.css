@@ -5,40 +5,50 @@
 /* --------------------------------- */
 :root {
   
-  --macusp-color1:#c40414;
-  --macusp-color1b:#B01F24b0;  
-  --macusp-color1c:#B01F2488;
-  --macusp-color1d:#B01F243f;
-  --macusp-color1e:#B01F2415;
-  --macusp-color1f:#B01F2405;
+  --macusp-color1:#23464A;
+  --macusp-color1b:#23464Ab0;  
+  --macusp-color1c:#23464A88;
+  --macusp-color1d:#23464A3f;
+  --macusp-color1e:#23464A15;
+  --macusp-color1f:#23464A05;
 
-  --macusp-color2:#e4949b;
-  --macusp-color2b:#e4949bb0;  
-  --macusp-color2c:#e4949b88;
-  --macusp-color2d:#e4949b3f;
-  --macusp-color2e:#e4949b15;
-  --macusp-color2f:#e4949b05;
+  --macusp-color2:#2F5D62;
+  --macusp-color2b:#2F5D62b0;  
+  --macusp-color2c:#2F5D6288;
+  --macusp-color2d:#2F5D623f;
+  --macusp-color2e:#2F5D6215;
+  --macusp-color2f:#2F5D6205;
 
-  --macusp-color3:#bc0414;
-  --macusp-color3b:#bc0414b0;  
-  --macusp-color3c:#bc041488;
-  --macusp-color3d:#bc04143f;
-  --macusp-color3e:#bc041415;
-  --macusp-color3f:#bc041405;
+  --macusp-color3:#295869;
+  --macusp-color3b:#175258b0;  
+  --macusp-color3c:#17525888;
+  --macusp-color3d:#1752583f;
+  --macusp-color3e:#17525815;
+  --macusp-color3f:#17525805;
 
-  --macusp-color4:#95030f;
-  --macusp-color4b:#95030fb0;
-  --macusp-color4c:#95030f88;
-  --macusp-color4d:#95030f3f;
-  --macusp-color4e:#95030f15;
-  --macusp-color4f:#95030f05;
+  --macusp-color4:#252A2E;
+  --macusp-color4b:#25292Db0;
+  --macusp-color4c:#25292D88;
+  --macusp-color4d:#25292D3f;
+  --macusp-color4e:#25292D15;
+  --macusp-color4f:#25292D05;
   
-  --macusp-color5:#7a1e26;
-  --macusp-color5b:#7a1e26b0;
-  --macusp-color5c:#7a1e2688;
-  --macusp-color5d:#7a1e263f;
-  --macusp-color5e:#7a1e2615;
-  --macusp-color5f:#7a1e2605;
+  --macusp-color5:#23464A;
+  --macusp-color5b:#23464Ab0;
+  --macusp-color5c:#23464A88;
+  --macusp-color5d:#23464A3f;
+  --macusp-color5e:#23464A15;
+  --macusp-color5f:#23464A05;
+
+  --macusp-color5:#2d5458;
+  --macusp-color5b:#2d5458b0;
+  --macusp-color5c:#2d545888;
+  --macusp-color5d:#2d54583f;
+  --macusp-color5e:#2d545815;
+  --macusp-color5f:#2d545805;
+
+
+
   /*--usp-color3:#fcb421;
   --usp-color3b:#fcb42125;*/
   --macusp-color6:#64c3d1;
@@ -82,7 +92,7 @@ html {
 }
 body {
 	font-family: LatoLight;
-	color:#454545;
+	color:#5E5E5E;
 	margin-bottom:80px; 
 }
 b, strong{
@@ -108,6 +118,7 @@ H1, h1{
 	font-size: 20px;
 	color:var(--macusp-color3);
 	text-transform:uppercase;
+	font-weight: bold;
 	margin-top:0px;
 }
 H1 .btn-group{
@@ -299,7 +310,7 @@ h1 i {
 }
 @media (min-width: 768px){
 	.navbar-collapse{
-		background-color: var(--macusp-color2d);
+		background-color: white;
 		text-align: center;
 	}
 }

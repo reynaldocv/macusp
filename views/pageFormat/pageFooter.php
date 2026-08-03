@@ -33,17 +33,40 @@
 		<div style="clear:both; height:1px;"><!-- empty --></div>
 		</div><!-- end pageArea --></div><!-- end col --></div><!-- end row --></div><!-- end container -->
 		
-		
-		<footer id="pre-footer">
-			<?php print _t("The information presented is in constant updating. Should you need further information or in case of doubts, please contact the MAC USP staff") ?>: <b>docmac@usp.br</b>.
-			<ul class="footerFicha">
-				<li><?php print caNavLink($this->request, '<i class="fa fa-file"> Ficha Tecnica</i>', '', '','Page', 'front1'); ?></li>
-				<!--<li><i class="fa fa-facebook-square"></i></li>
-				<li><i class="fa fa-youtube-play"></i></li>-->
-			</ul>
-		</footer>
-		<!--<footer id="footer">
+
+		<footer class="site-footer">
+		<div class="footer-container">
 			
+			<!-- Parte 1: Información o Logo -->
+			<div class="footer-section-left">
+			<p>MACUSP logo</p>
+			
+			</div>
+
+			<!-- Parte 2: Enlaces rápidos -->
+			<div class="footer-section">
+			<ul class="footerItems">
+				<li><?php print caNavLink($this->request, '<i class="fa fa-file"> Sobre o MAC</i>', '', '','Page', 'front1'); ?></li>
+				<li><?php print caNavLink($this->request, '<i class="fa fa-file"> Créditos</i>', '', '','Page', 'front1'); ?></li>
+				
+			</ul>
+			</div>
+
+			<!-- Parte 3: Redes sociales o Contacto -->
+			<div class="footer-section-right">
+			<p><?php print _t("The information presented is in constant updating.") ?></p>
+			<p><?php print _t("Doubts") ?>: <b>docmac@usp.br</b> </p>			
+			</div>
+
+		</div>
+		
+		<!--<div class="footer-bottom">
+			<p>&copy; 2026 Tu Empresa. Todos los derechos reservados.</p>
+		</div>
+		</footer>
+			
+
+		<footer id="footer">			
 			<ul class="list-inline pull-right social">
 				<li><?php print caNavLink($this->request, '<i class="fa fa-file"> Ficha Tecnica</i>', '', '','Page', 'front1'); ?></li>
 					<li><i class="fa fa-facebook-square"></i></li>
