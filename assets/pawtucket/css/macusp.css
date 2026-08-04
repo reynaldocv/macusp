@@ -695,7 +695,7 @@
 .site-footer {
   background-color: var(--macusp-color4);
   color: #ffffff;
-  padding: 40px 20px 20px;
+  padding: 20px 10px 10px;
 }
 
 .footer-container {
@@ -717,10 +717,15 @@
   min-width: 20%;
   text-align: right;
 }
+.footer-section-left > a > img {
+  height: 45px;
+}
 
 .footer-section-right {  
   flex: 1;
   min-width: 20%;
+  border-left: 2px solid #555;
+  padding-left: 20px;
 }
 
 .footer-section h3 {
@@ -1117,20 +1122,17 @@
 
 
 
-.progressBar{ 
+.progress-bar{ 
     
     width: 100%;
     height: 15px;
     overflow: hidden;
-    background-color: #f5f5f5;
+    background-color: var(--macusp-color2);
     border-radius: 4px;
     -webkit-box-shadow: inset 0 0px 2px 5px rgba(0, 0, 0, 0.1);
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);        
 }
-.proprogress-bar-metal
-{
-    background-color: yellow;
-}
+
 .navbar{
   margin-bottom: 0px;
 }
@@ -1323,17 +1325,26 @@
   margin-bottom: 0;
   list-style-type: none;
 	text-align: center;
-	color: var(--macusp-color1)
+	
 
 }
 .footerItems > li {
 	display: inline-block;
 	font-size: large;
-	padding: 20px 40px 5px 40px;  
+	padding: 5px 40px 5px 40px;  
   
 }
 .footerItems > li > a {
-	transition: color .3s ease-in-out, box-shadow .3s ease-in-out;	  
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;	  
+}
+.footerItems > li > a:hover{
+  
+  box-shadow: 16px -5px 1px 9px var(--macusp-color4),
+  -16px -5px 1px 9px var(--macusp-color4),
+  -10px 3px 1px 9px white, /* Extends left */
+   10px 3px 1px 9px white;  /* Extends right */
+	text-decoration: none;  
+	color: white;   
 }
 
 

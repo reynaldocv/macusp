@@ -39,15 +39,16 @@
 			
 			<!-- Parte 1: Información o Logo -->
 			<div class="footer-section-left">
-			<p>MACUSP logo</p>
-			
+				<a href="https://www.mac.usp.br/" target="_blank" title="Museu de Arte Contemporânea da USP">
+					<?php print caGetThemeGraphic($this->request, 'logo-MAC-branco.png', 'hola') ?>
+				</a>
 			</div>
 
 			<!-- Parte 2: Enlaces rápidos -->
 			<div class="footer-section">
 			<ul class="footerItems">
-				<li><?php print caNavLink($this->request, '<i class="fa fa-file"> Sobre o MAC</i>', '', '','Page', 'front1'); ?></li>
-				<li><?php print caNavLink($this->request, '<i class="fa fa-file"> Créditos</i>', '', '','Page', 'front1'); ?></li>
+				<li><?php print caNavLink($this->request, _t("Sobre o MAC"), '', '','', ''); ?></li>
+				<li><?php print caNavLink($this->request, _t("Créditos"), '', '','Page', 'ficha'); ?></li>
 				
 			</ul>
 			</div>
