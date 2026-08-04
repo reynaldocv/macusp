@@ -93,7 +93,7 @@
 
 
 <h6><b><?php print _t("exhibition") ?></b></h6>
-<p> <?php print $idno ?></p>  
+<!--<p><?php print $idno ?></p>-->
 <H3><?php print $name ?></H3>
 <?php print trim($date)?  "<h6>"._t("date") ."</h6><p>$date </p>": ""  ?>
 <?php print trim($local)? "<h6>"._t("local")."</h6><p>$local</p>": ""  ?>

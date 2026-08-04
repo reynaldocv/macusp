@@ -63,7 +63,7 @@ $button = caDetailLink($this->request, _t("More details"),"","ca_occurrences", $
 
 
 <h6><b><?php print _t("publication")?></b></h6>
-<p><?php print $idno ?></p>  
+<!--<p><?php print $idno ?></p>-->
 <H1><?php print $name ?></H1>
 <?php print trim($curator) ? "<h6>"._t("curator")."</h6><p> $curator </p>": "" ?>
 <?php print trim($local)   ? "<h6>"._t("local")."</h6><p> $local   </p>": "" ?>
