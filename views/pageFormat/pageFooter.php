@@ -56,7 +56,7 @@
 			<!-- Parte 3: Redes sociales o Contacto -->
 			<div class="footer-section-right">
 			<p><?php print _t("The information presented is in constant updating.") ?></p>
-			<p><?php print _t("Doubts") ?>: <b>docmac@usp.br</b> </p>			
+			<p><?php print _t("Doubts") ?>: <b> docmac@usp.br </b> </p>			
 			</div>
 
 		</div>
