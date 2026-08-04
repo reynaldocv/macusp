@@ -47,8 +47,8 @@
 			<!-- Parte 2: Enlaces rápidos -->
 			<div class="footer-section">
 			<ul class="footerItems">
-				<li><?php print caNavLink($this->request, _t("Sobre o MAC"), '', '','', ''); ?></li>
-				<li><?php print caNavLink($this->request, _t("Créditos"), '', '','Page', 'ficha'); ?></li>
+				<li><?php print caNavLink($this->request, _t("About MAC"), '', '','', ''); ?></li>
+				<li><?php print caNavLink($this->request, _t("Credits"), '', '','Page', 'ficha'); ?></li>
 				
 			</ul>
 			</div>
