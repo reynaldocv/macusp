@@ -43,10 +43,11 @@
 
 
 .macuspItems > li > a:hover {    
-  box-shadow: 10px 0px 1px 9px white,
-  -10px 0px 1px 9px white,
-  -25px -14px 1px 0px var(--macusp-color2), /* Extends left */
-   25px 14px 1px 0px var(--macusp-color2);  /* Extends right */
+  box-shadow: 20px -5px 1px 9px white,
+  -20px -5px 1px 9px white,
+  -25px 10px 1px 0px var(--macusp-color2), /* Extends left */
+   25px 10px 1px 0px var(--macusp-color2);  /* Extends right */
+   
 	text-decoration: none;  
 	color: var(--macusp-color1);   
 }

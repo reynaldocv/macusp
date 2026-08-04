@@ -4,7 +4,7 @@
 
 <h4>Documentation procedures are constantly being improved; therefore, information regarding specific artworks or exhibitions may be unavailable in our online collection.</h4>
 
-<h4>Images of the artworks are for reference only. MAC USP assumes no responsibility for
+<h4>Images of the artworks, when available are for reference only. MAC USP assumes no responsibility for
 authorizations or payments regarding any copyrights arising from the use of these images.
 For publication or dissemination, interested parties must request the appropriate
 authorization in advance.</h4>
