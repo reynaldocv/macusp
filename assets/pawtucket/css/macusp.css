@@ -1122,13 +1122,13 @@
 
 
 
-.progress-bar{ 
-    
+.progressBar{ 
+    font-size: tiny;
     width: 100%;
     height: 15px;
     overflow: hidden;
-    background-color: var(--macusp-color2);
-    border-radius: 4px;
+    background-color: var(--macusp-color2d);
+    border-radius: 1px;
     -webkit-box-shadow: inset 0 0px 2px 5px rgba(0, 0, 0, 0.1);
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);        
 }
