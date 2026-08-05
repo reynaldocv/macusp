@@ -29,9 +29,6 @@
 
 	# flags module 
 	$flag = _t("flags:pawtucket:language");
-	if (strlen($flag) > 5) {
-		$flag = "en_US";
-	}
 
 	$locales = $this->request->config->getList('ui_locales');	
 
@@ -42,7 +39,7 @@
 
 	foreach ($locales as $elem)
 	{
-		$tmp = caChangeLocaleLink($this->request, $elem, caGetThemeGraphic($this->request, "flags/$elem.svg")." "._t("flags:lang:".$elem), "",'myClass', "");
+		$tmp = caChangeLocaleLink($this->request, $elem, caGetThemeGraphic($this->request, "flags/$elem.svg")." "._t($elem), "",'myClass', "");
 						
 		$tmp = "<li>$tmp</li>"; 
 

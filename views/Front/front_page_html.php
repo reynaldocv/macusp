@@ -47,20 +47,21 @@
 					
 					
 				});
-			</script>
-	
+			</script>	
 
 	<div class="row" style="text-align:justify">
 		<div class="col-sm-2">
 		</div> <!--end col-sm-4-->	
 		<div class="col-sm-8">
-			<?php 				
-				try{
-					$content = $this->render("Front/front_page_$flag.php"); 
+			<?php 		
+				
+				try {
+					$content = $this->render("Front/front_page_en_US.php"); 
 					print $content; 
 				}
+				
 				catch(Exception $e){
-					$content = $this->render("Front/front_page_en_US.php"); 
+					$content = $this->render("Front/front_page_$flag.php"); 
 					print $content; 
 				}
 			?>

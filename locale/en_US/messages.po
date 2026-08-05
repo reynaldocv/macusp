@@ -907,10 +907,10 @@ msgstr ""
 msgid "flags:pawtucket:language"
 msgstr "en_US"
 
-msgid "flags:lang:en_US"
+msgid "en_US"
 msgstr "English"
 
-msgid "flags:lang:pt_BR"
+msgid "pt_BR"
 msgstr "Portuguesse"
 
 #########################################

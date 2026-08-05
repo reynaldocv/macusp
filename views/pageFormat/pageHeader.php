@@ -183,7 +183,7 @@
 				<ul class="nav navbar-nav navbar-right" id="flags-navbar">
 					<li class="dropdown" style="position:relative;">
 						<a href="#" class="dropdown-toggle icon" data-toggle="dropdown">
-							<?php print	$main_flag." "._t("flags:lang:".$flag); ?>
+							<?php print	$main_flag." "._t($flag); ?>
 						</a>
 						<ul class="dropdown-menu"><?php print join("\n", $otherFlags); ?></ul>
 					</li>
