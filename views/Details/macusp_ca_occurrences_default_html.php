@@ -31,16 +31,16 @@
 					<BR>
 					<H1>{{{^ca_occurrences.preferred_labels.name}}}</H1>
 					<!--<H6>{{{^ca_occurrences.type_id}}}{{{<ifdef code="ca_occurrences.idno">, ^ca_occurrences.idno</ifdef>}}}</H6>-->
-					<!--<H6><i>{{{^ca_occurrences.tipo_exposicao}}}</i></H6>-->
+					<H6><i>{{{^ca_occurrences.tipo_exposicao}}}</i></H6>
 				</div><!-- end col -->
 			<div>
 		</div><!-- end row -->
 		<div class="row">			
-			<div class='col-sm-6 col-md-6 col-lg-6'>
+			<div class='col-sm-12 col-md-12 col-lg-12'>
 				<div class="container">
 					<div>
 						{{{<ifdef code = 'ca_entities' restrictToRelationshipTypes='local_exposicao'>
-								<b><?php print _t("Exhibition venue").":"; ?></b><br>
+								<b><?php print _t("Exhibition venue").": "; ?></b><br>
 								<unit relativeTo='ca_entities' restrictToRelationshipTypes='local_exposicao'>
 									^ca_entities.preferred_labels
 								</unit>
@@ -66,7 +66,7 @@
 							$local = "$cities[2], <b>$cities[1]</b>"; 									
 						}
 
-						print $local; 
+						print "<p> $local</p>"; 
 
 
 					?>
@@ -74,8 +74,7 @@
 					<ifdef code="ca_occurrences.exhibitionBeginDate">
 					<div>
 						<b><?php print _t("Start") ?>:</b> 
-							{{{^ca_occurrences.exhibitionBeginDate}}}
-							
+							{{{^ca_occurrences.exhibitionBeginDate}}}							
 						<ifdef code="ca_occurrences.exhibitionEndDate"> |
 							<b> <?php print _t("End") ?>:</b> {{{^ca_occurrences.exhibitionEndDate}}}
 						</ifdef>
@@ -87,62 +86,62 @@
 						<ifdef code ="ca_occurrences.conceito_exposicao"><b><?php print _t("Sinopse") ?>:</b> ^ca_occurrences.conceito_exposicao <br></ifdef>
 						}}}
 					</div>	
-				</div>		
+					
 				
-			</div><!-- end col -->
-			<div class='col-md-6 col-lg-6'>
-				<!--<div><b><?php print _t("Responsible institution").":"; ?></b> 
-					{{{<unit relativeTo='ca_entities'>
-						^ca_entities.preferred_labels (^relationship_typename)
-					</unit>}}}
-				</div>-->
-
-				<!--<div><b><?php print _t("Responsible institution").":"; ?></b> 
-					{{{<unit relativeTo='ca_entities' restrictToRelationshipTypes='Instituicao_responsavel'>
-						^ca_entities.preferred_labels
-					</unit>}}}
-				</div>-->
-				
-				<ifdef code="ca_entities" restrictToRelationshipTypes="Instituicao_responsavel">
-					<div><b>
-						
-						{{{<ifcount code='ca_entities' restrictToRelationshipTypes='Instituicao_responsavel' delimiter=' ' min='1' max='1'>
-								<?php print _t("Institution").":"; ?>
-						</ifcount>}}}
-
-						{{{<ifcount code='ca_entities' restrictToRelationshipTypes='Instituicao_responsavel' delimiter=' ' min='2'>
-								<?php print _t("Institutions").":"; ?>
-						</ifcount>}}}
 			
-						</b> 
-						<ul>
-							{{{<unit relativeTo='ca_entities' restrictToRelationshipTypes='Instituicao_responsavel' delimiter=' '>
-									<li>^ca_entities.preferred_labels </li>
-							</unit>}}}
+					<!--<div><b><?php print _t("Responsible institution").":"; ?></b> 
+						{{{<unit relativeTo='ca_entities'>
+							^ca_entities.preferred_labels (^relationship_typename)
+						</unit>}}}
+					</div>-->
 
-						<ul>
-					</div>
-				</ifdef>
+					<!--<div><b><?php print _t("Responsible institution").":"; ?></b> 
+						{{{<unit relativeTo='ca_entities' restrictToRelationshipTypes='Instituicao_responsavel'>
+							^ca_entities.preferred_labels
+						</unit>}}}
+					</div>-->
+				
+					<ifdef code="ca_entities" restrictToRelationshipTypes="Instituicao_responsavel">
+						<div><b>
+							
+							{{{<ifcount code='ca_entities' restrictToRelationshipTypes='Instituicao_responsavel' delimiter=' ' min='1' max='1'>
+									<?php print _t("Institution").":"; ?>
+							</ifcount>}}}
 
-				<ifcount code="ca_entities" restrictToRelationshipTypes="Organizador|Curator|Auditor|Avaliador|Editor|" min="1">		
-					<div><b>
+							{{{<ifcount code='ca_entities' restrictToRelationshipTypes='Instituicao_responsavel' delimiter=' ' min='2'>
+									<?php print _t("Institutions").":"; ?>
+							</ifcount>}}}
+				
+							</b> 
+							<ul>
+								{{{<unit relativeTo='ca_entities' restrictToRelationshipTypes='Instituicao_responsavel' delimiter=' '>
+										<li>^ca_entities.preferred_labels </li>
+								</unit>}}}
 
-						{{{<ifcount code='ca_entities' restrictToRelationshipTypes='Organizador|Curator|Auditor|Avaliador|Editor|' delimiter=' ' min='1' max='1'>
-								<?php print _t("Responsible").":"; ?>
-						</ifcount>}}}
+							<ul>
+						</div>
+					</ifdef>
 
-						{{{<ifcount code='ca_entities' restrictToRelationshipTypes='Organizador|Curator|Auditor|Avaliador|Editor|' delimiter=' ' min='2'>
-								<?php print _t("Responsibles").":"; ?>
-						</ifcount>}}}
-						</b> 
+					<ifcount code="ca_entities" restrictToRelationshipTypes="Organizador|Curator|Auditor|Avaliador|Editor|" min="1">		
+						<div><b>
 
-						<ul>
-							{{{<unit relativeTo='ca_entities' restrictToRelationshipTypes='Organizador|Curator|Auditor|Avaliador|Editor|' delimiter=' '>
-								<li>^ca_entities.preferred_labels (^relationship_type_code)</li>
-							</unit>}}}
-						<ul>
-					</div>
-				</ifcount>
+							{{{<ifcount code='ca_entities' restrictToRelationshipTypes='Organizador|Curator|Auditor|Avaliador|Editor|' delimiter=' ' min='1' max='1'>
+									<?php print _t("Responsible").":"; ?>
+							</ifcount>}}}
+
+							{{{<ifcount code='ca_entities' restrictToRelationshipTypes='Organizador|Curator|Auditor|Avaliador|Editor|' delimiter=' ' min='2'>
+									<?php print _t("Responsibles").":"; ?>
+							</ifcount>}}}
+							</b> 
+
+							<ul>
+								{{{<unit relativeTo='ca_entities' restrictToRelationshipTypes='Organizador|Curator|Auditor|Avaliador|Editor|' delimiter=' '>
+									<li>^ca_entities.preferred_labels (^relationship_type_code)</li>
+								</unit>}}}
+							<ul>
+						</div>
+					</ifcount>
+				</div>
 								
 			</div><!-- end col -->
 		</div><!-- end row -->	

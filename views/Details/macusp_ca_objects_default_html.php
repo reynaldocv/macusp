@@ -24,8 +24,7 @@
 	<div class="col-sm-7 col-md-7 col-md-offset-1 col-lg-7 col-lg-offset-0">		
 		<div class="row">			
 			<div class='col-sm-7 col-md-7 col-lg-7'>
-				{{{representationViewer}}}	
-				
+				{{{representationViewer}}}					
 			</div><!-- end col -->
 			<div class='col-md-5 col-lg-5'>
 				

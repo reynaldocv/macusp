@@ -29,6 +29,9 @@
 
 	# flags module 
 	$flag = _t("flags:pawtucket:language");
+	if (strlen($flag) > 5) {
+		$flag = "en_US";
+	}
 
 	$locales = $this->request->config->getList('ui_locales');	
 

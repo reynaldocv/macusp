@@ -900,13 +900,6 @@ msgstr ""
 msgid "Search by title of album."
 msgstr ""
 
-
-
-
-
-
-
-
 # It was included to change the languages of wikipedia boxes (wikicode) 
 # and for changing the languages flags
 # reynaldocv 21/01/2025
@@ -948,6 +941,9 @@ msgid "List of Works"
 msgstr ""
 
 msgid "Curators"
+msgstr ""
+
+msgid "Curator"
 msgstr ""
 
 msgid "Works from MAC USP reproduced"

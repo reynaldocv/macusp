@@ -30,7 +30,7 @@
  * ----------------------------------------------------------------------
  */
 	print $this->render("Front/featured_set_slideshow_html.php");
-	$flag = _t("flags:pawtucket:language");
+	$flag = _t("flags:pawtucket:language");	
 		
 ?>
 	
@@ -54,9 +54,15 @@
 		<div class="col-sm-2">
 		</div> <!--end col-sm-4-->	
 		<div class="col-sm-8">
-			<?php 
-				$content = $this->render("Front/front_page_$flag.php"); 
-				print $content; 
+			<?php 				
+				try{
+					$content = $this->render("Front/front_page_$flag.php"); 
+					print $content; 
+				}
+				catch(Exception $e){
+					$content = $this->render("Front/front_page_en_US.php"); 
+					print $content; 
+				}
 			?>
 			
 		</div><!--end col-sm-8-->
