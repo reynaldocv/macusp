@@ -1726,7 +1726,7 @@ msgstr "%1 resultados"
 msgid "One result"
 msgstr "Um resultado"
 
-msgid "No results for advanced search"
+msgid "No result for advanced search"
 msgstr "Sem resultados para a busca avançada"
 
 msgid "No results"

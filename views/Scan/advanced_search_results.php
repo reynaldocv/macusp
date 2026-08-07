@@ -15,7 +15,7 @@
         }
 
         else{
-            print "<h4>"._t("<span>%1</span> results for advanced search", $vn_result_size).":</h4>";
+            print "<h4>"._t("%1 results for advanced search", "<b>$vn_result_size</b>").":</h4>";
         }
         print "<HR>";
 

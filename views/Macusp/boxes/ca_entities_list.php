@@ -11,8 +11,7 @@
 				<ifdef code='ca_entities.DadosBiograficos.AnoNascimento'>
 					(^ca_entities.DadosBiograficos.AnoNascimento)
 				</ifdef>"
-				);
-			
+				);			
 
 			$vs_data_deathday = $qr_res->getWithTemplate("
 				^ca_entities.DadosBiograficos.LocalMorte.hierarchy.preferred_labels%hierarchyDirection=asc%maxLevelsFromBottom=2%%delimiter=_➜_
@@ -50,7 +49,6 @@
 				$infoClick = "<span class='glyphicon glyphicon-info-sign' onclick='getInfoArtist($vn_id)'></span>"; 
 			}
 			
-			//$vs_rep_detail_link = ""; 
 			$vs_result_output = "
 			<div class='bResultListItemCol bResultListItemCol-artist col-xs-{$vn_col_span_xs} col-sm-{$vn_col_span_sm} col-md-{$vn_col_span}'>
 				<div class='bResultListItem bResultListItem-artist' id='row{$vn_id}' onmouseover='jQuery(\"#bResultListItemExpandedInfo{$vn_id}\").show();'  onmouseout='jQuery(\"#bResultListItemExpandedInfo{$vn_id}\").hide();'>
