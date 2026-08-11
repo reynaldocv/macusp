@@ -696,7 +696,7 @@
 .site-footer {
   background-color: var(--macusp-color4);
   color: #ffffff;
-  padding: 10px 5px 5px;
+  padding: 20px 10px 10px;
 }
 
 .footer-container {
@@ -710,13 +710,13 @@
 
 .footer-section {
   flex: 1;
-  min-width: 20%;
+  min-width: 50%;
 }
 
 .footer-section-left {
   flex: 1;
   min-width: 20%;
-  text-align: center;
+  text-align: right;
 }
 .footer-section-left > a > img {
   height: 30px;
@@ -726,7 +726,7 @@
   flex: 1;
   min-width: 20%;
   border-left: 2px solid #555;
-  padding-left: 50px; 
+  padding-left: 100px; 
 }
 
 .footer-section-right > p {  
@@ -1331,7 +1331,7 @@
 }
 .footerItems > li {
 	display: inline-block;
-	font-size: small;
+	font-size: large;
 	padding: 5px 40px 5px 40px;  
   
 }

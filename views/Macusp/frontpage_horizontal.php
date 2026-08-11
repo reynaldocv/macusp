@@ -105,7 +105,8 @@
                                 $vs_image = $vs_default_placeholder_tag;
                             }
                         }else{
-                            $vs_image = $vs_default_placeholder_tag;
+                            $vs_image = "";
+                            //$vs_image = $vs_default_placeholder_tag;
                         }
                     }
                     $vs_rep_detail_link 	= caDetailLink($this->request, $vs_image, '', $vs_table, $vn_id);	

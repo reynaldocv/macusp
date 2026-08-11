@@ -100,24 +100,7 @@
                 $vs_label_detail_link 	= caDetailLink($this->request, $qr_res->get("{$vs_table}.preferred_labels"), '', $vs_table, $vn_id);
 
                 $vs_image = ($vs_table === 'ca_objects') ? $qr_res->getMediaTag("ca_object_representations.media", 'icon', array("checkAccess" => $va_access_values)) : $va_images[$vn_id];
-				
-                if(!$vs_image){
-                    if ($vs_table == 'ca_objects') {
-                        $t_list_item->load($qr_res->get("type_id"));
-                        $vs_typecode = $t_list_item->get("idno");
-                        if($vs_type_placeholder = caGetPlaceholder($vs_typecode, "placeholder_media_icon")){
-                            $vs_image = "<div class='bResultItemImgPlaceholder'>".$vs_type_placeholder."</div>";
-                        }else{
-                            $vs_image = $vs_default_placeholder_tag;
-                        }
-                    }else{
-                        $vs_image = $vs_default_placeholder_tag;
-                    }
-                }
-                if ($vs_table === 'ca_objects') {					
-                    $vs_rep_detail_link 	= caDetailLink($this->request, $vs_image, '', $vs_table, $vn_id);	
-                }
-
+			
                 $vs_thumbnail = "";
                 $vs_type_placeholder = "";
                 $vs_typecode = "";
@@ -133,7 +116,8 @@
                             $vs_image = $vs_default_placeholder_tag;
                         }
                     }else{
-                        $vs_image = $vs_default_placeholder_tag;
+                        $vs_image = "";
+                        //$vs_image = $vs_default_placeholder_tag;
                     }
                 }
                 

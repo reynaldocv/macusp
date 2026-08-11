@@ -56,12 +56,11 @@
 			<?php 		
 				
 				try {
-					$content = $this->render("Front/front_page_en_US.php"); 
-					print $content; 
-				}
-				
-				catch(Exception $e){
 					$content = $this->render("Front/front_page_$flag.php"); 
+					print $content; 
+				}				
+				catch(Exception $e){
+					$content = $this->render("Front/front_page_en_US.php"); 
 					print $content; 
 				}
 			?>

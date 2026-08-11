@@ -39,7 +39,7 @@
 			
 			<!-- Parte 1: Información o Logo -->
 			<div class="footer-section-left">
-				<a href="https://www.mac.usp.br/" target="_blank" title="Museu de Arte Contemporânea da USP">
+				<a href="http://www.mac.usp.br/" target="_blank" title="Museu de Arte Contemporânea da USP">
 					<?php print caGetThemeGraphic($this->request, 'logo-MAC-branco.png', 'hola') ?>
 				</a>
 			</div>
@@ -55,8 +55,8 @@
 
 			<!-- Parte 3: Redes sociales o Contacto -->
 			<div class="footer-section-right">
-			<p><?php print _t("The information presented is in constant updating.") ?></p>
-			<p><?php print _t("Doubts") ?>: <b> docmac@usp.br </b> </p>			
+			<p><?php print _t("The information presented is in constant updating.") ?> 
+			<br> <?php print _t("Doubts") ?>: <b> docmac@usp.br  </p>			
 			</div>
 
 		</div>

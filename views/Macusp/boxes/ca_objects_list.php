@@ -17,7 +17,7 @@
 			if (trim($vs_authors) === "")
 			{
 				$vs_authors = $qr_res->getWithTemplate("				
-					<unit relativeTo='ca_entities' delimiter=' ' restrictToTypes='Artista' excludeRelationshipTypes='doador'>
+					<unit relativeTo='ca_entities' delimiter=' ' restrictToTypes='Artista' excludeRelationshipTypes='doador' min ='2'>
 						<b> ^ca_entities.preferred_labels.displayname </b>
 					</unit>"); 
 
@@ -45,7 +45,8 @@
 			
 			$vs_rep_detail_link = "<a href='#'>".$vs_default_placeholder_tag."</a>";
 					
-			$vs_label_detail_link = "<a href='#'>"._("Título")."</a>"; 
+			//$vs_label_detail_link = "<a href='#'>"._("Título")."</a>"; 
+			$vs_label_detail_link = ""._("Título")."";
 			$preDetails = "<h5>"._("Autoria")."</h5>"; 
 			$postDetails = "<h7>"._("Data")."</h7>"; 
 			

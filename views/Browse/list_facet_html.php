@@ -54,7 +54,7 @@
 <?php
 		}
 		foreach($va_facet_content as $vn_id => $va_item) {
-		    $vs_content_count = (isset($va_item['content_count']) && ($va_item['content_count'] > 0)) ? " (".$va_item['content_count'].")" : "";
+		    $vs_content_count = (isset($va_item['content_count']) && ($va_item['content_count'] > 1)) ? " (".$va_item['content_count'].")" : "";
 			print "<div class='browseFacetItem col-sm-4 col-md-3'>".caNavLink($this->request, $va_item['label'].$vs_content_count, '', '*', '*', '*', array('facet' => $vs_facet_name, 'id' => $va_item['id'], 'view' => $vs_view, 'key' => $vs_key))."</div>";
 			$vn_c++;
 			
@@ -82,7 +82,7 @@
 		
 	} else {
 		foreach($va_facet_content as $vn_id => $va_item) {
-		    $vs_content_count = (isset($va_item['content_count']) && ($va_item['content_count'] > 0)) ? " (".$va_item['content_count'].")" : "";
+		    $vs_content_count = (isset($va_item['content_count']) && ($va_item['content_count'] > 1)) ? " (".$va_item['content_count'].")" : "";
 			
 			if($va_facet_info["group_mode"]== "alphabetical"){
 				$vs_first_letter = mb_strtoupper(mb_substr($va_item[$vs_order_by], 0, 1));

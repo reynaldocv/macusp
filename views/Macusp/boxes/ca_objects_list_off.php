@@ -23,6 +23,7 @@
 			$vs_rep_detail_link = "<a href='#'>".$vs_default_placeholder_tag."</a>";
 					
 			$vs_label_detail_link = "<a href='#'>"._("Título")."</a>"; 
+			//$vs_label_detail_link = ""._("Título").""; 
 			$preDetails = "<h5>"._("Autoria")."</h5>"; 
 			$postDetails = "<h7>"._("Data")."</h7>"; 
 			
