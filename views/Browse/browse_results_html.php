@@ -100,9 +100,10 @@ if (!$vb_ajax) {	// !ajax
 					//print "<strong>".$va_criterion['facet'].':</strong>';
 					#if ($va_criterion['facet_name'] != '_search') {
 						$tmp = strtoupper($va_all_facets[$va_criterion['facet_name']]["label_singular"]); 
+					if ($va_criterion['facet_name'] !== 'tipo_exposicao_facet'){
 
-						print caNavLink($this->request, '<button type="button" class=""><span style="color:black;" class="glyphicon glyphicon-remove"></span>'.$tmp.": ".$va_criterion['value'].' </button>', '', '*', '*', '*', array('removeCriterion' => $va_criterion['facet_name'], 'removeID' => $va_criterion['id'], 'view' => $vs_current_view, 'key' => $vs_browse_key));
-						
+							print caNavLink($this->request, '<button type="button" class=""><span style="color:black;" class="glyphicon glyphicon-remove"></span>'.$tmp.": ".$va_criterion['value'].' </button>', '', '*', '*', '*', array('removeCriterion' => $va_criterion['facet_name'], 'removeID' => $va_criterion['id'], 'view' => $vs_current_view, 'key' => $vs_browse_key));
+						}
 						//print caNavLink($this->request, '<button type="button" class=""><span style="color:black;" class="glyphicon glyphicon-remove"></span>'.$va_all_facets[$va_criterion['facet_name']]["label_singular"].": ".$va_criterion['value'].' </button>', '', '*', '*', '*', array('removeCriterion' => $va_criterion['facet_name'], 'removeID' => $va_criterion['id'], 'view' => $vs_current_view, 'key' => $vs_browse_key));
 					#}else{
 					#	print ' '.$va_criterion['value'];

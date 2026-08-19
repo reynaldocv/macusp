@@ -36,6 +36,7 @@ require_once(__CA_MODELS_DIR__."/ca_occurrences.php");
 require_once(__CA_LIB_DIR__.'/pawtucket/BasePawtucketController.php');
 require_once(__CA_LIB_DIR__.'/ca/Search/EntitySearch.php');
 require_once(__CA_LIB_DIR__.'/ca/Browse/EntityBrowse.php');
+require_once(__CA_LIB_DIR__.'/ca/Browse/OccurrenceBrowse.php');
 
 
 Class IntroController extends ActionController {
@@ -107,16 +108,34 @@ Class IntroController extends ActionController {
 		
 		$t_entity = new ca_occurrences();
 
+		
 		$type_id = ca_lists::getItemID('occurrence_types', 'exhibition');
+		$type_id2 = ca_lists::getItemID('tipo_exposicao', 'exposicao_mac_usp');
 
-		$tmp = $t_entity->getRandomItems(3*$limit, array('checkAccess' => $va_access_values, 'hasRepresentations' => 1, 'restrictByIntrinsic'=> array('type_id'=> $type_id)));		
-		//$tmp = $t_entity->getRandomItems(30, array('checkAccess' => $va_access_values, 'hasRepresentations' => 1));
-		
+		$tmp = $t_entity->getRandomItems(5*$limit, array(
+		    'checkAccess'          => $va_access_values, 
+		    'hasRepresentations'   => 1, 
+		    // Native database fields go here:
+		    'restrictByIntrinsic'  => array(
+			'type_id' => $type_id
+		    )
+		));		
+
 		$va_featured_ids = array_keys($tmp);
-		
+        
+        $tmp = [];
+
+        foreach ($va_featured_ids as $id){
+            $item = new ca_occurrences($id); 
+            
+			if ($item->get("ca_occurrences.tipo_exposicao") == $type_id2){
+                $tmp[] = $id;                 
+            }
+        }		
 		// A list of exhibitions is generated randomly
 		//$this->view->setVar('featured_set_exhibitions_as_search_result', $o_browse);
-		$this->view->setVar('featured_set_ids', $va_featured_ids);	
+		//$this->view->setVar('featured_set_ids', $va_featured_ids );	
+		$this->view->setVar('featured_set_ids', $tmp);	
 		$this->view->setVar("table", $table);	
 		$this->view->setVar("limit", $limit);	
 		$this->view->setVar("file", $options);
@@ -127,7 +146,7 @@ Class IntroController extends ActionController {
 
 		$this->render($vs_path);
 	}
-
+	
 	public function works() {			
 		$options = $this->opo_config->get('works');		
 		$table = "ca_objects"; 
@@ -143,8 +162,16 @@ Class IntroController extends ActionController {
 
 		$type_id = ca_lists::getItemID('object_types', 'art');
 		
-		$tmp = $t_object->getRandomItems(3*$limit, array('checkAccess' => $va_access_values, 'hasRepresentations' => 1, 'restrictByIntrinsic'=> array('type_id'=> $type_id)));		
+		//$tmp = $t_object->getRandomItems(3*$limit, array('checkAccess' => $va_access_values, 'hasRepresentations' => 1, 'restrictByIntrinsic'=> array('type_id'=> $type_id)));		
 		//$tmp = $t_entity->getRandomItems(30, array('checkAccess' => $va_access_values, 'hasRepresentations' => 1));
+		$tmp = $t_object->getRandomItems(3 * $limit, array(
+			'checkAccess'          => $va_access_values, 
+			'hasRepresentations'   => 1, 
+			'restrictByIntrinsic'  => array('type_id' => $type_id),
+			'restrictToAttributes' => array(
+				'tipo_exposição' => array('value' => $type_id2)
+			)
+		));
 		
 		$va_featured_ids = array_keys($tmp);
 

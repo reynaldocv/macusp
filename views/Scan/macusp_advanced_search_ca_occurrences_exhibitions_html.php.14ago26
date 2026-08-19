@@ -1,9 +1,4 @@
 
-
-<!--  MARILDA 19/08/26 ESSE ARQUIVO É DE CONFIGURAÇÃO DO FORMULÁRIO DE BUSCA AVANÇADA DAS EXPOSIÇÕES  -->
-
-
-
 <div class="row">
 
 {{{form}}}
@@ -17,7 +12,7 @@
 			{{{ca_occurrences.preferred_labels.name%value=''%label=<?php print _t("Title of Exhibition") ?>}}}
 		</div>
 	</div>
-       <p> </p>    <p> </p>
+
 	<div class='row'>
 		<div class="advancedSearchField col-sm-6">
 			<span class='formLabel' data-toggle="popover" data-trigger="hover" data-content="<?php print _t("Search by a particular date or date range.") ?>">
@@ -32,10 +27,6 @@
 		</div>
 	</div>
 
-<!-- mudar aqui   MARILDA 14/08/26 ESSE ARQUIVO É DE CONFIGURAÇÃO DO FORMULÁRIO DE BUSCA AVANÇADA DAS EXPOSIÇÕES
-
-
-
 	<div class='row'>
 		<div class="advancedSearchField col-sm-12">
 			<span class='formLabel' data-toggle="popover" data-trigger="hover" data-content="<?php print _t("Search by artists in a exhibition.") ?>">
@@ -44,10 +35,6 @@
 			{{{ca_entities.preferred_labels.displayname/artista%label=<?php print _t("Artists in a exhibition") ?>}}}
 		</div>
 	</div>
-
--->
-
-        <p> </p>
 	
 	<div class='row'>
 		<div class="advancedSearchField col-sm-12">
@@ -57,8 +44,7 @@
 			{{{ca_entities.preferred_labels.displayname/curator,co_curador,assistente_curadoria,curador_responsavel%label=<?php print _t("Institutions or persons related to the exhibition") ?>}}}
 		</div>
 	</div>
-	<p> </p>    <p> </p>	
-
+	
 	<div class='row'>
 		<div class="advancedSearchField col-sm-12">
 			<span class='formLabel' data-toggle="popover" data-trigger="hover" data-content="<?php print _t("Search by name of institution or city.") ?>">

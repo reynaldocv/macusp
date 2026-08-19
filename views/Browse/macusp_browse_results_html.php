@@ -69,9 +69,12 @@
 	//$menu_items = $this->getVar('reynaldocv');
 			
 	print "<h1>$ca_entities_template_contain</h1>";
-	//print "HOLA"; 
+//print "HOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLA"; 
 	
-//print_r($va_all_facets["place_facet"]["label_singular"] ); 
+//	print_r($va_all_facets["place_facet"]["label_singular"] ); 
+
+
+
 if (!$vb_ajax) {	// !ajax
 ?>
 <div class="row" style="clear:both;">

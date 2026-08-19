@@ -1,11 +1,12 @@
 <?php 
     $qr_ids             = $this->getVar('featured_set_ids'); 
+    $qr_ids2             = $this->getVar('featured_set_ids2'); 
     $vs_table           = $this->getVar('table');
     $vn_limit           = $this->getVar('limit');
     $vn_file            = $this->getVar('file');
     $vn_view            = $this->getVar('view');
     $va_access_values 	= $this->getVar('access_values');	
-    
+
     $o_icons_conf = caGetIconsConfig();
 	$va_object_type_specific_icons = $o_icons_conf->getAssoc("placeholders");
 

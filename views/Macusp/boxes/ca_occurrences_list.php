@@ -9,6 +9,8 @@
 			$postDetails = $qr_res->getWithTemplate("<h7>
 				^ca_occurrences.exhibitionBeginDate - 
 				^ca_occurrences.exhibitionEndDate
+				<br>
+                                <i>^ca_occurrences.tipo_exposicao</i>
 				</h7>
 				");
 			

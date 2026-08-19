@@ -4,7 +4,6 @@
  * ----------------------------------------------------------------------
  * CollectiveAccess
  * Open-source collections management software
- * MARILDA 19/08/2026 - Esse arquivo dá conta do resultado da busca geral para exposições.
  * ----------------------------------------------------------------------
  *
  * Software by Whirl-i-Gig (http://www.whirl-i-gig.com)
@@ -76,7 +75,7 @@
 		$vb_div_open = false;
 		while($qr_results->nextHit()) {
 			if ($vn_i == 0) { print "<div class='{{{block}}}Set authoritySet'>\n"; $vb_div_open = true; }
-				print "<div class='{{{block}}}Result authorityResult'>".$qr_results->get('ca_occurrences.preferred_labels.name', array('returnAsLink' => true))."</div>";
+				print "<div class='{{{block}}}Result authorityResult'>".$qr_results->get('^ca_occurrences.preferred_labels.name', array('returnAsLink' => true))."</div>";
 			$vn_count++;
 			$vn_i++;
 			if ($vn_i == $vn_items_per_column) {
@@ -103,6 +102,7 @@
 ?>
 
 
+<?php print "Ola Ola ";?>
 			<script type="text/javascript">
 				jQuery(document).ready(function() {
 					jQuery('#{{{block}}}Results').hscroll({

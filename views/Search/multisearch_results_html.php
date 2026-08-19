@@ -22,8 +22,7 @@
 				}
 		?>
 				</small>
-				<h1><?php print _t("Search results for %1", "<span style='color:black;'>".caUcFirstUTF8Safe($this->getVar('searchForDisplay'))."</span>"); ?></h1>
-		<?php
+
 				// 
 				// Print out block content (results for each type of search)
 				//
