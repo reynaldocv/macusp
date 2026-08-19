@@ -2403,17 +2403,19 @@ a.browseRemoveFacet .glyphicon {
 .bResultListItem img{
 	height: 100%;
 	width: 100%;
-	object-fit: cover;
+	object-fit: cover;	
 }
 .bResultListItem .bResultListItemText a{
 	font-weight:600 ;
 	line-height:1.2em;
 	color:#333333;
+	text-align: left;
 }
 
 .bResultListItem .bResultListItemText{
 	line-height:1.2em;
 	font-size:12px;
+	text-align: left;
 }
 .bResultListItem .bResultListItemText small, .bResultListItem .bResultListItemText small a{
 	color:#ababab;

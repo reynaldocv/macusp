@@ -47,6 +47,7 @@
 				if(in_array($vs_block, $va_browse_types)){
 ?>
 				<span class='multisearchFullResults'><?php print caNavLink($this->request, '<span class="glyphicon glyphicon-list"></span> '._t('Full results'), '', '', 'Scan', '{{{block}}}', array('search' => str_replace("/", "", $vs_search))); ?></span> | 
+				    
 <?php
 				}
 ?>
