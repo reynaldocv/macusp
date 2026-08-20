@@ -54,7 +54,7 @@
 			<span class='formLabel' data-toggle="popover" data-trigger="hover" data-content="<?php print _t("Search by curator or institution.") ?>">
 				<?php print _t("Institutions or persons related to the exhibition (Ex. Institution responsible for the exhibition, Curator)") ?>
 			</span>
-			{{{ca_entities.preferred_labels.displayname/curator,co_curador,assistente_curadoria,curador_responsavel%label=<?php print _t("Institutions or persons related to the exhibition") ?>}}}
+			{{{ca_entities.preferred_labels.displayname/curator,co_curador,assistente_curadoria,curador_responsavel,Instituicao_responsavel%label=<?php print _t("Institutions or persons related to the exhibition") ?>}}}
 		</div>
 	</div>
 	<p> </p>    <p> </p>	
